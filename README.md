@@ -11,6 +11,7 @@ OpenCode, and others). Different skills, different topics — one repo.
 | Skill | What it does |
 |-------|--------------|
 | [`typography-for-lawyers`](skills/typography-for-lawyers) | Professional typography for legal and professional documents — fonts, point size, margins, line spacing, court-rule compliance, and fixing "typewriter habits" — distilled from Matthew Butterick's *Typography for Lawyers*. |
+| [`turkish-humanizer`](skills/turkish-humanizer) | Makes Turkish text read naturally — cleans AI-generated and English-translationese patterns (signpost connectors, bureaucratic `-maktadır`, `sahip olmak`, `-lı bir şekilde`, calques, em dashes) and rewrites toward fluent, TDK-correct Turkish while preserving meaning. |
 
 ## Install
 
