@@ -1,0 +1,13 @@
+# codedb tooling artifacts
+codedb.snapshot
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
