@@ -126,3 +126,47 @@ pronoun, "bir şekilde", "sahip olmak", a light verb, an abstract-noun shell) so
 already carries in a suffix or in context. Cut the redundancy, let a clear verb close the sentence,
 join clauses with suffixes, hold the register the context asks for — and the text stops sounding
 translated. Meaning stays; only the over-explicit, translated scaffolding goes.
+
+---
+
+## 6. Yeni hata sınıfları — katalog temizken ortaya çıkanlar
+
+Bunlar "AI kalıbı" değil; cümleler doğal *duruyor* ama yanlışlar. Sahada, ilk sürümün temizlediği
+kalıpların ardından kalan hata tipleri:
+
+| ✗ Yazılan | Sınıf | Sorun | ✓ Doğrusu |
+|---|---|---|---|
+| kapı **ses eder** | eşdizim | *ses etmek* = konuşmak/itiraz etmek | kapı **ses çıkarır** |
+| bir tanesini bile **şaşırmadan** sayar | değerlik | *şaşırmak* geçişsiz, belirtme eki almaz | **atlamadan** sayar |
+| tutuyor **görünüyor** | eksik yapı | "appears to" birebir çevrilmiş | tutuyor **gibi** görünüyor |
+| duvarın **ardını açıyorsun** | tamlama mantığı | bir şeyin "ardı" açılmaz | **duvarı** açıyorsun |
+| **kara kutu** yok | metafor kalkı | TR'de ilk çağrışım uçuş kayıt cihazı | **Sihir yok:** her parçanın içini açarsın |
+| **ak-sıcak** | metafor kalkı | *white-hot* uydurma kalkı | **akkor** |
+| **gerilim sivrisi** | metafor kalkı | *sivri* TR'de bu anlamda ad değil | **ani gerilim darbesi** |
+| Yatağa **göndereli**, ışıkları söndüreli çok oldu | düşen nesne | *kimi* gönderdi? Cümle çöküyor | **Seni** yatağa gönderip ışıkları söndüreli çok oldu |
+| **okumazsın, kurarsın** (slogan) | başlık eksiltisi | nesnesiz kalınca havada duruyor | **Okumakla kalmazsın; kendin kurarsın.** |
+| **adı en sonda** (başlık) | başlık eksiltisi | *the name comes last* — TR bu sıkıştırmayı kaldırmaz | **Önce keşfedersin, adını sonra öğrenirsin.** |
+| üçüncünün**kü** | mekanik | `-ki` ünlü uyumuna girmez | üçüncünün**ki** |
+| **maniple'yi** | mekanik | cins ada kesme konmaz | **manipleyi** |
+
+## 7. İnceleme (review) kipi — çıktı böyle görünür
+
+Uzun ve büyük ölçüde doğru bir metinde **yeniden yazma yapılmaz.** Konumlu bulgu listesi verilir;
+yazar yalnız bozuk olana dokunur.
+
+**Girdi:** 275 ekranlık iki dilli kitap. **Çıktı:**
+
+| Konum | Alıntı | Sınıf | Sorun | Öneri |
+|---|---|---|---|---|
+| Ekran 42 | "kapı ses eder" | **hata** | *ses etmek* = konuşmak | "kapı ses çıkarır" |
+| Ekran 88 | "bir tanesini bile şaşırmadan" | **hata** | *şaşırmak* geçişsiz | "atlamadan" |
+| Ekran 7 | "KARA KUTU YOK" | **kalıp** | metafor kalkı + BÜYÜK HARF i/ı'yı öldürüyor | "Sihir yok: her parçanın içini açarsın" |
+| Ekran 12 | "adı en sonda" | **kalıp** | başlık eksiltisi; okur "ne demek?" diyor | "Önce keşfedersin, adını sonra öğrenirsin" |
+| Bölüm 4 | "bounce" (röle kolu için serbest kullanım) | **kalıp** | Bölüm 12'de *bounce* teknik terim olacak — ad şimdiden yakılıyor | terim defterine al; 4. bölümde başka kelime kullan |
+| Ekran 31 | "üçüncününkü" | **hata** | `-ki` uyuma girmez | "üçüncününki" |
+
+**Not:** *dokunulmayanlar* — tarihsel alıntılar, kod tanımlayıcıları, terim defterindeki kilitli
+terimler ve üslup sözleşmesinde açıkça izin verilen yapılar taranmadı.
+
+Bulgu sınıfları ayrı tutulur çünkü yazar hepsine aynı davranmaz: **hata** düzeltilir, **kalıp**
+düzeltilmeli, **öneri** tercihe kalır.
