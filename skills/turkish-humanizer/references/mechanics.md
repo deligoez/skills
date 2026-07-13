@@ -11,7 +11,8 @@ The mechanics that betray non-native / machine output, with the correct TDK rule
 4. [Kalıp fiiller, "bir", edilgen çatı](#4-kalip)
 5. [Ünlü/ünsüz mekaniği](#5-ses)
 6. [Sayı, tarih, saat, birim](#6-sayi)
-7. [Hızlı başvuru tablosu](#7-tablo)
+7. [**Otomasyon ve araç tuzakları**](#7-otomasyon)
+8. [Hızlı başvuru tablosu](#8-tablo)
 
 ## 1. de/da, ki, mi {#1-dedaki-mi}
 
@@ -69,7 +70,11 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
 ### Kesme işareti (apostrophe)
 - **Used** on proper nouns before inflectional (case/possessive/bildirme) suffixes, dates, numbers,
   abbreviations: ✓ *Ankara'da, TDK'nin, 1990'da, 3'üncü, Nihat Bey'e.* ✗ *Ankarada, TDKnin.*
-- **NOT used:**
+- **NOT used — and the real-world error is usually kesme *fazlalığı*, not eksikliği:**
+  - **Cins ada kesme konmaz.** Kesme yalnızca **özel ad / kısaltma / sayı** içindir. Yabancı kökenli
+    olsa bile cins ad kesme almaz — ek okunuşa göre doğrudan eklenir:
+    ✗ *maniple'yi, buffer'ı, link'i* → ✓ **manipleyi, arabelleği, linki.**
+    En temizi zaten Türkçe terimi kullanmaktır: *opcode'u* → ✓ **işlem kodunu.**
   - Yapım/çokluk ekleri: ✓ *Türkçe, Türklük, Amerikalı* ✗ *Türk'çe, Türk'lük, Amerika'lı.*
   - **Kurum/kuruluş adları** (a much-missed TDK exception): ✓ *Türk Dil Kurumunun, Türkiye Büyük
     Millet Meclisine* ✗ *…Kurumu'nun, …Meclisi'ne.*
@@ -153,7 +158,71 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
 - **Saat:** period, not colon: ✓ *14.30, saat 14.30'da* ✗ *14:30.*
 - **Sıra sayıları — one form only:** ✓ *3.* or *3'üncü* ✗ *3.'üncü.*
 
-## 7. Hızlı başvuru tablosu {#7-tablo}
+## 7. Otomasyon ve araç tuzakları {#7-otomasyon}
+
+Türkçe metinle **kod** çalışıyorsa bunlar yazım kuralı değil, **araç kuralıdır** — ve sessizce bozarlar.
+(Aşağıdaki çıktılar Unicode veri dosyalarına karşı doğrulanmıştır.)
+
+### 7.1 Türkçe-I sorunu — dört harf, iki kutu
+Türkçede **i↔İ** ve **ı↔I** eşleşir. Unicode'un *varsayılan* (İngilizce) algoritması ise **i↔I** eşler.
+Fark tam olarak buradan çıkar.
+
+| İfade | Sonuç |
+|---|---|
+| `"i".toUpperCase()` | `"I"` ✗ |
+| `"i".toLocaleUpperCase("tr")` | `"İ"` ✓ |
+| `"I".toLowerCase()` | `"i"` ✗ |
+| `"I".toLocaleLowerCase("tr")` | `"ı"` ✓ |
+| `"İ".toLowerCase()` | `"i" + U+0307` — **iki karakter!** (görünüşte "i", aslında i + birleşen nokta) |
+| `"İ".toLocaleLowerCase("tr")` | `"i"` (tek karakter) ✓ |
+
+**Doğru API:**
+- **JS:** `toUpperCase()/toLowerCase()` **locale'den bağımsızdır** (her zaman Unicode varsayılanı).
+  Kullan: `toLocaleUpperCase("tr")` / `toLocaleLowerCase("tr")`.
+- **Python:** `.upper()/.lower()` de locale'den bağımsız — `setlocale` **işe yaramaz**. PyICU ya da
+  elle eşleme tablosu gerekir.
+- **Java:** `toUpperCase()` (argümansız) **varsayılan locale'i** kullanır — yani görünmez, ortam
+  bağımlı davranış. Açıkça `Locale.forLanguageTag("tr")` ya da mantık için `Locale.ROOT` ver.
+- **C#:** `ToUpper()` `CurrentCulture` kullanır. Görüntü için `tr-TR`, karşılaştırma için
+  `ToUpperInvariant()` / `StringComparison.OrdinalIgnoreCase` (bkz. analiz kuralları CA1308/CA1309).
+- **CSS:** `text-transform: uppercase` + doğru `lang="tr"` — spec bunu şart koşar ama **tarayıcı
+  desteği tutarsızdır**. Güvenlisi: casing'i JS'te `toLocaleUpperCase("tr")` ile yapıp basmak.
+
+### 7.2 İki ayrı dünya — karıştırma
+1. **Kullanıcıya görünen metin** Türkçe casing ister: *istanbul* → **İSTANBUL** (asla *ISTANBUL*).
+2. **Koda bakan dizgiler** (anahtar, enum, etiket, komut) **ordinal/invariant** olmalı. Klasik tuzak:
+   `tr-TR` altında `"interesting".ToUpper()` → `"İNTERESTİNG"`, dolayısıyla `== "INTERESTING"` **false**.
+   Aynı sınıf: `"FILE".toLocaleLowerCase("tr")` → **`"fıle"`** (noktasız ı!) ≠ `"file"`.
+   Ve `"İstanbul"` çoğu regex motorunda `/istanbul/i` ile **eşleşmez** (İ'nin katlanması iki karakter).
+   Bu, Atlassian Confluence'ı (Java) ve npm'de yargs-parser'ı vuran gerçek hata sınıfıdır.
+
+### 7.3 Sıralama (collation)
+Türk alfabesi: **a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z** — ve **ı, i'den önce** gelir.
+Naif kod-noktası sıralaması ç/ğ/ı/ö/ş/ü'yü ASCII'nin *arkasına* atar:
+```js
+["ıstanbul","istanbul","izmir"].sort()                              // ✗ ıstanbul en sona düşer
+["ıstanbul","istanbul","izmir"].sort((a,b)=>a.localeCompare(b,"tr")) // ✓ doğru sıra
+```
+Kullan: `localeCompare(b,"tr")` / `Intl.Collator("tr")`.
+
+### 7.4 Toplu bul-değiştir çekim eklerini bozar — **kelimeyi değiştirme, sar**
+Türkçede ek terime yapışır ve **ekin biçimi terimin son sesine bağlıdır.** Naif değiştirme bunu kırar:
+- `opcode'u` → *opcode* → *işlem kodu* değiştir → ✗ **`işlem kodu'u`** (doğrusu **işlem kodunu** —
+  kaynaştırma `-n-` gerekiyor).
+- `yazmaç` → çekimde **yazmacın** (ünsüz yumuşaması) — kök değişince ek de değişir.
+
+**Kural:** ya **çekimli biçimlerin tamamını** listeleyip değiştir, ya da terimi **değiştirme, sar**
+(çekimli hâli olduğu gibi bırakıp etrafına işaretleme koy). Terim değişikliği bir **korpus işlemidir**,
+bir `sed` işi değil (bkz. `terminology.md`).
+
+### 7.5 Normalleştirme
+İ/Ç/Ğ/Ş **NFC↔NFD arasında temiz gidip gelir** — burada bozuk bir tur yok. Gerçek riskler:
+- **Karşılaştırmadan önce normalize etmemek** (aynı harf bileşik ve ayrık iki farklı dizgi olabilir).
+- **Türkçe *cedilla* (U+0327) ile Romence *virgül-altı* (U+0326)**: Ş/Ţ ile Ș/Ț **göze aynı görünür**,
+  kod noktası farklıdır — arama/karşılaştırma sessizce çuvallar.
+- ASCII'ye düşürme (ş→s, ı→i) **slug'da** olur, **düz metinde asla**.
+
+## 8. Hızlı başvuru tablosu {#8-tablo}
 
 | Kategori | ✗ (İngilizce/AI) | ✓ (TDK) |
 |---|---|---|
