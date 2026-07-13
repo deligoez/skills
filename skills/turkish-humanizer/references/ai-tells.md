@@ -23,6 +23,9 @@ carry the meaning. Look for **clusters**, not single instances (see the false-po
 8. [Overused AI vocabulary](#8-vocabulary)
 9. [Universal tells that also apply to Turkish](#9-universal)
 10. [English tells that do NOT port to Turkish](#10-do-not-port)
+11. [**Metafor kalkı — çağrışım taşınmaz**](#11-metafor)
+12. [**Türkçeye özgü izler** (baskın sinyaller)](#12-turkceye-ozgu)
+13. [Aşırı düzeltme yasağı — iyi Türkçeyi bozma](#13-asiri-duzeltme)
 
 ## 1. Connectors / discourse markers {#1-connectors}
 
@@ -222,3 +225,118 @@ A naive port of an English humanizer would wrongly "fix" these. Do **not** apply
 - **Over-aggressive de-hedging / de-complexifying to "beat a detector."** Detectors are biased against
   simple, clear, non-native-shaped prose; flattening real nuance to dodge one produces worse Turkish.
   Aim at genuine fluency, never at a detector score (see `SKILL.md`).
+
+## 11. Metafor kalkı — çağrışım taşınmaz {#11-metafor}
+
+**En sinsi sınıf.** A metaphor translates literally and its **connotation does not come with it.** The
+words are right; what the reader's head does with them is wrong.
+
+**İki soruluk test:**
+1. **Bu ifade Türkçede ne çağrıştırıyor?** *kara kutu* → Türk okurun aklına önce **uçuş kayıt cihazı**
+   gelir. Genel bir kitap için "kara kutu yok" cümlesi hiçbir şey söylemez.
+   → *"Sihir yok: her parçanın içini açarsın."*
+2. **Bu kalk Türkçede yerleşik/tanıklı mı?** Yerleşikse serbest, değilse **uydurma — betimle.**
+   - ✅ Yerleşik: *kara kutu testi* (yazılım testi), *el sıkışma* (TCP), *yarış durumu*, *karbon ayak izi*.
+   - ✗ Uydurma: *ak-sıcak* (white-hot) → doğrusu **akkor**. *gerilim sivrisi* (voltage spike) →
+     **ani gerilim darbesi** (*sivri* Türkçede bu anlamda ad değil).
+
+**Kontrol listesi — genel:** kara kutu · kırmızı bayrak · gümüş kurşun · düşük asılı meyve · oyun
+değiştirici · yol haritası · ayak izi · buzdağının görünen kısmı.
+**Teknik:** spike · bounce · flush · drain · handshake · race · starve · deadlock · overhead.
+Her biri için: yerleşik karşılığı var mı? Yoksa olayı anlat.
+
+> **Kural, yazarını da vurdu.** Bu skill'in terim defteri taslağında ring oscillator için
+> *"halka salıngaç"* yazılmıştı — hiçbir Türkçe kaynakta geçmiyor. Doğrusu **halka salınıcı**.
+> Kulağa doğru gelmesi doğru olduğu anlamına gelmiyor. Bkz. `terminology.md`.
+
+## 12. Türkçeye özgü izler — baskın sinyaller {#12-turkceye-ozgu}
+
+Bunlar İngilizce humanizer'dan devşirilmiş izlerden **daha güçlüdür**. Önce bunları ara.
+
+### 12.1 Bürokratik sarmalayıcı — tek kuralla çöker
+**Teşhis:** Türkçenin **hâl eki** varken bürokrasi araya iki kelimelik bir sarmalayıcı sokuyor.
+**Tedavi: sarmalayıcıyı hâl ekine çök.**
+
+| ✗ Sarmalayıcı | ✓ Hâl eki |
+|---|---|
+| Transfer **noktasında** gelişme yok | Transfer**de** gelişme yok |
+| Eğitim **konusunda** adımlar atıldı | Eğitim**de** adımlar atıldı |
+| Yöntem **bakımından** sakınca yok | Yöntem**de** sakınca yok |
+| Bu konuyla **ilgili olarak** açıklama yapıldı | Bu konu**da** açıklama yapıldı |
+| Kaliteli hizmet **anlamında** ayrışıyoruz | Kaliteli hizmet**te** ayrışıyoruz |
+| **Söz konusu** belge gönderildi | Belge gönderildi |
+| **Bu anlamda**, yeni strateji belirledik | Yeni strateji belirledik *(sil)* |
+
+**Ama fazla düzeltme yapma:** *açısından* gerçek bir bakış açısı değişimi için doğrudur
+("hukuki açıdan bakıldığında"). ***bakımından* hukuk dilinde terimdir** ("usul bakımından", "esas
+bakımından") — orada dokunma. *söz konusu* gerçek belirsizlikte meşrudur ("söz konusu üç şirketten
+hangisi"). İz olan, **yığılma** ve **hâl ekinin işini gasp etmesi**.
+
+### 12.2 Cümle sonu `-dır` — hata değil, **register uyuşmazlığı**
+Dilbilgisel olarak doğru (bildirme eki) ve sözlük/hukuk/akademi register'ında **gereklidir**. Sohbet
+eden bir metinde toptan korunması İngilizce-kaynak izidir.
+- ✗ *Bu bir fonksiyondur.* → ✓ *Bu bir fonksiyon.*
+- **Kural:** tanım/hukuk/akademi → tut. Anlatım, doküman, arayüz, diyalog → düşür.
+
+### 12.3 `olarak` şişmesi
+Yerli zarf biçimi varken `olarak` ekleniyor: *genel olarak* → **genelde** · *kesin olarak* →
+**kesinlikle** · *hızlı bir şekilde/olarak* → **hızlıca**. Yığılma bariz iz: ✗ *genel olarak, temel
+olarak ve kişisel olarak katılıyorum* → ✓ *Bu fikre katılıyorum.*
+**Meşru:** gerçek rol/sıfat bildirimi — *bir doktor olarak görüşüm şu.*
+
+### 12.4 Gereksiz yardımcı fiil — **en iyi kaynaklı madde**
+Yardımcı fiil tek türemiş fiile çöküyorsa gereksizdir.
+*başvuruda bulunmak* → **başvurmak** · *görüşmelerde bulunmak* → **görüşmek** · *etki etmek* →
+**etkilemek** · *umut etmek* → **ummak** · *duyurusunu yapmak* → **duyurmak**.
+
+### 12.5 İkili edilgen + `olan`
+✗ *yapılmış olan çalışmalar* → ✓ **yapılan** çalışmalar · ✗ *yürütülmekte olan projeler* →
+✓ **yürütülen** projeler. (Edilgenin kendisi Türkçede İngilizceden daha doğaldır — ona savaş açma;
+sadece `-mış/-makta + olan` ikizini ve **failin gizlenmesini** hedefle.)
+
+### 12.6 `-mış durumda`
+✗ *Enflasyon artmış durumda.* → ✓ *Enflasyon arttı.* (Gerçek bir *durum* karşıtlığı yoksa periphrastik
+şişmedir.)
+
+### 12.7 `ve … ve … ve` zinciri
+İngilizce "X and Y and Z"nin birebir izi. Türkçe virgülle listeler, tek bir `ve` ile kapatır — ya da
+ulaçla bağlar (`-ip`, `-erek`). ✗ *Bütçe konuşuldu ve proje ele alındı ve görev dağıtıldı.* →
+✓ *Bütçe konuşuldu, proje ele alındı ve görevler dağıtıldı.* (Yazınsal yineleme ayrı: *geldi, gördü
+ve fethetti* — dokunma.)
+
+### 12.8 Ritim için virgül bolluğu
+Türkçe **dilbilgisel ilişkiye** göre virgüller, İngilizce gibi nefes/ritim için değil.
+✗ *Bu proje, gerçekten, oldukça, önemli bir adım.* → ✓ *Bu proje gerçekten önemli bir adım.*
+(Gerçek ara söz, hitap, uzun yan cümle virgülü doğrudur — onları silme.)
+
+### 12.9 Doldurucu zarflar — **liste değil, tayf**
+Ban list yapma; işlevine bak.
+| Kelime | Durum |
+|---|---|
+| **aslında / esasında / temelde** | En güçlü tik ("actually/basically" kalkı). Karşıtlık yapmıyorsa **sil**. |
+| **artık** | **Doldurucu DEĞİL** — gerçek anlamı var (bundan sonra / bir daha). Dokunma. |
+| **tam olarak / kesinlikle** | Karşıtlık/pekiştirme yapıyorsa meşru; refleks ise sil. |
+| **adeta / resmen / bir nevi** | Klişeleşince iz; gerçek benzetme/yaklaştırma ise meşru. |
+
+### 12.10 Klişe açılışlar ve çift yaklaştırma
+✗ *Bilindiği üzere…* · *Şüphesiz ki…* → sil.
+✗ *yaklaşık olarak 100 civarında kişi* → ✓ *yaklaşık 100 kişi* **ya da** *100 civarında kişi* — birini seç.
+
+### 12.11 Plaza dili
+*deadline* → teslim tarihi · *assign etmek* → atamak · *attach etmek* → eklemek · *update etmek* →
+güncellemek · *focuslanmak* → odaklanmak · *aksiyon almak* → harekete geçmek.
+
+## 13. Aşırı düzeltme yasağı — iyi Türkçeyi bozma {#13-asiri-duzeltme}
+
+Bu skill **kuralcı bir dil polisi değildir.** Necmiye Alpay'ın uyarısı yerinde: doğruluğu "arılık/
+temizlik" fetvasına çevirmek dili fakirleştirir. Amaç, metnin işini yapması.
+
+**Asla düzeltme:**
+- **Gerçek ikileme** — *kılık kıyafet, sağ salim, akıl fikir, mal mülk*. Bunlar Türkçenin öz anlatım
+  aracıdır. Sadece **bürokratik yakın-eşanlamlı ikiliyi** hedefle: ✗ *hukuki ve yasal* → ✓ *hukuka
+  uygun*; ✗ *amaç ve gaye*, *açık ve net*. (*usul ve esaslar* hukukta **terimdir** — dokunma.)
+- **Hata/durum mesajlarında edilgen** — *silinemiyor, gönderilemedi, bulunamıyor* **doğrudur** ve
+  kullanıcıyı suçlamamak için bilinçlidir (bkz. `registers.md`). Burada edilgeni iz sayma.
+- **Meşru `-maktadır`** resmî yazışmada (mevzuatın kendisi bunu şart koşar), ansiklopedide, hukukta.
+- **Terim olan adlaştırmalar** (`terminology.md`) ve **yerleşik alıntılar**.
+- **Tek örnek.** Küme ara: yığılma iz, tekil kullanım değil.
