@@ -14,14 +14,35 @@ Almost every fix below is one of these. Internalize them and most rewrites becom
    not heavy sentence-initial connectors.
 3. **Her kelime hakkını versin** — cut any word whose meaning is already carried by a neighbor, a
    suffix, or the verb.
-4. **Fiil ekine güven, zamiri düşür** — Turkish is pro-drop; the verb already marks person, so drop
-   `ben/sen/o/biz` unless you need contrast.
+4. **Özneyi düşür — ama zorunlu nesneyi düşürme.** Turkish is pro-drop for *subjects*: the verb marks
+   person, so drop `ben/sen/o/biz` unless you need contrast. It is **not** object-drop. See the
+   counter-rule below — this is the one place this skill's own advice, over-applied, produces errors.
+5. **Doğallaştırmak ≠ İngilizceye benzetmek.** Where Turkish merges what English splits (*tık* =
+   tap/knock *and* tick; *halka* = loop *and* ring), the merge is a resource — don't manufacture a
+   distinction Turkish doesn't make. See `collocations.md`.
 
 Turkish is agglutinative and pro-drop: suffixes already encode person, tense, and much of the
 connective logic English needs separate words for. The single thing that most makes Turkish read as
 translated is **over-explicitness** — saying with a separate word (a connector, a pronoun,
 "bir şekilde," "sahip olmak," a light verb) what the language already says through a suffix. The
 most reliable rewrite is usually **deletion**.
+
+> ### ⚠ Karşı kural: nesneyi düşürme
+>
+> "Zamiri düşür" fazla genellenince cümle havada kalır. Türkçe **özneyi** düşürebilir — çünkü fiil
+> kişiyi taşır. Ama **fiilin zorunlu nesnesini/tümlecini** düşüremez: fiilde nesne uyumu **yoktur**,
+> yani düşen nesneyi geri getirecek hiçbir şey kalmaz.
+>
+> - ✗ *Yatağa göndereli, ışıkları söndüreli çok oldu.* → **kimi** yatağa gönderdi? Cümle çöküyor.
+>   ✓ *Seni yatağa gönderip ışıkları söndüreli çok oldu.*
+> - Aynı sınıf: göndergesi kurulmamış bir özneyle devam etmek (*"…sekizde durdu"* — kim/ne durdu?).
+>
+> **Sınama:** cümleyi bağlamsız, tek başına oku ve sor: **kim? kimi? neyi? kime?** Cevap bir önceki
+> cümleden net çıkmıyorsa nesneyi/göndergeyi geri yaz. Nesneyi ancak gönderge gerçekten diriyse düşür.
+>
+> **Ulaç zinciri kuralı:** `-ip / -erek / -ince / -eli` ana cümleyle **aynı özneyi** paylaşır. Özne
+> değişiyorsa bu ekleri kullanma, cümleyi böl. Çatı da uyuşmalı: ✗ *yola çıkılıp köye ulaştık* →
+> ✓ *yola çıkıp köye ulaştık.*
 
 ## 1. Word order and focus (vurgu)
 
@@ -58,12 +79,17 @@ English translation.
 - ✗ *Projenin zamanında tamamlanmasının sağlanması için ekstra personel görevlendirilmesi
   gerekmektedir.* → ✓ *Projeyi zamanında tamamlamak için ekstra personel görevlendirmek gerekiyor.*
 
-**Important caveat (do not overcorrect).** Turkish's normal formal/academic register is *natively*
-more nominal than English's. So the goal is **not** "verbs instead of all nominalizations" — that
-would make Turkish sound *more* foreign. The target is only the *puffed-up bureaucratic* form when a
-plain one exists: unwind the crutch-verb-plus-abstract-noun shell (`değerlendirme yapmak` →
-`değerlendirmek`), but leave legitimate nominal phrasing alone (*"Okumanın faydaları saymakla
-bitmez"* is perfect Turkish). See `ai-tells.md` §3.
+> ### ⚠ Fazla düzeltme uyarısı — bu refleks metni bozar
+>
+> Türkçenin resmî/akademik register'ı **doğası gereği** İngilizceden daha adcıldır. Hedef "bütün
+> adlaştırmaları fiile çevirmek" **değildir** — öyle yaparsan metin *daha* yabancı durur. Hedef
+> yalnızca **şişirilmiş kalıp-fiil kabuğudur**: `değerlendirme yapmak` → `değerlendirmek`. Meşru
+> adcıl kuruluşa dokunma (*"Okumanın faydaları saymakla bitmez"* kusursuz Türkçedir).
+>
+> **Ve en önemlisi: terim olan adlaştırmalar dokunulmazdır.** Teknik metinde bazı adlaştırmalar
+> *terimdir*, üslup değildir: **kesme** (interrupt), **kaydırma** (shift), **toplama**, **adresleme**,
+> **yazmaç**. Bunları "fiilleştirmek" terimi yok eder. Terim defteri varsa o bağlayıcıdır
+> (`terminology.md`). Bkz. `ai-tells.md` §3.
 
 ## 3. Connect with suffixes, not signpost words
 
@@ -121,14 +147,20 @@ essay) and rewrite consistently toward it.
 
 ## 6. Collocations and idiom (kulağa doğru gelmek)
 
-A grammatical sentence can still be "off" if the pairing isn't the one natives use. When a rewrite is
-correct but sounds wrong, check the collocation:
+A grammatical sentence can still be "off" if the pairing isn't the one natives use. **This is the
+largest single source of residual error — grammar-correct, pairing-wrong — and it has its own file:
+see `collocations.md` (fiil değerliği, ışık fiil seçimi, EN→TR fiil bölünmeleri, kendini sınama).**
 
-- ✓ *karar almak* (not *karar yapmak*), *önem taşımak / arz etmek* (not *önem tutmak*),
-  *dikkat çekmek* (not *dikkat almak*).
+The short version:
+- The noun chooses its verb: ✓ *karar vermek/almak* (not *karar yapmak*), *ses çıkarmak* (not *ses
+  etmek* — that means "to speak"), *dikkat çekmek* (not *dikkat almak*).
+- The verb governs a case: ✓ *sana güveniyorum* (not *seni güveniyorum*), *toplantıya katıldı* (not
+  *toplantıyı katıldı*).
 - Idiom (deyim) is a fluency signal, not decoration: a flat, idiom-free rewrite of originally
   colorful text often reads as flattened/translated even when every sentence is correct. Keep the
   color where the register invites it — but don't manufacture idioms that weren't there.
+- **Tanık bulamıyorsan icat etme.** If you cannot attest a pairing in real Turkish, you invented it;
+  choose a plainer verb you can attest.
 
 ## 7. Vowel harmony and native feel
 
