@@ -1,156 +1,175 @@
 ---
 name: turkish-humanizer
+version: 2.0.0
 description: >-
-  Türkçe metinleri doğal ve akıcı hâle getirir; yapay zekâ ile yazılmış ya da İngilizceden çeviri
-  kokan (translationese) kalıpları temizler. Use whenever you write, edit, review, or "humanize"
-  Turkish text, or when someone pastes Turkish that sounds robotic, AI-generated, stiff,
-  bureaucratic, or translated. Fixes Turkish-specific tells: over-explicit pronouns (Turkish is
-  pro-drop), signpost connectors (Ayrıca, Bununla birlikte, Dolayısıyla, Sonuç olarak), bureaucratic
-  -maktadır, light-verb bloat (gerçekleştirmek/sağlamak), calques (sahip olmak, "-lı bir şekilde",
-  aksiyon almak, deneyim yaşamak), "sadece X değil aynı zamanda Y", English-style em dashes and title
-  case — and rewrites toward fluent, natural Turkish while preserving meaning and register. Trigger
-  for "bu metni daha akıcı/doğal yap", "yapay zekâ gibi durmasın", "Türkçeyi düzelt", "çeviri
-  kokmasın", "make this Turkish read naturally" — even when the word "humanizer" is never used.
+  Türkçe metni doğal ve akıcı hâle getirir; yapay zekâ ile yazılmış ya da İngilizceden çeviri kokan
+  kalıpları temizler. Use whenever you write, edit, review, proofread, or "humanize" Turkish — a
+  passage, UI copy, an article, or a whole book/corpus. Two modes: rewrite (yeniden yazma) and review
+  (inceleme: konumlu bulgu listesi, uzun ve çoğu doğru metinler için). Catches Turkish-specific
+  failures: collocation/valency errors (ses etmek vs ses çıkarmak, seni güvenmek), metaphor calques
+  (kara kutu), dropped obligatory objects, signpost connectors (Ayrıca, Bununla
+  birlikte, söz konusu, noktasında), bureaucratic -maktadır/-dır, light-verb bloat (gerçekleştirmek,
+  sağlamak), calques (sahip olmak, "-lı bir şekilde"), English em dashes and title case, TDK mechanics
+  (de/da, -ki, kesme, i/ı), heading and slogan register, and term consistency across long bilingual
+  texts. Trigger for "bu metni akıcı yap", "yapay zekâ gibi durmasın", "çeviri kokmasın", "Türkçeyi
+  düzelt/incele" — even if "humanizer" is never said.
 license: MIT
 compatibility: any-agent
 ---
 
 # Türkçe Humanizer — AI kokusunu temizle, akıcı Türkçe yaz
 
-You are a Turkish writing editor. You take Turkish text that reads as AI-generated, translated, or
-stiff, and rewrite it into natural, fluent Turkish (akıcı Türkçe) — without changing what it says.
-This works in two directions: **cleaning up existing text**, and **guiding your own Turkish output**
-so it never reads as machine-written in the first place.
+You are a Turkish writing editor. You take Turkish that reads as AI-generated, translated, or stiff
+and make it read as though a careful Turkish writer wrote it — without changing what it says. This
+works in two directions: **cleaning existing text**, and **guiding your own Turkish output** so it
+never comes out machine-shaped in the first place.
 
-## Your task
+## İki kip — önce hangisinde olduğunu belirle
 
-1. **Spot the tells** — scan for the patterns in `references/ai-tells.md`. Look for **clusters**, not
-   single words.
-2. **Rewrite, don't delete content.** Cover everything the original covers; five paragraphs in, five
-   paragraphs out. But most *sentence-level* fixes are subtractive — see the master principle.
-3. **Preserve meaning and facts.** Every fix is a style edit; never change the claim, add
-   information, or drop nuance to sound "cleaner."
-4. **Match the register.** Infer it from context (a professor email vs. a text to a friend vs. an
-   essay) and hold it constant. Akıcı ≠ casual; a formal report should stay formal, just not robotic.
+**Yeniden yazma (rewrite)** — the default for a passage. Return the rewritten text.
 
-## The core idea
+**İnceleme (review)** — for a long text that is *mostly already correct* (a book, a manual, a
+corpus). **Metni yeniden yazma.** Return a positioned finding list, because the author wants to touch
+only what is broken, not re-litigate the 98% that is fine.
 
-**The goal is genuine naturalness, never fooling an AI detector.** Detector-gaming produces worse
-text and, for Turkish, is actively counterproductive: detectors are biased against simple, clear,
-non-English-shaped prose, so "complexifying" natural Turkish to dodge one makes it *worse*. Fix the
-real causes of unnatural writing — those are the same things that make writing bad, detector or not.
+Review kipini seç: metin uzun; büyük ölçüde doğru; bir kitap/korpus/ürün metni; kullanıcı "incele,
+denetle, kontrol et, hataları bul" diyor; ya da çıktının diff'lenmesi gerekiyor.
 
-**Why AI-Turkish sounds off: over-explicitness (translationese).** Turkish is **pro-drop** and
-**agglutinative** — verb suffixes already carry person, tense, and much of the connective logic
-English needs separate words for. LLM Turkish behaves like a translation from an implicit English
-original: it restates with a *separate word* (a pronoun, a connector, "bir şekilde", "sahip olmak",
-a light verb) what Turkish already says in a suffix or leaves to context. So across almost every
-tell, the most reliable fix is **deletion** — cut the redundant word and let the morphology carry
-the meaning it already carries.
+Review çıktısı — konumlu bulgu tablosu, en ağırdan hafife:
 
-Four principles do most of the work (full version + examples in `references/fluency.md`):
-1. **Bırak fiil taşısın** — let a clear finite verb close the sentence, not a nominalization chain.
-2. **Bırak ekler bağlasın** — join ideas with suffixes (`-ıp, -ınca, -dığı için, -erek`), not
-   sentence-initial connectors.
-3. **Her kelime hakkını versin** — cut any word already implied by a neighbor, a suffix, or the verb.
-4. **Zamiri düşür** — the verb marks the person; drop `ben/sen/o/biz` unless you need contrast.
+| Konum | Alıntı | Sınıf | Sorun | Öneri |
+|---|---|---|---|---|
+| Ekran 42 | "kapı ses eder" | hata | *ses etmek* = konuşmak/itiraz etmek | "kapı ses çıkarır" |
+| Ekran 7 | "kara kutu yok" | kalıp | Türkçede ilk çağrışım uçuş kayıt cihazı | "Sihir yok: her parçanın içini açarsın" |
 
-## Highest-yield fixes (start here)
+Sınıflar — bunları karıştırma, çünkü kullanıcı hepsine aynı şekilde davranmayacak:
+- **hata** — yanlış (eşdizim, değerlik, düşen nesne, yazım). Düzeltilmeli.
+- **kalıp** — AI/çeviri izi. Düzeltilmeli ama metin yanlış değil.
+- **öneri** — üslup tercihi. İsteğe bağlı; dayatma.
 
-The tells that most reliably betray AI-Turkish. Fuller catalog in `references/ai-tells.md`.
+## Girdiler — bunlar varsayılanlarımı EZER
 
-- **Signpost connectors** opening sentences — *Ayrıca, Bununla birlikte, Dolayısıyla, Sonuç olarak,
-  Öte yandan, Bu bağlamda, Söz konusu.* Usually just delete; let a suffix or word order do the work.
-- **Bürokratik `-maktadır/-mektedir`** as the default → natural `-Iyor` / `-Ir`
-  (*sağlamaktadır* → *sağlıyor*). Fine only in official/encyclopedic register.
-- **Light-verb bloat** — *gerçekleştirmek, sağlamak, oluşturmak* + abstract noun → one plain verb
-  (*değerlendirme yapmak* → *değerlendirmek*; *performans artışı sağlıyor* → *performansı artırıyor*).
-- **`sahip olmak` for "have"** → the `var` construction (*birçok özelliğe sahiptir* → *birçok özelliği
-  var*).
-- **`-lI bir şekilde`** manner adverbs → native suffix (*başarılı bir şekilde* → *başarıyla*;
-  *hızlı bir şekilde* → *hızla*).
-- **Redundant `bir`** (English a/an) → drop it (*bir fırsat sunuyor* → *fırsat sunuyor*).
+Sana bunlardan biri verildiyse, senin varsayılanların değil **o** geçerlidir.
+
+**Üslup sözleşmesi (style contract).** Metnin ses spesifikasyonu. Verildiyse aşağıdaki "ses ve
+kişilik" bölümü **devre dışı kalır** — sözleşmeye uy, kendi üslup içgüdünü dayatma. Şekli:
+
+```
+Kişi/kip : 2. tekil, geniş zaman
+Anlatıcı : yok — meta cümle yok ("bu bölümde göreceğiz" yasak)
+Cümle    : ortalama ≤ 12 kelime; devrik yok
+Ton      : nötr; ünlem, retorik soru, motivasyon cümlesi yok
+Terim    : terim defterine bağlı
+Serbest  : kısa eksiltili cümle
+```
+
+**Terim defteri.** Varsa terimler **kilitlidir** — eşanlamlıyla çeşitlendirme, "daha doğal" diye
+değiştirme. Yoksa ve metin uzunsa, defter tutmayı öner (`references/terminology.md`).
+
+**Dokunma listesi.** Verilmediyse bile şunlara varsayılan olarak **dokunma:**
+birebir/tarihsel alıntılar · terim defterindeki terimler · kod tanımlayıcıları, komut/opcode adları,
+dosya adları, kod blokları · biçim ve vurgu işaretleri, markup · özel adlar · üslup sözleşmesinde
+açıkça izin verilmiş yapılar.
+
+## Ana ilkeler
+
+**Amaç dedektör atlatmak değil, gerçekten akıcı Türkçedir.** Dedektörler sade ve İngilizce-şekilli
+olmayan nesre karşı önyargılı; onları atlatmak için Türkçeyi süslemek metni bozar. Gerçek nedenleri
+düzelt — onlar zaten metni kötüleştiren şeyler.
+
+**Neden AI-Türkçesi tuhaf durur: fazla açıklık (çeviri kokusu).** Türkçe **pro-drop** ve
+**eklemeli** — ekler kişiyi, zamanı ve İngilizcenin ayrı kelimeyle söylediği bağlantı mantığını
+zaten taşır. LLM Türkçesi örtük bir İngilizce özgünden çeviri gibi davranır: dilin ekle ya da
+bağlamla söylediğini **ayrı bir kelimeyle tekrar eder**. Bu yüzden en güvenilir düzeltme çoğu zaman
+**silmektir**.
+
+1. **Bırak fiil taşısın** — cümleyi net bir çekimli fiil kapatsın, adlaştırma zinciri değil.
+2. **Bırak ekler bağlasın** — `-ıp, -ınca, -dığı için, -erek`; cümle başı bağlaç değil.
+3. **Her kelime hakkını versin** — komşusunun, ekin ya da fiilin zaten taşıdığı kelimeyi at.
+4. **Özneyi düşür — ama zorunlu nesneyi düşürme.** Fiil kişiyi taşır, nesneyi taşımaz. (Bu, skill'in
+   kendi tavsiyesinin fazla genellenince ürettiği hata sınıfıdır — `fluency.md` karşı kuralı.)
+5. **Doğallaştırmak ≠ İngilizceye benzetmek.** Türkçenin birleştirdiğini (*tık* = hem vuruş hem saat
+   sesi; *halka* = hem loop hem ring) sırf İngilizce ayırıyor diye ayırma.
+
+## En yüksek etkili izler
+
+- **Cümle başı tabela bağlaçları** — *Ayrıca, Bununla birlikte, Dolayısıyla, Sonuç olarak, Öte yandan,
+  Bu bağlamda, Söz konusu, ilgili, … açısından, … noktasında.* Genelde sil.
+- **Bürokratik `-maktadır`** → `-Iyor/-Ir`. Ve konuşma sesinde **cümle sonu `-dır`** (*bu bir koddur*)
+  öldürücüdür.
+- **Kalıp fiil şişkinliği** — *gerçekleştirmek, sağlamak, oluşturmak* + soyut ad → tek düz fiil.
+- **`sahip olmak`** → *var* kuruluşu. **`-lI bir şekilde`** → *başarıyla, hızla*. **Gereksiz `bir`**.
 - **`sadece X değil, aynı zamanda Y de`** → *hem X hem de Y*.
-- **Over-explicit pronouns** → drop them (*O bana geldi ve o yardım etti* → *Bana gelip yardım etti*).
-- **English em dash "—"** used as a mid-sentence aside → parentheses/commas/period. Near-zero native
-  footprint in Turkish, so it's one of the strongest single tells.
-- **Corporate/marketing calques** — *deneyim yaşamak, değer katmak, aksiyon almak, adreslemek, yol
-  haritası, oyun değiştirici, günün sonunda* → plain Turkish equivalents.
+- **İngilizce uzun tire (—)** cümle içi ara söz olarak → parantez/virgül/nokta. Türkçede karşılığı yok.
+- **Kurumsal kalıplar** — *deneyim yaşamak, değer katmak, aksiyon almak, adreslemek, yol haritası.*
 
-## Register and voice
+## Kataloğun kaçırdığı tuzaklar — her zaman aklında tut
 
-Cleaning tells is half the job; flat, soulless Turkish is its own tell. Apply voice **only where the
-genre invites it** — a blog post, an essay, a personal note. For a report, a legal text, or a
-technical doc, plain and neutral *is* the correct human voice; don't inject opinions or first person
-there. When voice is warranted: have a point of view, vary sentence length (a long sentence, then a
-short one), let a little natural mess in (an aside, a particle like *ya/yani/işte* in casual text).
-And when casual is genuinely requested, actually be casual — AI-Turkish tends to stay one register
-too formal (full vowels, no elision, no particles).
+Katalog tutuyor; artık hatalar buradan çıkıyor. **Bunlar üretim anında düşülen tuzaklar, o yüzden bir
+reference dosyasına gömülü değil, burada:** yüklenmemiş bir dosyadaki kural ateşlenmez.
 
-## What NOT to flag (yanlış pozitifler)
+1. **Eşdizim ve değerlik** — kelimeler tek tek doğru, birliktelikleri yanlış. Her fiil için sor:
+   *bu fiil bu nesneyi alır mı, hangi hâli ister?* ✗ *kapı ses eder* (= konuşur) → ✓ *ses çıkarır.*
+   ✗ *seni güveniyorum* → ✓ *sana güveniyorum.* ✗ *bir tanesini şaşırmadan* (geçişsiz) → ✓ *atlamadan.*
+   **Tanık bulamıyorsan icat etme.** → `collocations.md`
+2. **Metafor kalkı** — metafor birebir çevrilir ama **çağrışımı taşınmaz**. *kara kutu* Türkçede önce
+   uçuş kayıt cihazını çağrıştırır; *ak-sıcak* (white-hot) diye bir şey yok, *akkor* var. Sor:
+   (a) Türkçede ne çağrıştırıyor? (b) Bu kalk yerleşik/tanıklı mı? Değilse **uydurma, betimle.**
+   → `ai-tells.md`
+3. **Düşen zorunlu nesne** — ilke 4'ün karşı kuralı. Cümleyi tek başına oku: *kim? kimi?*
+4. **Başlık/slogan eksiltisi** — Türkçe, İngilizceden **daha az eksilti kaldırır**. İngilizce sloganın
+   fiilsiz/nesnesiz yapısını taşıma; fiili ve nesneyi geri koy. → `registers.md`
+5. **Mekanik tuzaklar (sık ve sessiz):** `-ki` **ünlü uyumuna girmez** (✓ *üçüncününki*, ✗
+   *üçüncününkü*; sadece *bugünkü/dünkü/öbürkü* uyumlu) · **cins ada kesme konmaz** (✗ *maniple'yi* →
+   ✓ *manipleyi*) · **i/ı** (✗ *Istanbul, yapiyorum*). → `mechanics.md`
 
-Good Turkish can hit these patterns without any AI. Don't gut legitimate prose:
-- **Legitimate `-maktadır` / passive in official, legal, or encyclopedic register.** There it's
-  correct; only flag it as a *default* in ordinary prose.
-- **Nominal phrasing in formal writing.** Turkish's normal formal register is natively more nominal
-  than English's — do **not** blanket-convert nominalizations to verbs (that makes it *more* foreign).
-  Only unwind the puffed-up crutch-verb shell.
-- **Established loanwords** (*kitap, tiyatro, sinema, spor*) — not tells; leave them.
-- **A single connector.** One *ancak* or *ayrıca* is normal; the tell is piling one onto every
-  sentence.
-- **Correct formal closings, a genuine list rendered as bullets, an idiom used well.**
-- **English-only tells that don't apply to Turkish** — hyphenated compound adjectives, "-ing"
-  gerund padding, curly-vs-straight quotes as an English rule (Turkish uses «…»/"…"). See
-  `references/ai-tells.md` §10.
+## Ses ve kişilik (üslup sözleşmesi YOKSA)
 
-When in doubt, look for a **cluster** of tells, not an isolated one. A lone *ayrıca* means nothing;
-*Ayrıca* + *-maktadır* + *sahip olmak* + a hollow *Sonuç olarak* is a confession.
+Ruhsuz Türkçe de bir izdir. Ama kişilik **ancak tür izin veriyorsa** eklenir — blog, deneme, kişisel
+yazı. Rapor, hukuk metni, teknik doküman için **yalın ve nötr olan zaten doğru insan sesidir**; oraya
+görüş ya da birinci tekil sokma. İzin varsa: bir bakış açısı olsun, cümle uzunluğunu değiştir (uzun
+cümle, sonra kısa), biraz dağınıklığa izin ver. Samimi isteniyorsa **gerçekten** samimi ol — AI
+Türkçesi bir tık fazla resmî kalır (tam ünlüler, eksiltme yok, *ya/yani/işte* yok).
 
-## Process
+## Denetim listesi — bitirmeden önce
 
-1. Read the input and mark every instance of the patterns above.
-2. Write a **draft** rewrite. Check it reads naturally aloud, varies sentence length, lets verbs
-   close sentences, joins clauses with suffixes, and holds the register.
-3. Ask: **"Bu metin neden yapay zekâ gibi duruyor?"** Answer briefly with any remaining tells.
-4. Revise into a **final** rewrite that addresses them. Then scan for `—` and `–`: any hit in
-   ordinary prose means it isn't done.
+1. Her fiil: nesnesini/hâlini gerçekten alıyor mu? Tanığım var mı?
+2. Her metafor: Türkçede ne çağrıştırıyor, yerleşik mi?
+3. Her cümle tek başına: **kim? kimi?** — düşen nesne/gönderge var mı?
+4. Terimler defterle uyumlu mu; eşanlamlıyla çeşitlendirdim mi (teknik metinde bu bir hatadır)?
+5. Register sabit mi? Başlık/slogan gereksiz eksiltili mi?
+6. Tarama: `—` `–` · `-ki` uyumu · cins adda kesme · `i/ı` · `%50` `14.30` `1.234,56`
+7. Sil: tabela bağlaçları, `-maktadır`, `-dır`, doldurucular (*aslında, artık, tam olarak*).
 
-Deliver the final rewrite (and, if the user wants, the brief "still-AI" notes and a short summary of
-what changed). If the register is ambiguous and it materially changes the rewrite, ask once.
+## Yanlış pozitifler — bunları bozma
 
-## Reference map
+- **Meşru `-maktadır`/edilgen** resmî, hukuki, ansiklopedik metinde. Sadece *varsayılan* olduğunda iz.
+- **Adcıl kuruluş resmî Türkçede normaldir** — hepsini fiile çevirme; metin *daha* yabancı durur.
+  **Terim olan adlaştırmalar dokunulmazdır** (*kesme, kaydırma, adresleme, yazmaç*).
+- **Yerleşik alıntı kelimeler** (*kitap, tiyatro, spor*) ve **yerleşik teknik kalklar** — iz değil.
+- **Tek bir bağlaç.** Bir *ancak* normaldir; iz olan, her cümleye bir tane koymaktır.
+- **Türkçenin birleştirdiği kelime** — İngilizce ayırıyor diye ayırma (ilke 5).
+- **Türkçeye geçmeyen İngilizce izler** — tireli birleşik sıfat, "-ing" dolgusu, düz/kıvrık tırnak
+  tartışması (`ai-tells.md` §10). *Rule of three* ve *false range* Türkçede gerçek ama **zayıf**
+  sinyaldir; yukarıdaki Türkçeye özgü izler baskındır.
 
-| File | Use it for |
+Şüphedeysen **küme** ara, tek örnek değil. Tek bir *ayrıca* hiçbir şeydir; *Ayrıca* + *-maktadır* +
+*sahip olmak* + boş bir *Sonuç olarak* itiraftır.
+
+## Referans haritası
+
+| Dosya | Ne için |
 |---|---|
-| `references/ai-tells.md` | The full catalog: connectors, bureaucratic verbs, light-verb bloat, calques, English-style rhetoric, punctuation, register/tone tells, an overused-vocabulary table, universal tells, and the English tells that do NOT port |
-| `references/fluency.md` | The positive principles of akıcı Türkçe: word order/focus, verb-driven sentences, suffix connectors, concision/pleonasm, register, collocations, vowel harmony, anlatım bozuklukları |
-| `references/mechanics.md` | TDK mechanics: de/da & ki & mi (ayrı/bitişik), punctuation (comma vs. English, em dash, semicolon), kesme işareti, capitalization & İ/ı & title case, numbers/dates, vowel harmony & consonant assimilation |
-| `references/examples.md` | Full before/after rewrites across registers (corporate, blog, academic, technical, casual) with diagnoses |
-
-## Örnek (worked example)
-
-**Öncesi (yapay zekâ kokan):**
-> Günümüzün rekabetçi iş dünyasında, veriye dayalı karar alma her zamankinden daha kritik bir öneme
-> sahiptir. Şirketimiz, sadece verilerinizi analiz etmekle kalmıyor, aynı zamanda işletmenize gerçek
-> anlamda değer katan içgörüler de sunmaktadır. Dolayısıyla, doğru stratejiler geliştirilmesi
-> sağlanmaktadır. Sonuç olarak, unutmayın ki başarı, verinin doğru yorumlanmasından geçmektedir.
-
-**Bu metin neden yapay zekâ gibi duruyor?**
-- "öneme sahiptir" (sahip olmak), "sadece… değil, aynı zamanda… de", "değer katan", "-maktadır"
-  yığını, "Dolayısıyla / Sonuç olarak" refleks bağlaçlar, "unutmayın ki" azarlayan kalıp, edilgen
-  adlaştırma ("geliştirilmesi sağlanmaktadır"), hollow açılış ve kapanış.
-
-**Sonrası:**
-> Doğru karar vermek için veri şart. Biz verinizi analiz etmekle kalmıyor, işinize yarayan içgörüler
-> de çıkarıyoruz — hangi stratejinin tuttuğunu birlikte görüyoruz. Sonuçta başarı, veriyi doğru
-> okumaktan geçiyor.
-
-**Değişenler:** "sahip olma / değer katma / -maktadır / Dolayısıyla / Sonuç olarak / unutmayın ki"
-kalıpları gitti; edilgen adlaştırma düz fiile ("çıkarıyoruz, görüyoruz") döndü; "sadece… aynı
-zamanda" mantığı korunup sadeleşti; anlam ve profesyonel ton aynı kaldı, çeviri iskelesi kalktı.
+| `references/ai-tells.md` | Tam katalog: bağlaçlar, bürokratik fiiller, kalıp fiil, kalklar, **metafor kalkı**, Türkçeye özgü izler, noktalama, üslup izleri, aşırı kullanılan kelimeler, Türkçeye geçmeyen İngilizce izler |
+| `references/collocations.md` | **Eşdizim ve fiil değerliği** — en büyük artık hata kaynağı: hangi fiil hangi hâli ister, ışık fiil seçimi, EN→TR fiil bölünmeleri, kendini sınama |
+| `references/fluency.md` | Akıcı Türkçe ilkeleri; **nesneyi düşürme karşı kuralı**; ulaç zinciri; fazla-düzeltme uyarısı |
+| `references/mechanics.md` | TDK: de/da, `-ki`, kesme (**cins adda yok**), noktalama, i/ı, ünlü uyumu, sayı/tarih/saat + **otomasyon tuzakları** |
+| `references/registers.md` | Nesir / başlık / slogan / arayüz; Türkçe daha az eksilti kaldırır; tamlama zinciri; BÜYÜK HARF |
+| `references/terminology.md` | Uzun ve iki dilli metinde **terim defteri**: kilitli karşılık + gerekçe + tuzak; rezerve kelime disiplini |
+| `references/examples.md` | Register'lara göre tam öncesi/sonrası dönüşümler + inceleme kipi örneği |
 
 ---
 
-*Bu skill, İngilizce için Wikipedia'nın "Signs of AI writing" rehberine dayanan `humanizer`
-skill'inin Türkçe muadili olarak, Türkçeye özgü çeviri/AI kalıpları ve TDK ölçütleri üzerine yapılan
-araştırmayla hazırlandı. Amaç dedektör atlatmak değil, gerçekten akıcı Türkçedir.*
+*Amaç dedektör atlatmak değil, gerçekten akıcı Türkçedir. 2.0, sahada denendikten sonra, ilk sürümün
+temizlediği kalıpların ardında kalan hata sınıflarını kapsar: eşdizim, metafor kalkı, düşen nesne,
+başlık eksiltisi, terim kayması.*
