@@ -82,6 +82,13 @@ Yapı: **ne oldu → (gerekiyorsa) neden → ne yapmalı.**
 > bilinçlidir** (*silinemiyor, gönderilemedi*) — kullanıcıyı suçlamamak için. Burada edilgeni AI izi
 > sayma (bkz. `ai-tells.md` §13).
 
+### 5.2b Durum etiketi İngilizcesi — "ready-to" kalkı
+Arayüz durum/rozet etiketleri İngilizceden birebir sızar. Sözcükleri değil, **ekranda ne demek
+istediğini** Türkçeye taşı.
+- ✗ *Okumaya hazır:* (Ready to read) → ✓ *Bugün:* / *Başla* · ✗ *Devam ediyor* (In progress) →
+  ✓ *Sürüyor* · ✗ *Tamamlandı olarak işaretle* → ✓ *Tamamlandı.*
+- Bu sınıf arayüzde sık: kısa etiket, İngilizce kalıbı taşıyıp Türkçede tuhaf duruyor.
+
 ### 5.3 Onay kutusu
 Sonucu olan eylemde **fiili düğmeye yaz**: ✓ *Sil / Vazgeç*, *Kaldır / İptal*. *Evet / Hayır* yalnız
 gerçekten düşük riskli ikili sorularda. Gövde tam soru sorar: *"…kaldırmak istediğinize emin misiniz?"*
