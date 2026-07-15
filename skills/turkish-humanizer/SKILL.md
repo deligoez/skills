@@ -127,6 +127,19 @@ reference dosyasına gömülü değil, burada:** yüklenmemiş bir dosyadaki kur
    *üçüncününkü*) · **cins ada kesme konmaz** (✗ *maniple'yi* → ✓ *manipleyi*) · **i/ı** (✗ *Istanbul,
    yapiyorum*) · **şapka** (*hâlâ ≠ hala*, *kâğıt*) · **yazıyla sayı** (rakam paritesi görmez —
    kaynakla karşılaştır). → `mechanics.md`
+6. **Bağlam nakli** — metnin İÇİNDE meşru olan ifade, bağlamsız kopyaya (slogan, kredo, özet)
+   taşınınca kalıba döner. Sahada: *"Kapağı kaldır."* sahne içinde doğru (ortada gerçek bir kutu
+   kapağı var); kapak kredosuna *"her parçanın kapağını kaldırırsın"* diye taşınınca kimsenin
+   kurmadığı bir cümle oldu (doğrusu: *açıp bakarsın*). Alıntıyı taşımadan önce sor: **bu ifadeyi
+   ayakta tutan sahne burada var mı?**
+7. **Sarkık özne** — özne belirtilmemiş üçüncü kişi, ulaçla "sen"e iliştirilince kim yaptı
+   belirsizleşir: ✗ *"Seni yatağa gönderip ışıkları söndüreli çok oldu"* (kim gönderdi? ışığı kim
+   söndürdü?). Çözüm çoğu kez edilgen/geçişsiz: ✓ *"Yatağa gönderileli, ışıklar söneli çok oldu."*
+   İpucu: metnin İngilizce karşılığı varsa çoğu zaman doğru çözümü zaten bilir (*You were sent to
+   bed and the lights went out*).
+8. **Durum etiketi kalkı (Ready-to)** — arayüz/etiket metninde İngilizce durum kalıbı: ✗ *"Okumaya
+   hazır: 44 bölüm"* (*Ready to read:*) → ✓ *"Bugün: 44 bölüm"*. Etiketi Türkçe kurarken sor:
+   bir insan bu rafın üstüne ne yazardı?
 
 ## Ses ve kişilik (üslup sözleşmesi YOKSA)
 
