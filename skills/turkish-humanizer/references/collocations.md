@@ -73,6 +73,24 @@ audible.
 - **yol açmak / neden olmak** for a *negative or neutral* result; **sağlamak** implies a *positive*
   one: ✗ *tembelliğim geç kalmamı sağladı* → ✓ *…geç kalmama neden oldu.*
 
+### 2b. Çağrışım çakışması — deyim, düz anlamı ezer
+
+A verb-object pair can be grammatical yet collide with an **established idiom** — the reader hears the
+idiom, not what you meant.
+- ✗ *her parçanın **içini açarsın*** → *içini açmak* = **dertleşmek / içini dökmek.** Doğrusu:
+  *her parçayı **açıp bakarsın*** / *içine bakarsın.*
+- Test: yazdığın ikiliyi tek başına söyle — aklına önce bir **deyim** mi geliyor? Geliyorsa başka fiil
+  seç.
+
+### 2c. Kültürel kulak — doğallık bağlama bağlıdır
+
+A sentence can be grammatical *and* idiom-clean and still be something **no one says in that context.**
+- ✗ (soyut anlatımda) *her parçanın kapağını kaldırırsın* — Türkçede bu bağlamda sırıtır →
+  *açıp bakarsın.*
+- **Ama** aynı ifade **somut bir sahnede** meşrudur: ortada gerçek bir kutu varsa *"Kapağı kaldır."*
+  doğrudur. Bağlamsız genelleme sırıtır; cümleyi **geçtiği yerde** değerlendir. (İnceleme kipinde bu
+  **öneri** sınıfıdır, otomatik düzeltme değil.)
+
 ## 3. Bir İngilizce fiil → çok Türkçe fiil
 
 The split table. Pick by what is actually happening, not by the English verb.
@@ -128,6 +146,9 @@ Run this on every verb you write, especially in a rewrite:
    Sözlük'ün örnek cümleleri, gerçek metinler). If you cannot attest the pairing, **you invented it.**
 3. **Tanık bulamıyorsan icat etme** — tanıklı bir fiil seç, ya da olayı betimle.
 4. Before "fixing" a word that repeats, ask direction **B**: is Turkish merging on purpose?
+5. **İki dilli metinde kaynağa bak.** Türkçe cümlede düşen özne/nesne belirsizse (kim? kimi?),
+   **kaynak dil çoğu zaman doğru cevabı zaten taşır** — İngilizce özneyi/nesneyi açıkça söyler.
+   Tahmin etme, `en.js` gibi kaynağı oku.
 
 The failure mode is confident invention. When in doubt, choose the plainer verb you can attest over
 the more elegant one you cannot.
