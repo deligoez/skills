@@ -40,6 +40,10 @@ most reliable rewrite is usually **deletion**.
 > **Sınama:** cümleyi bağlamsız, tek başına oku ve sor: **kim? kimi? neyi? kime?** Cevap bir önceki
 > cümleden net çıkmıyorsa nesneyi/göndergeyi geri yaz. Nesneyi ancak gönderge gerçekten diriyse düşür.
 >
+> **Çözüm çoğu kez nesneyi geri yazmak değil, edilgen/geçişsiz kurmaktır:** ✗ *Seni yatağa gönderip
+> ışıkları söndüreli çok oldu* → ✓ *Yatağa gönderileli, ışıklar söneli çok oldu.* İki dilli metinde
+> **kaynak dile bak** (`en.js` gibi): İngilizce özneyi/nesneyi açıkça söyler, doğru çözümü verir.
+>
 > **Ulaç zinciri kuralı:** `-ip / -erek / -ince / -eli` ana cümleyle **aynı özneyi** paylaşır. Özne
 > değişiyorsa bu ekleri kullanma, cümleyi böl. Çatı da uyuşmalı: ✗ *yola çıkılıp köye ulaştık* →
 > ✓ *yola çıkıp köye ulaştık.*
