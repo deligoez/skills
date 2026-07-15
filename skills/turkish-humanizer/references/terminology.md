@@ -115,3 +115,13 @@ sırasının kararı verdiğini gösterir.
 3. **Çakışma taraması.** For each reserved word, search for *casual* uses of the same word elsewhere.
    That is the *bounce* failure, and it is invisible without this step.
 4. Karar değişirse: defteri güncelle, gerekçeyi yaz, korpusu çekimli biçimlerle güncelle.
+
+## Kutupluluk ve durum sözlüğü — eşleşme sabittir
+
+Bazı alanlar bir **kutupluluk/durum kelime çifti** sabitler; eşini yanlış kullanmak **öneri değil,
+hata**dır. Bunlar terim defterinin parçasıdır.
+- ✗ *lamba açık* → ✓ **lamba yanık.** Lamba **yanık/sönük**tür, **açık/kapalı** değil.
+- Anahtar **açık/kapalı**; devre **açık/kapalı** (açık = akım yok — bkz. `collocations.md`).
+- Bir kelime bir kutba kilitlendiyse öbür kutup için başka kelime kullan; karıştırmak sızıntıdır.
+- Defterde tut: her kutupluluk çifti (yanık/sönük, açık/kapalı, dolu/boş, geçerli/geçersiz) tek bir
+  eşleşmeye kilitlenir ve metin boyunca korunur.
