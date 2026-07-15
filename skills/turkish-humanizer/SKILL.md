@@ -1,6 +1,6 @@
 ---
 name: turkish-humanizer
-version: 2.0.0
+version: 2.1.0
 description: >-
   Türkçe metni doğal ve akıcı hâle getirir; yapay zekâ ile yazılmış ya da İngilizceden çeviri kokan
   kalıpları temizler. Use whenever you write, edit, review, proofread, or "humanize" Turkish — a
@@ -35,12 +35,16 @@ only what is broken, not re-litigate the 98% that is fine.
 Review kipini seç: metin uzun; büyük ölçüde doğru; bir kitap/korpus/ürün metni; kullanıcı "incele,
 denetle, kontrol et, hataları bul" diyor; ya da çıktının diff'lenmesi gerekiyor.
 
+İyi bir inceleme daveti şunları verir (varsa): **üslup sözleşmesi** (metnin sesi), **terim defteri**
+(kilitli karşılıklar + kutupluluk çiftleri), **dokunma listesi** (alıntı, kod, kasıtlı vuruş) ve
+**projenin gerçekten tekrar eden hata sınıfları.** Yoksa bağlamdan çıkar, çıkaramadığını "kararsız"a koy.
+
 Review çıktısı — konumlu bulgu tablosu, en ağırdan hafife:
 
 | Konum | Alıntı | Sınıf | Sorun | Öneri |
 |---|---|---|---|---|
 | Ekran 42 | "kapı ses eder" | hata | *ses etmek* = konuşmak/itiraz etmek | "kapı ses çıkarır" |
-| Ekran 7 | "kara kutu yok" | kalıp | Türkçede ilk çağrışım uçuş kayıt cihazı | "Sihir yok: her parçanın içini açarsın" |
+| Ekran 7 | "kara kutu yok" | kalıp | Türkçede ilk çağrışım uçuş kayıt cihazı | "Sihir yok: her parçayı açıp bakarsın" |
 
 Sınıflar — bunları karıştırma, çünkü kullanıcı hepsine aynı şekilde davranmayacak:
 - **hata** — yanlış (eşdizim, değerlik, düşen nesne, yazım). Düzeltilmeli.
@@ -108,10 +112,10 @@ bağlamla söylediğini **ayrı bir kelimeyle tekrar eder**. Bu yüzden en güve
 Katalog tutuyor; artık hatalar buradan çıkıyor. **Bunlar üretim anında düşülen tuzaklar, o yüzden bir
 reference dosyasına gömülü değil, burada:** yüklenmemiş bir dosyadaki kural ateşlenmez.
 
-1. **Eşdizim ve değerlik** — kelimeler tek tek doğru, birliktelikleri yanlış. Her fiil için sor:
-   *bu fiil bu nesneyi alır mı, hangi hâli ister?* ✗ *kapı ses eder* (= konuşur) → ✓ *ses çıkarır.*
-   ✗ *seni güveniyorum* → ✓ *sana güveniyorum.* ✗ *bir tanesini şaşırmadan* (geçişsiz) → ✓ *atlamadan.*
-   **Tanık bulamıyorsan icat etme.** → `collocations.md`
+1. **Eşdizim, değerlik ve çağrışım** — kelimeler tek tek doğru, birliktelikleri yanlış. Her fiil için
+   sor: *bu nesneyi alır mı, hangi hâli ister, ne çağrıştırır?* ✗ *kapı ses eder* (= konuşur) →
+   ✓ *ses çıkarır* · ✗ *seni güveniyorum* → ✓ *sana güveniyorum* · ✗ *içini açarsın* (= dertleşmek) →
+   ✓ *açıp bakarsın.* **Tanık bulamıyorsan icat etme.** → `collocations.md`
 2. **Metafor kalkı** — metafor birebir çevrilir ama **çağrışımı taşınmaz**. *kara kutu* Türkçede önce
    uçuş kayıt cihazını çağrıştırır; *ak-sıcak* (white-hot) diye bir şey yok, *akkor* var. Sor:
    (a) Türkçede ne çağrıştırıyor? (b) Bu kalk yerleşik/tanıklı mı? Değilse **uydurma, betimle.**
@@ -120,8 +124,9 @@ reference dosyasına gömülü değil, burada:** yüklenmemiş bir dosyadaki kur
 4. **Başlık/slogan eksiltisi** — Türkçe, İngilizceden **daha az eksilti kaldırır**. İngilizce sloganın
    fiilsiz/nesnesiz yapısını taşıma; fiili ve nesneyi geri koy. → `registers.md`
 5. **Mekanik tuzaklar (sık ve sessiz):** `-ki` **ünlü uyumuna girmez** (✓ *üçüncününki*, ✗
-   *üçüncününkü*; sadece *bugünkü/dünkü/öbürkü* uyumlu) · **cins ada kesme konmaz** (✗ *maniple'yi* →
-   ✓ *manipleyi*) · **i/ı** (✗ *Istanbul, yapiyorum*). → `mechanics.md`
+   *üçüncününkü*) · **cins ada kesme konmaz** (✗ *maniple'yi* → ✓ *manipleyi*) · **i/ı** (✗ *Istanbul,
+   yapiyorum*) · **şapka** (*hâlâ ≠ hala*, *kâğıt*) · **yazıyla sayı** (rakam paritesi görmez —
+   kaynakla karşılaştır). → `mechanics.md`
 
 ## Ses ve kişilik (üslup sözleşmesi YOKSA)
 
@@ -152,6 +157,8 @@ Türkçesi bir tık fazla resmî kalır (tam ünlüler, eksiltme yok, *ya/yani/i
 - **Türkçeye geçmeyen İngilizce izler** — tireli birleşik sıfat, "-ing" dolgusu, düz/kıvrık tırnak
   tartışması (`ai-tells.md` §10). *Rule of three* ve *false range* Türkçede gerçek ama **zayıf**
   sinyaldir; yukarıdaki Türkçeye özgü izler baskındır.
+- **Kasıtlı eksiltili vuruş** — tek satırlık dramatik paragraf (*"Bir sır."*) üslup aracıdır, eksilti
+  hatası değil. Üslup sözleşmesi izin veriyorsa dokunma (`ai-tells.md` §13).
 
 Şüphedeysen **küme** ara, tek örnek değil. Tek bir *ayrıca* hiçbir şeydir; *Ayrıca* + *-maktadır* +
 *sahip olmak* + boş bir *Sonuç olarak* itiraftır.
