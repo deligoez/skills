@@ -95,6 +95,11 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
   disappears across case. ✓ *İstanbul, İSTANBUL, yapıyorum, Iğdır* ✗ *Istanbul, ISTANBUL, yapiyorum,
   İğdır.* Naive `toUpperCase()` (ISTANBUL, TÜRKIYE) and ASCII "i" for "ı" are mechanical AI/edit
   tells; mixed dotting in one text is a giveaway.
+- **Düzeltme işareti (şapka: â î û) — anlamı ayırır, atlanınca hata.** İki yerde şart: (a) **anlam
+  ayrımı** — *hâlâ* (still) ≠ *hala* (aunt), *kâr* (profit) ≠ *kar* (snow), *âdet* (custom) ≠ *adet*
+  (sayı), *âlem* ≠ *alem*, *dâhi* (genius) ≠ *dahi* (even); (b) **g/k/l inceltmesi** yabancı
+  kökenlerde — *kâğıt, dükkân, mahkûm, rüzgâr, sükût, mekân.* ✗ *hala yağıyor* (yanlış anlam) →
+  ✓ *hâlâ yağıyor.* AI ve toplu değiştirme şapkayı sık düşürür; iki dilli metinde gözden kaçar.
 - **Sentence case, not Title Case, for headings:** ✓ *Yapay zekâ metinleri nasıl etkiliyor?*
   ✗ *Yapay Zekâ Metinleri Nasıl Etkiliyor?* Common nouns are never capitalized mid-sentence for
   emphasis (✗ *Misyonu ve Vizyonu*). Named creative works do capitalize content words but keep
@@ -157,6 +162,11 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
   ✓ *07.07.2026* ✗ *07/07/2026.* Suffix apostrophized: *19 Mayıs 1919'da.*
 - **Saat:** period, not colon: ✓ *14.30, saat 14.30'da* ✗ *14:30.*
 - **Sıra sayıları — one form only:** ✓ *3.* or *3'üncü* ✗ *3.'üncü.*
+- **Yazıyla yazılmış sayılar — rakam paritesi bunları görmez.** *iki yüz elli* gibi yazılı sayılar
+  otomatik rakam-denetiminin dışında kalır ve yanlış sayıya denk gelebilir. İki dilli metinde
+  **kaynakla yan yana oku** (*iki yüz elli* ↔ *two hundred fifty*); bağımsızsa hesabı elle doğrula.
+- **Sayı çekim eki okunuşa göredir**, son rakama göre değil: *30'a* = *otuza*, *62'ye* = *altmış
+  ikiye*, *100'ü* = *yüzü*, *2011'de* = *iki bin on birde*, *1000'e* = *bine.* ✗ *30'e, 62'ya, 100'u.*
 
 ## 7. Otomasyon ve araç tuzakları {#7-otomasyon}
 
