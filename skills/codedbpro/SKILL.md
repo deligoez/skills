@@ -122,6 +122,13 @@ compression. Use it for multi-hour tasks instead of re-deriving state.
 - Two independent facts you need → still one batch; only serialize when call B needs call A's output.
 - Don't re-read a file after `edit`/`patch` "to check" — the response already contains the written
   lines; use `diff` if you want the change in context.
+- **A zero-match search is a claim, not a fact — verify it with a second pattern.** `faster_search
+  {pattern:"first-letter"}` returned 0 matches while `::first-letter` sat in the file (hyphenated
+  patterns have misfired in the field); a search for a nearby word found it immediately. Before
+  acting on "not found" (deleting a rule, skipping a rename), re-check with a different substring
+  or `mode:"regex"`.
+- `create` takes **`file`**, not `path` — `{file:"...", content:"...", force:true}`. Passing `path`
+  fails with "missing 'file'" (read/edit/patch use `file` too; only search/replace take `path`).
 
 ## Minimal decision card
 
