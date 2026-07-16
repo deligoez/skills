@@ -116,6 +116,11 @@ abstract noun, instead of one plain verb.
   management-speak transplants; prefer plain equivalents (*hayata geçirmek*, *dikkat çekmek /
   bilinçlendirmek*, etc.) outside genuinely corporate contexts.
 
+- **Kişileştirme kalkı** — İngilizce nesneleri özneleştirir (*this book thinks in X*, *the code
+  wants*, *the data says*); Türkçede *düşünmek/istemek/söylemek* insana aittir. *Bu kitap Türkçe
+  düşünür* → eylemi **gerçekten yapan** özneye ver (*kurduğun makine Türkçenin harfleriyle
+  konuşur*) ya da olguyu düz söyle. Nesne ancak dilde yerleşikse *ister/söyler* (yasa, tablo…).
+
 ## 5. English-style rhetoric {#5-rhetoric}
 
 - **Rule of three** — three near-synonymous adjectives padding a claim: *Hızlı, güvenilir ve verimli

@@ -146,8 +146,20 @@ kalıpların ardından kalan hata tipleri:
 | Yatağa **göndereli**, ışıkları söndüreli çok oldu | düşen nesne | *kimi* gönderdi? Cümle çöküyor | **Seni** yatağa gönderip ışıkları söndüreli çok oldu |
 | **okumazsın, kurarsın** (slogan) | başlık eksiltisi | nesnesiz kalınca havada duruyor | **Okumakla kalmazsın; kendin kurarsın.** |
 | **adı en sonda** (başlık) | başlık eksiltisi | *the name comes last* — TR bu sıkıştırmayı kaldırmaz | **Önce keşfedersin, adını sonra öğrenirsin.** |
+| kitap **Türkçe düşünür** | kişileştirme kalkı | nesne düşünmez; İngilizce personifikasyon (*this book thinks in X*) | eylemi gerçekten yapan özneye ver: **kurduğun makine Türkçenin harfleriyle konuşur** |
+| parçayı **hazır almak** | eşdizim kalkı | *take ready-made*; TR'de "hazır almak" = hazır giyim çağrışımı | **hiçbir parçayı hazır bulmadan** (ya da olumlu: *her birini kendin kurarsın*) |
+| **her parçayı açıp bakarsın** | duruş / fazla açıklık | alışkanlık iddia ediyor; kast: hiçbiri kapalı DEĞİL (olanak) | **içini göremeyeceğin tek bir parça yok** |
+| ba**şlıyorsun** … kurar**sın** (aynı yay) | zaman tutarsızlığı | şimdiki→geniş zıplaması yayı kırıyor | **başlıyorsun … kurmuş olursun** (şimdi→sonra) ya da baştan sona geniş zaman |
 | üçüncünün**kü** | mekanik | `-ki` ünlü uyumuna girmez | üçüncünün**ki** |
 | **maniple'yi** | mekanik | cins ada kesme konmaz | **manipleyi** |
+
+**Yüksek bahisli register'ın (kapak, kredo, slogan) tek kökü.** Yukarıdaki satırların çoğu tek
+yerden gelir: cümle **yarım adım dışarıdan, anlatan bir duruşta** kurulur ve canlı bir söz
+gerektiğinde **İngilizce-kalıp bir deyime** uzanır (*thinks in X*, *take ready-made*, *lift the
+lid*). Çare hep aynı yöne çeker: içine-girmiş ikinci tekile dön, eylemi gerçekten yapan özneye
+ver, kalkı bir Türk'ün kendiliğinden söyleyeceği fiziksel sözle değiştir, ve bir yaydaki zamanı
+tutarlı tut (şimdiki→geniş zıplaması jar). Not: bu satırlar VERA'nın kapağından — yakalayan
+yazarın kulağıydı; skill'in işi onu kalıcı kılmak.
 
 ## 7. İnceleme (review) kipi — çıktı böyle görünür
 
