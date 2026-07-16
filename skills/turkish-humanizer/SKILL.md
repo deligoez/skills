@@ -187,6 +187,8 @@ Türkçesi bir tık fazla resmî kalır (tam ünlüler, eksiltme yok, *ya/yani/i
 | `references/registers.md` | Nesir / başlık / slogan / arayüz; Türkçe daha az eksilti kaldırır; tamlama zinciri; BÜYÜK HARF |
 | `references/terminology.md` | Uzun ve iki dilli metinde **terim defteri**: kilitli karşılık + gerekçe + tuzak; rezerve kelime disiplini |
 | `references/examples.md` | Register'lara göre tam öncesi/sonrası dönüşümler + inceleme kipi örneği |
+| `references/anlati.md` | **Pozitif craft** — iyi Türkçe nesir nasıl işler: anlaşılırlık, akıcılık, tutarlılık, özgünlük. Ataç/Hepçilingirler geleneği + anlatım-bozukluğu çerçevesi. ai-tells kokuyu siler, bu dosya sesi kurar |
+| `references/ceviri-teknikleri.md` | **Düzeltme operasyonları** — kendi örtük İngilizceni deyimsel Türkçeye çevir: Vinay-Darbelnet 7 işlem (transpozisyon, modülasyon, eşdeğerlik…), açımlama, EN→TR yapısal asimetri. ai-tells kokuyu bulur, bu dosya nasıl düzelteceğini söyler |
 
 ---
 
