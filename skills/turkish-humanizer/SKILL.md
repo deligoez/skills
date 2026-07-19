@@ -138,7 +138,8 @@ reference dosyasına gömülü değil, burada:** yüklenmemiş bir dosyadaki kur
    söndürdü?). Çözüm çoğu kez edilgen/geçişsiz: ✓ *"Yatağa gönderileli, ışıklar söneli çok oldu."*
    İpucu: metnin İngilizce karşılığı varsa çoğu zaman doğru çözümü zaten bilir (*You were sent to
    bed and the lights went out*).
-8. **Durum etiketi kalkı (Ready-to)** — arayüz/etiket metninde İngilizce durum kalıbı: ✗ *"Okumaya
+8. **Yetenek kipi geniş zamanla söylenmez.** İngilizce *“counting says everything”* der; Türkçesi **“hepsini söyleyebilir”**dir. Geniş zaman Türkçede *alışkanlık / genel doğru* bildirir; bir aracın ya da yöntemin **kapasitesini** anlatan cümlede `-ebilir` şarttır. Bu, “gereksiz `-ebilir` ihtimalini azalt” tavsiyesinin **zıddı değil**: orada *ihtimal*, burada *yetenek* var — ikisini ayırt et. ✗ *Saymak her şeyi söyler ama yavaş* → ✓ *Saymak her şeyi söyleyebilir ama yavaş.* Karşılaştırma cümlelerinde ikinci yarıya **`da`** eklemek paralelliği kurar: *“Anlaşmak **da** hızlı ama az şey söyleyebilir.”*
+9. **Durum etiketi kalkı (Ready-to)** — arayüz/etiket metninde İngilizce durum kalıbı: ✗ *"Okumaya
    hazır: 44 bölüm"* (*Ready to read:*) → ✓ *"Bugün: 44 bölüm"*. Etiketi Türkçe kurarken sor:
    bir insan bu rafın üstüne ne yazardı?
 
