@@ -105,6 +105,7 @@ bağlamla söylediğini **ayrı bir kelimeyle tekrar eder**. Bu yüzden en güve
 - **`sahip olmak`** → *var* kuruluşu. **`-lI bir şekilde`** → *başarıyla, hızla*. **Gereksiz `bir`**.
 - **`sadece X değil, aynı zamanda Y de`** → *hem X hem de Y*.
 - **İngilizce uzun tire (—)** cümle içi ara söz olarak → parantez/virgül/nokta. Türkçede karşılığı yok.
+- **`ve` öncesi virgül** (`A, ve B`) — İngilizcede meşru, TDK'ya göre yanlış; **iki dilli yazmanın en sessiz sızıntısı**, çünkü iki metin yan yana kurulurken virgül TR tarafına geçer. Sahada: dikkatle yazılmış iki dilli bir kitapta **114** örnek (82 nesir + 32 arayüz metni). Aynısı *veya / ya da / yahut* için. **Körlemesine silme:** virgül çoğu kez yazarın istediği **duraktan** gelir ve silinince cümle üç öğeli listeye dönüşebilir (✗ *“bir sayaç, bir biriktirici, ve makine saydı”* → silersen makine listenin öğesi olur). Doğru çözüm sırasıyla: `X ve Y` · `X. Ve Y` · `X; Y`. (Kural `mechanics.md` §2'de de var — buraya çıkarıldı çünkü yüklenmemiş bir dosyadaki kural ateşlenmiyor.)
 - **Kurumsal kalıplar** — *deneyim yaşamak, değer katmak, aksiyon almak, adreslemek, yol haritası.*
 
 ## Kataloğun kaçırdığı tuzaklar — her zaman aklında tut
