@@ -335,6 +335,20 @@ Ban list yapma; işlevine bak.
 *deadline* → teslim tarihi · *assign etmek* → atamak · *attach etmek* → eklemek · *update etmek* →
 güncellemek · *focuslanmak* → odaklanmak · *aksiyon almak* → harekete geçmek.
 
+### 12.12 Eksiltili soruda hâl eki YANLIŞ BAŞA bağlanır
+
+**Teşhis:** İngilizce eksiltili soruda yer/araç belirteci fiilsiz de yerinde durur:
+*"A flashlight at the window?"* Türkçede aynı yapı kurulunca hâl ekli öğe **önündeki ada**
+bağlanır ve çoğu kez **madde/köken** okunur.
+
+- ✗ **"Camdan el feneri?"** → okur *"camdan **yapılmış** fener"* anlıyor.
+- ✓ *"Camdan el feneri mi sallasan?"* · *"Pencereden fener mi yaksan?"*
+
+**Kural:** eksiltili soruda hâl ekli bir öğe adın önüne geliyorsa **fiili geri koy.** Türkçe
+İngilizceden daha az eksilti kaldırır (`registers.md` → başlık eksiltisi); **soru cümlesinde bu
+daha da sıkıdır**, çünkü okurun ayırt edecek bağlamı yok. En riskli ekler: `-DAn` (madde/köken),
+`-lI` (nitelik), tamlayan eki.
+
 ## 13. Aşırı düzeltme yasağı — iyi Türkçeyi bozma {#13-asiri-duzeltme}
 
 Bu skill **kuralcı bir dil polisi değildir.** Necmiye Alpay'ın uyarısı yerinde: doğruluğu "arılık/
