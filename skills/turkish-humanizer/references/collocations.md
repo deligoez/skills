@@ -112,6 +112,7 @@ The split table. Pick by what is actually happening, not by the English verb.
 | EN | TR seçenekleri |
 |---|---|
 | make | yapmak · etmek · **çıkarmak** (ses) · **vermek** (karar) · **kurmak** (cümle, plan) · oluşturmak |
+| carry / convey / transmit | **taşımak** (bir NESNEYİ bir yere götürmek) · **iletmek** (bir ETKİYİ aktarmak) · götürmek · aktarmak. ✗ *ip bir çekme **taşır*** → ✓ *ip bir çekme **iletir*** (ortada götürülen bir nesne yok, aktarılan bir kuvvet var) |
 | run | koşmak · **çalışmak** (program çalışır) · çalıştırmak · yürütmek · işletmek |
 | set | ayarlamak · kurmak · belirlemek · koymak · (bit) **1 yapmak / kurmak** |
 | clear / reset | temizlemek · **sıfırlamak** |
