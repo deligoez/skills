@@ -91,6 +91,20 @@ A sentence can be grammatical *and* idiom-clean and still be something **no one 
   doğrudur. Bağlamsız genelleme sırıtır; cümleyi **geçtiği yerde** değerlendir. (İnceleme kipinde bu
   **öneri** sınıfıdır, otomatik düzeltme değil.)
 
+### 2d. Çarenin kendi tuzağı — önerdiğin karşılığı da sına
+
+The fix you reach for can carry an idiom of its own. Sahada yakalandı: bir metinde
+*"dönüş yolunu **dünyaya verdin**"* yazıyordu (EN kalkı: *you gave the return to the earth*).
+Önerilen düzeltme **"toprağa verdin"** idi — ama **toprağa vermek = defnetmek.** İkisi de olmaz.
+
+- ✗ *dönüş yolunu **dünyaya verdin*** (kalk)
+- ✗ *dönüş yolunu **toprağa verdin*** (çare, ama defin çağrışımlı)
+- ✓ *dönüşü artık **toprak taşıyor*** · *dönüş yolu **toprağın kendisi***
+
+**Kural:** düzeltmeyi yazdıktan sonra **ona da 2b testini uygula** ("bu ikiliyi tek başına söyle:
+aklına önce bir deyim mi geliyor?"). Deyim çarpışması yalnız orijinalde değil, **çarenin içinde de**
+olur — ve anadili konuşanın refleks önerisi de bu tuzağa düşer.
+
 ## 3. Bir İngilizce fiil → çok Türkçe fiil
 
 The split table. Pick by what is actually happening, not by the English verb.
