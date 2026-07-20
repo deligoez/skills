@@ -139,7 +139,22 @@ reference dosyasına gömülü değil, burada:** yüklenmemiş bir dosyadaki kur
    İpucu: metnin İngilizce karşılığı varsa çoğu zaman doğru çözümü zaten bilir (*You were sent to
    bed and the lights went out*).
 8. **Yetenek kipi geniş zamanla söylenmez.** İngilizce *“counting says everything”* der; Türkçesi **“hepsini söyleyebilir”**dir. Geniş zaman Türkçede *alışkanlık / genel doğru* bildirir; bir aracın ya da yöntemin **kapasitesini** anlatan cümlede `-ebilir` şarttır. Bu, “gereksiz `-ebilir` ihtimalini azalt” tavsiyesinin **zıddı değil**: orada *ihtimal*, burada *yetenek* var — ikisini ayırt et. ✗ *Saymak her şeyi söyler ama yavaş* → ✓ *Saymak her şeyi söyleyebilir ama yavaş.* Karşılaştırma cümlelerinde ikinci yarıya **`da`** eklemek paralelliği kurar: *“Anlaşmak **da** hızlı ama az şey söyleyebilir.”*
-9. **Durum etiketi kalkı (Ready-to)** — arayüz/etiket metninde İngilizce durum kalıbı: ✗ *"Okumaya
+9. **Çarenin kendi tuzağı — düzeltmeyi de sına.** Sahada: *"dönüş yolunu **dünyaya verdin**"* bir
+   kalktı (EN: *you gave the return to the earth*); önerilen çare **"toprağa verdin"** idi — ama
+   *toprağa vermek = **defnetmek**.* İkisi de olmaz → ✓ *"dönüşü artık toprak taşıyor."*
+   **Anadili konuşanın refleks önerisi de bu tuzağa düşer**, o yüzden çareyi yazdıktan sonra ona da
+   deyim testini uygula: *bu ikiliyi tek başına söyle — aklına önce bir deyim mi geliyor?*
+   → `collocations.md` §2d
+10. **Eksiltili soruda hâl eki YANLIŞ BAŞA bağlanır.** İngilizce *"A flashlight at the window?"*
+   fiilsiz durur; Türkçe durmaz. ✗ **"Camdan el feneri?"** okurun kafasında *camdan **yapılmış***
+   fener olur, çünkü `-DAn` önündeki ada **madde/köken** olarak bağlanır. Çare noktalama değil,
+   **fiili geri koymak**: *"Camdan el feneri mi sallasan?"* En riskli ekler `-DAn`, `-lI`,
+   tamlayan eki. → `ai-tells.md` §12.12
+11. **`bırakmak` "give out / break down" DEĞİLDİR.** ✗ *"Her benzetme bir yerde **bırakır**"* →
+   ✓ *"her benzetme bir yerden sonra **yürümez** / geçerliliğini yitirir."* `bırakmak` terk ve
+   vazgeçme bildirir; öznesi bir *benzetme* olamaz. Aynı sınıf: **`taşımak` bir NESNEYİ götürür,
+   `iletmek` bir ETKİYİ aktarır** — ✗ *"ip bir çekme taşır"* → ✓ *"ip bir çekme **iletir**."*
+12. **Durum etiketi kalkı (Ready-to)** — arayüz/etiket metninde İngilizce durum kalıbı: ✗ *"Okumaya
    hazır: 44 bölüm"* (*Ready to read:*) → ✓ *"Bugün: 44 bölüm"*. Etiketi Türkçe kurarken sor:
    bir insan bu rafın üstüne ne yazardı?
 
