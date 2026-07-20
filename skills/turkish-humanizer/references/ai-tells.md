@@ -247,6 +247,10 @@ words are right; what the reader's head does with them is wrong.
 
 **Kontrol listesi — genel:** kara kutu · kırmızı bayrak · gümüş kurşun · düşük asılı meyve · oyun
 değiştirici · yol haritası · ayak izi · buzdağının görünen kısmı.
+**Başarısızlık/tükenme mecazları — `bırakmak` Türkçede bunu YAPMAZ:** *break down · give out ·
+fall apart* için ✗ *"her benzetme bir yerde **bırakır**"* → ✓ *"her benzetme bir yerden sonra
+**yürümez**"* · *"...geçerliliğini yitirir"* · *"...çöker"*. (`bırakmak` Türkçede terk/vazgeçme
+bildirir; öznesi bir *benzetme* olamaz.)
 **Teknik:** spike · bounce · flush · drain · handshake · race · starve · deadlock · overhead.
 Her biri için: yerleşik karşılığı var mı? Yoksa olayı anlat.
 
