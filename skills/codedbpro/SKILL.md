@@ -1,6 +1,6 @@
 ---
 name: codedbpro
-version: 1.0.0
+version: 1.1.0
 description: >-
   Use the codedbpro MCP toolset (CodeDB Pro daemon) as the primary way to read, search, and edit
   code — batched round-trips, outline-first reading, symbol-safe edits, dry-run-first refactors.
@@ -90,10 +90,16 @@ Pick the write tool by what you know, not by habit:
 | You know… | Use |
 |---|---|
 | the function/type name | `edit {file, symbol:"name", content}` — survives line drift; best default for code |
-| a pattern inside the target scope | `edit {file, pattern:"…", content}` — edits the whole enclosing scope |
+| a pattern inside the target scope | `edit {file, pattern:"…", content, scope:"line"}` — **`scope:"line"` replaces only the matched lines; without it the whole enclosing function is replaced** |
 | exact line numbers | `patch {file, range:"10-20", content}` (or `after:N`, `op:"insert"/"delete"`) |
 | an exact sentence/string to swap (prose, comments, cross-file renames) | `replace {pattern, replacement, path, apply:true}` |
 | you're creating a file | `create {file, content, parents:true}` (`force:true` overwrites, `append:true` appends) |
+
+> **⚠ `pattern` without `scope` is a whole-function replace.** `edit` matches your text, then expands
+> the replaced region to the enclosing function/block. If `content` is only the small piece you
+> matched, everything else in that function — signature included — is deleted, and the call still
+> reports `ok:true`. Default to **`scope:"line"`** for surgical changes; reserve bare `pattern` for
+> when you *mean* to swap a whole function (and then prefer `symbol:`, which says so explicitly).
 
 - `edit`/`patch` return the written lines — you rarely need a follow-up read.
 - `replace` is **dry-run by default**: preview first, then re-send with `apply:true`. It refuses
@@ -129,6 +135,23 @@ compression. Use it for multi-hour tasks instead of re-deriving state.
   or `mode:"regex"`.
 - `create` takes **`file`**, not `path` — `{file:"...", content:"...", force:true}`. Passing `path`
   fails with "missing 'file'" (read/edit/patch use `file` too; only search/replace take `path`).
+- **`edit` + `pattern` replaces the WHOLE enclosing function — the #1 cause of lost code.**
+  Reproduced on 0.2.10: pattern `suffix := "!"` (one line) returned `lines_removed: 5` and the diff
+  deleted the entire `Greet` function, signature included. The same edit with **`scope:"line"`**
+  returned `lines_removed: 1`. So: **check `lines_removed` on every edit response** — bigger than the
+  line count of your pattern means the scope expanded and you clobbered neighbours. Revert and retry
+  with `scope:"line"`. `dry_run:true` previews the diff without writing (costs one call, saves a
+  reconstruction).
+- **Don't span a doc-comment → `func` boundary in a `pattern`.** `// Greet says…\nfunc Greet(…)`
+  fails with `no enclosing scope found for pattern match`: the comment sits outside the symbol's
+  scope. Match from the `func` line, or use `symbol:` / `scope:"line"`.
+- **You cannot force a literal search — escape instead.** `mode:"literal"` *and* `regex:false` were
+  both overridden: `alpha|beta` still matched lines containing only `alpha` or only `beta`
+  (`interpreted:"regex"`). Escaping worked: `alpha\|beta` matched just the literal line. Escape
+  `| ( ) . * + ? [` when you want a literal substring, or add `w:true` for whole-word.
+- **Absolute paths outside the repo work.** `read`/`faster_search`/`edit`/`create` all succeed on
+  `/tmp`, `~/.claude`, another checkout — codedbpro is not repo-locked. A failure out there is
+  usually a missing parent dir (`parents:true`) or the scope error above, not a workspace boundary.
 
 ## Minimal decision card
 
@@ -136,6 +159,7 @@ compression. Use it for multi-hour tasks instead of re-deriving state.
 know nothing about the file      → read outline
 know the function                → read symbol / edit symbol
 know the exact line              → read lines / patch range
+surgical change inside a func    → edit scope:"line"  (bare pattern = whole-function replace)
 know the exact string            → faster_search / replace (dry-run → apply)
 question is vague                → meta_search
 ≥2 of anything                   → batch
