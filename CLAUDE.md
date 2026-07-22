@@ -18,17 +18,15 @@ Workflow:
 
 Do **not** run `git add` / `git commit` directly alongside `hc`.
 
-## Skills — author in English
+## Skills — English by default, the target language when the skill *is* that language
 
-Write every skill (`SKILL.md` and its `references/`) in **English**: instructions, headings, rules,
-and structure. English is the model's strongest instruction-following language, and it keeps the
-repo consistent and shareable via `npx skills`.
+Write skills in **English** by default: instructions, headings, rules, and structure. English is the
+model's strongest instruction-following language and keeps the repo consistent and shareable via
+`npx skills`. This covers every general-purpose skill (`codedbpro`, `typography-for-lawyers`, …).
 
-The one exception is **target-language material**, which stays in its own language: examples, term
-tables, quoted patterns, and before/after pairs. A skill *about* Turkish therefore reads as English
-prose wrapped around Turkish examples — not as Turkish prose.
+**Exception — a skill about a natural language is authored in that language.** When the subject *and*
+the output are one language, its instructions belong in that language: the prose then models the
+register it is asking for, and every example is in that language anyway.
+`skills/turkish-humanizer` is deliberately Turkish — that is correct, not debt.
 
-Conversation with the user is a separate matter and follows their language; the artifact is English.
-
-**Known debt:** `skills/turkish-humanizer` (v2.1) is currently written mostly in Turkish and does
-not follow this rule yet — normalize it to English framing on the next substantial edit.
+Conversation with the user follows the user's language; that is separate from the artifact.
