@@ -17,3 +17,18 @@ Workflow:
   keeps a backup ref. Use `--force` for commits already pushed, then `git push --force-with-lease`.
 
 Do **not** run `git add` / `git commit` directly alongside `hc`.
+
+## Skills — author in English
+
+Write every skill (`SKILL.md` and its `references/`) in **English**: instructions, headings, rules,
+and structure. English is the model's strongest instruction-following language, and it keeps the
+repo consistent and shareable via `npx skills`.
+
+The one exception is **target-language material**, which stays in its own language: examples, term
+tables, quoted patterns, and before/after pairs. A skill *about* Turkish therefore reads as English
+prose wrapped around Turkish examples — not as Turkish prose.
+
+Conversation with the user is a separate matter and follows their language; the artifact is English.
+
+**Known debt:** `skills/turkish-humanizer` (v2.1) is currently written mostly in Turkish and does
+not follow this rule yet — normalize it to English framing on the next substantial edit.
