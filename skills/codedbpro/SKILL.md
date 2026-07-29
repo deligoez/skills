@@ -84,9 +84,12 @@ batch   {ops:[{tool, args}, …]}
 ## Rule 1 — two or more operations = ONE `batch`
 
 - Reads and searches run **in parallel**.
-- Edits to the **same file** are safe in one batch: the daemon serializes them and applies them
-  bottom-up, so earlier line numbers never drift. A run of sequential single `edit` calls to one
-  file is the anti-pattern this rule kills.
+- Same-file writes are serialized, but **applied in call order, top-down — they are not reordered**.
+  Tested on 0.2.14: `{after:2, op:"insert"}` followed by `{range:"6-6"}` in one batch hit the
+  original line 5. Batch them anyway for the round-trip, but every line range after the first write
+  must already account for the shift — or use `symbol`/`pattern` ops, which re-resolve and don't
+  care. A run of sequential single `edit` calls to one file is still the anti-pattern this rule
+  kills.
 - `ops` must be a real JSON array, and each element needs **both** `tool` and `args` — args nested,
   not spread. `{ops:[{op:"edit", …}]}` and `{ops:[{tool:"edit", file:…}]}` both fail.
 
