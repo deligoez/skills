@@ -156,6 +156,13 @@ rename — re-check with a different substring or an escaped pattern.
 | you're rewriting the whole file | `create {file, content, force:true}` |
 | you're creating a file | `create {file, content, parents:true}` |
 
+- **After any write to a file, line numbers from an earlier read are stale.** `patch` and
+  `edit {range}` are deterministic: they apply to whatever now sits there and return `ok:true`.
+  Re-read (the read cache is refreshed by the write — no `fresh:true` needed), or send the write
+  with `dry_run:true` — the diff comes back without touching the file, one call instead of a broken
+  one. On a range-based write into a file you have already edited, treat `dry_run:true` as the
+  default, not the last resort. Verified failure: a range two lines stale doubled a docblock's
+  `@return` and ate the blank `*` line.
 - **Prose and Markdown have no parseable scopes.** `edit {pattern}` on a `.md` file fails with
   `no enclosing scope found for pattern match`. Use `range`/`after`, or `replace` for a string swap.
 - **Don't span a doc-comment → `func` boundary in a pattern.** `// Greet says…\nfunc Greet(…)` fails
@@ -169,7 +176,9 @@ rename — re-check with a different substring or an escaped pattern.
 
 ## Rule 5 — verify every write
 
-1. `lines_removed` in the response — the Rule 0 check. Do this every time.
+1. `lines_removed` in the response — the Rule 0 check. Do this every time. The count alone is not
+   enough: a stale range removes the right *number* of lines and the wrong ones. Read the `-` lines
+   of the returned diff, not just the tally.
 2. `edit`/`patch` return the written lines, so a follow-up read is usually waste. Want the change in
    context? `diff {file}` (or `diff {stat:true}`, `staged:true`).
 3. `lint {file}` auto-detects the project linter and returns normalized diagnostics. It returns
@@ -199,6 +208,7 @@ know nothing about the file      → read outline
 know the function                → read symbol / edit symbol
 replacing less than a function   → edit scope:"line"   (any pattern, 1 line or 40 = whole func)
 know the exact line              → read lines / patch range
+line numbers after a prior write → stale; re-read, or send it with dry_run:true
 markdown or prose                → patch range / replace   (pattern edits have no scope there)
 know the exact string            → faster_search / replace (dry-run → apply)
 question is vague                → meta_search
