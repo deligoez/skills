@@ -1,6 +1,6 @@
 ---
 name: codedbpro
-version: 1.2.0
+version: 1.3.0
 description: >-
   Use the codedbpro MCP toolset (CodeDB Pro daemon) as the primary way to read, search, and edit
   code — batched round-trips, outline-first reading, symbol-safe edits, dry-run-first refactors.
