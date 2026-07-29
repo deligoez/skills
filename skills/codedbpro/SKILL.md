@@ -44,8 +44,14 @@ edit {file, pattern:'suffix := "!"', content:'\tsuffix := "!!"', scope:"line"}
   → lines_removed: 1   # only the matched line
 ```
 
-- **Pass `scope:"line"` for any surgical change inside a function.** (Verified working, even though
-  it is absent from some published schemas.)
+- **Pass `scope:"line"` whenever the replacement is not the entire function** — that is the test, not
+  whether the change feels small. (Verified working, even though it is absent from some published
+  schemas. `scope:"line"` keeps exactly the matched lines, however many they are.)
+- **A multi-line pattern is not safer.** Scope expands from the *match*, not from how much you
+  matched. A pattern covering a whole `if` block still replaced the enclosing function
+  (`lines_removed: 8` for a 4-line pattern); the same call with `scope:"line"` removed 4.
+  `scope:"block"` does **not** narrow to the enclosing block — on that test it expanded to the
+  function exactly like a bare pattern.
 - **Reserve a bare `pattern` for when you mean to swap a whole function** — and then prefer
   `symbol:"name"`, which says so explicitly and survives line drift.
 - **Read `lines_removed` on every write.** Larger than the line count of your pattern = the scope
@@ -144,7 +150,7 @@ rename — re-check with a different substring or an escaped pattern.
 | You know… | Use |
 |---|---|
 | the function/type name | `edit {file, symbol:"name", content}` — survives line drift; best default for code |
-| a few lines inside a function | `edit {file, pattern:"…", content, scope:"line"}` — **never omit `scope`** (Rule 0) |
+| less than a whole function | `edit {file, pattern:"…", content, scope:"line"}` — **never omit `scope`**, however many lines you matched (Rule 0) |
 | exact line numbers | `patch {file, range:"10-20", content}` (or `after:N`, `op:"insert"/"delete"`) |
 | an exact string to swap across files | `replace {pattern, replacement, path, apply:true}` |
 | you're rewriting the whole file | `create {file, content, force:true}` |
@@ -191,7 +197,7 @@ compression. Use it on multi-hour tasks instead of re-deriving state.
 ```
 know nothing about the file      → read outline
 know the function                → read symbol / edit symbol
-surgical change inside a func    → edit scope:"line"   (bare pattern = whole-function replace)
+replacing less than a function   → edit scope:"line"   (any pattern, 1 line or 40 = whole func)
 know the exact line              → read lines / patch range
 markdown or prose                → patch range / replace   (pattern edits have no scope there)
 know the exact string            → faster_search / replace (dry-run → apply)
