@@ -56,8 +56,10 @@ edit {file, pattern:'suffix := "!"', content:'\tsuffix := "!!"', scope:"line"}
   `symbol:"name"`, which says so explicitly and survives line drift.
 - **Read `lines_removed` on every write.** Larger than the line count of your pattern = the scope
   expanded and you clobbered neighbours. Revert and retry with `scope:"line"`.
-- **`dry_run:true` previews the diff without writing** (response comes back as `op:"verify"`). One
-  call, and it saves reconstructing a function by hand.
+- **`dry_run:true` previews the diff without writing** — the response carries `dry_run:true` (the
+  older `op:"verify"` shape is gone). One call, and it saves reconstructing a function by hand.
+- **The built-in scope-shrink guard will not save you here.** `confirm_scope_shrink` only fires above
+  a 10:1 shrink; the everyday Rule 0 accident — 8 lines replaced by 4 — writes silently.
 
 ## Tool signatures
 
