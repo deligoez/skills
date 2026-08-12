@@ -134,6 +134,10 @@ Never pull a big file whole. A 7,878-line widget file → `mode:"outline"` retur
 - Re-reading a file you already saw? Pass `if_hash` from the previous read — unchanged files come
   back as `{unchanged:true}` for free.
 - Small files (a screen of prose, a config) — just read them full. Outline-first is for big files.
+- **`mode:"full"` on a big file returns a partial file, not an error.** Responses are capped at
+  256 KiB: a 1 MB file came back as its first ~26% with `truncated:true`, `annotated:false` (no line
+  gutter) and `hint:"use mode=lines and continue by range"` — still `ok:true`. If you see
+  `truncated:true`, everything past that point is simply absent from your context.
 
 **Known limit:** a one-line arrow const (`export const f = x => …`) resolves as a symbol to just its
 signature line. Use `lines`/`smart_range` for those.
