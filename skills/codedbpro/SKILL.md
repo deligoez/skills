@@ -72,7 +72,8 @@ read    {file, mode: outline|full|lines|symbol|section|smart_range|ls|compact|js
 edit    {file, symbol|pattern|range|after, content, scope?: line|block|symbol,
          op?: replace|delete|insert|str_replace|byte_delta,
          old_string?, new_string?, expected?, match_index?, replace_all?,
-         if_revision?, whole_file?, confirm_scope_shrink?, dry_run?, backup?}
+         if_revision?, whole_file?, confirm_scope_shrink?, dry_run?, backup?,
+         base_revision? + start_byte? + end_byte?}   # byte_delta only
 patch   {file, range:"10-20" | after:N, content, op?: replace|delete|insert,
          if_revision?, dry_run?, backup?}
 create  {file, content, parents?, force?, append?, executable?, content_b64?}
