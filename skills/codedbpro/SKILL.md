@@ -67,21 +67,25 @@ Guessing parameter names is the second-biggest time sink. These are exact:
 
 ```
 read    {file, mode: outline|full|lines|symbol|section|smart_range|ls|compact|json|query,
-         range?:"10-20"|"10-$", name?, heading?, line?, path?, query?, if_hash?, fresh?}
-edit    {file, symbol|pattern|range|after, content, scope?:"line",
-         op?: replace|delete|insert, dry_run?, backup?}
-patch   {file, range:"10-20" | after:N, content, op?, dry_run?, backup?}
-create  {file, content, parents?, force?, append?, executable?}
+         range?:"10-20"|"10-$", name?, heading?, line?, path?, query?, numbers?,
+         if_revision?, fresh?, live?}         # every read returns hash + revision
+edit    {file, symbol|pattern|range|after, content, scope?: line|block|symbol,
+         op?: replace|delete|insert|str_replace|byte_delta,
+         old_string?, new_string?, expected?, match_index?, replace_all?,
+         if_revision?, whole_file?, confirm_scope_shrink?, dry_run?, backup?}
+patch   {file, range:"10-20" | after:N, content, op?: replace|delete|insert,
+         if_revision?, dry_run?, backup?}
+create  {file, content, parents?, force?, append?, executable?, content_b64?}
 faster_search {pattern, path, mode?: literal|word|regex, i?, w?, l?, c?, scope?, type?,
                find?, fuzzy?, A?, B?, limit?, max_per_file?, fresh?, no_ignore?}
 search        {…identical interface}          # canonical baseline output
-meta_search   {query, path?, detail?: auto|merged|plan|full, run?, max_variants?}
+meta_search   {query, path?, detail?: auto|merged|plan|full, run?, max_variants?, prefer_fast?}
 replace {pattern, replacement, path|paths, regex?, apply?, dry_run?=true,
-         max_files?=50, allow_large?, allow_cwd_root?, backup?, i?, type?}
-diff    {file?, staged?, stat?}
+         max_files?=50, allow_large?, allow_cwd_root?, backup?, atomic_write?, i?, type?}
+diff    {file?, staged?, stat?, no_cache?}
 lint    {file, fresh?}
 memo    {action: store|get|tag|ls|dump|drop|clear|status|error|errors|plan|context,
-         value?, tag?, hash?, check?}
+         value?, tag?, hash?, check?, next?, status?}
 batch   {ops:[{tool, args}, …]}
 ```
 
