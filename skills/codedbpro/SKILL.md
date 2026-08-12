@@ -204,7 +204,8 @@ pattern.
 2. `edit`/`patch` return the written lines, so a follow-up read is usually waste. Want the change in
    context? `diff {file}` (or `diff {stat:true}`, `staged:true`).
 3. `lint {file}` auto-detects the project linter and returns normalized diagnostics. It returns
-   `{linter:null}` when the repo has no linter config — then your verification is the test suite.
+   `{linter:null, pass:null}` when the repo has no supported linter config (it looks for a
+   project-local install before PATH) — then your verification is the test suite.
 
 ## Rule 6 — memo for anything that must survive context loss
 
