@@ -97,11 +97,15 @@ batch   {ops:[{tool, args}, …]}
 
 - Reads and searches run **in parallel**.
 - Same-file writes are serialized, but **applied in call order, top-down — they are not reordered**.
-  Tested on 0.2.14: `{after:2, op:"insert"}` followed by `{range:"6-6"}` in one batch hit the
-  original line 5. Batch them anyway for the round-trip, but every line range after the first write
-  must already account for the shift — or use `symbol`/`pattern` ops, which re-resolve and don't
-  care. A run of sequential single `edit` calls to one file is still the anti-pattern this rule
-  kills.
+  Tested on 0.2.14 and again on 0.2.22: `{after:2, op:"insert"}` followed by `{range:"6-6"}` in one
+  batch hit the original line 5, and two plain `patch` ranges behave the same. The 0.1.04 release
+  note about bottom-up auto-coalescing no longer describes the MCP batch path. Batch them anyway
+  for the round-trip, but every line range after the first write must already account for the shift
+  — or use `symbol`/`pattern` ops, or `if_revision` (Rule 4), which don't care. A run of sequential
+  single `edit` calls to one file is still the anti-pattern this rule kills.
+- Batches run in bounded eight-op waves; a wide batch of large payloads trips the 64 MiB retention
+  cap (`batch_output_limit`) or the 256 KiB per-response ceiling. Batch freely, but keep payloads
+  narrow — outlines and ranges, not `mode:"full"`.
 - `ops` must be a real JSON array, and each element needs **both** `tool` and `args` — args nested,
   not spread. `{ops:[{op:"edit", …}]}` and `{ops:[{tool:"edit", file:…}]}` both fail.
 
