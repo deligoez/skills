@@ -15,7 +15,7 @@ compatibility: any-agent
 
 # codedbpro — daemon-backed read/search/edit for agents
 
-A persistent daemon over MCP: a dozen code tools with no fork/exec per call (~1–13 ms/op measured),
+A persistent daemon over MCP: eleven code tools with no fork/exec per call (~1–13 ms/op measured),
 a symbol index, and shell-free writes. Content travels as JSON, so curly quotes, non-ASCII,
 backticks and `$` are all safe — this replaces python/perl heredoc surgery and its classic traps.
 
@@ -78,7 +78,6 @@ patch   {file, range:"10-20" | after:N, content, op?: replace|delete|insert,
 create  {file, content, parents?, force?, append?, executable?, content_b64?}
 faster_search {pattern, path, mode?: literal|word|regex, i?, w?, l?, c?, scope?, type?,
                find?, fuzzy?, A?, B?, limit?, max_per_file?, fresh?, no_ignore?}
-search        {…identical interface}          # canonical baseline output
 meta_search   {query, path?, detail?: auto|merged|plan|full, run?, max_variants?, prefer_fast?}
 replace {pattern, replacement, path|paths, regex?, apply?, dry_run?=true,
          max_files?=50, allow_large?, allow_cwd_root?, backup?, atomic_write?, i?, type?}
@@ -89,8 +88,11 @@ memo    {action: store|get|tag|ls|dump|drop|clear|status|error|errors|plan|conte
 batch   {ops:[{tool, args}, …]}
 ```
 
-**`file` vs `path`:** read/edit/patch/create/lint/diff take **`file`**; search/replace take
-**`path`**. Passing `path` to `create` fails with `missing 'file'`; passing `query` to
+There are **eleven** tools — the old `search` name is gone from discovery in 0.2.22, and `batch` can
+carry all of them except itself.
+
+**`file` vs `path`:** read/edit/patch/create/lint/diff take **`file`**; the searches and `replace`
+take **`path`**. Passing `path` to `create` fails with `missing 'file'`; passing `query` to
 `faster_search` fails with `missing 'pattern'` (only `meta_search` takes `query`).
 
 ## Rule 1 — two or more operations = ONE `batch`
