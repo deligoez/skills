@@ -121,8 +121,9 @@ take **`path`**. Passing `path` to `create` fails with `missing 'file'`; passing
 ]}
 ```
 
-Returns `{ok, op:"batch", total, failed, results:[…]}` in call order. Self-check: if your last three
-calls were single codedbpro calls that did not depend on each other's output, that was one batch.
+Returns `{ok, total, failed, results:[…]}` in call order — `ok:false` with a non-zero `failed` when
+any op failed, and each result carries its own `ok`. Self-check: if your last three calls were single
+codedbpro calls that did not depend on each other's output, that was one batch.
 
 ## Rule 2 — outline first, then the symbol
 
