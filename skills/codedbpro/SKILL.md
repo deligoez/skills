@@ -204,8 +204,8 @@ returned it. Build output, `node_modules` and vendored trees are invisible until
 - `replace` is **dry-run by default**: preview, then re-send with `apply:true`. It refuses
   `path:"."` (`allow_cwd_root`) and refuses touching more than 50 files (`max_files`/`allow_large`).
   Those guards are features — don't reflex-override them. `regex:true` enables backreferences
-  (`\1`, backslash form). An applied replacement is verified on disk and reports `verified`, and a
-  replacement that would change nothing is rejected rather than reported as success (0.2.20).
+  (`\1`, backslash form). **`apply:true` that matches nothing still returns `ok:true`** — with
+  `applied:false, files_changed:0, total_replacements:0`. Read the counters, not `ok`.
 - `create` needs **`parents:true`** for a new directory tree, and **`force:true`** to overwrite.
   Without them you get `failed to create file` / `file already exists`.
 
