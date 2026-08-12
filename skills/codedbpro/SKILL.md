@@ -155,9 +155,11 @@ both overridden in testing: `alpha|beta` still matched lines containing only `al
 (the response says `interpreted:"regex"`). Escaping worked — `alpha\|beta` matched only the literal
 line. Escape `| ( ) . * + ? [` for a literal substring, or add `w:true` for whole-word.
 
-**A zero-match search is a claim, not a fact.** `faster_search {pattern:"first-letter"}` returned 0
-while `::first-letter` sat in the file. Before acting on "not found" — deleting a rule, skipping a
-rename — re-check with a different substring or an escaped pattern.
+**A zero-match search is a claim, not a fact.** `faster_search {pattern:"first-letter"}` once returned
+0 while `::first-letter` sat in the file; 0.2.12 made index filtering recall-safe and that case no
+longer reproduces on 0.2.22. Keep it as a habit rather than a known bug: before acting on "not
+found" — deleting a rule, skipping a rename — re-check with a different substring or an escaped
+pattern.
 
 ## Rule 4 — pick the write tool by what you know
 
