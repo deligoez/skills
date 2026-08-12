@@ -214,8 +214,8 @@ returned it. Build output, `node_modules` and vendored trees are invisible until
 1. `lines_removed` in the response — the Rule 0 check. Do this every time. The count alone is not
    enough: a stale range removes the right *number* of lines and the wrong ones. Read the `-` lines
    of the returned diff, not just the tally.
-2. `edit`/`patch` return the written lines, so a follow-up read is usually waste. Want the change in
-   context? `diff {file}` (or `diff {stat:true}`, `staged:true`).
+2. `edit`/`patch` return a diff synthesized from that edit alone, so a follow-up read is usually
+   waste. Want the change in context? `diff {file}` (or `diff {stat:true}`, `staged:true`).
 3. `lint {file}` auto-detects the project linter and returns normalized diagnostics. It returns
    `{linter:null, pass:null}` when the repo has no supported linter config (it looks for a
    project-local install before PATH) — then your verification is the test suite.
