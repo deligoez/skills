@@ -142,6 +142,11 @@ Never pull a big file whole. A 7,878-line widget file → `mode:"outline"` retur
   256 KiB: a 1 MB file came back as its first ~26% with `truncated:true`, `annotated:false` (no line
   gutter) and `hint:"use mode=lines and continue by range"` — still `ok:true`. If you see
   `truncated:true`, everything past that point is simply absent from your context.
+- **Check the `warnings` array on reads.** Reads decode invisible Unicode tag blocks and mixed-script
+  confusables and report them with `kind`, `severity`, `count` and `decoded` — a file carrying a
+  hidden tag block came back with `tag_unicode`/`high`/`decoded:"AB"`, and a Cyrillic-а `admin` with
+  `confusable_unicode`. The content is still returned; the warning is your only tripwire when the
+  file came from somewhere you don't control.
 
 **Known limit:** a one-line arrow const (`export const f = x => …`) resolves as a symbol to just its
 signature line. Use `lines`/`smart_range` for those.
