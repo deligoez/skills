@@ -35,7 +35,7 @@ skill.
 `content` is only the small piece you matched, the rest of that function — signature included — is
 deleted, and the call still returns `ok:true`.
 
-Reproduced on 0.2.10 against a Go file:
+Reproduced on 0.2.10, re-verified unchanged on 0.2.22, against a Go file:
 
 ```
 edit {file, pattern:'suffix := "!"', content:'\tsuffix := "!!"'}
