@@ -170,6 +170,10 @@ longer reproduces on 0.2.22. Keep it as a habit rather than a known bug: before 
 found" — deleting a rule, skipping a rename — re-check with a different substring or an escaped
 pattern.
 
+**The likelier cause is scope: ignored paths are skipped by default.** Verified — a `build/` line in
+`.gitignore` hid its file from `faster_search` completely; the same search with `no_ignore:true`
+returned it. Build output, `node_modules` and vendored trees are invisible until you ask for them.
+
 ## Rule 4 — pick the write tool by what you know
 
 | You know… | Use |
