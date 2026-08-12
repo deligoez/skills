@@ -131,8 +131,8 @@ Never pull a big file whole. A 7,878-line widget file → `mode:"outline"` retur
 - `read {file, mode:"lines", range:"120-180"}` / `mode:"smart_range", line:150` → exact or
   context-expanded ranges. `range:"10-$"` reads to end of file.
 - `read {file, mode:"section", heading:"Install"}` → a markdown section. `mode:"ls"` lists a dir.
-- Re-reading a file you already saw? Pass `if_hash` from the previous read — unchanged files come
-  back as `{unchanged:true}` for free.
+- Re-reading a file you already saw? Pass `if_revision` from the previous read — unchanged files come
+  back as `{unchanged:true}` for free. (`if_hash` is the legacy spelling of the same guard.)
 - Small files (a screen of prose, a config) — just read them full. Outline-first is for big files.
 - **`mode:"full"` on a big file returns a partial file, not an error.** Responses are capped at
   256 KiB: a 1 MB file came back as its first ~26% with `truncated:true`, `annotated:false` (no line
@@ -174,11 +174,16 @@ pattern.
 
 - **After any write to a file, line numbers from an earlier read are stale.** `patch` and
   `edit {range}` are deterministic: they apply to whatever now sits there and return `ok:true`.
-  Re-read (the read cache is refreshed by the write — no `fresh:true` needed), or send the write
-  with `dry_run:true` — the diff comes back without touching the file, one call instead of a broken
-  one. On a range-based write into a file you have already edited, treat `dry_run:true` as the
-  default, not the last resort. Verified failure: a range two lines stale doubled a docblock's
-  `@return` and ate the blank `*` line.
+  Verified failure: a range two lines stale doubled a docblock's `@return` and ate the blank `*`
+  line.
+- **Carry `if_revision` on every line-range write.** Every read returns a `revision`; pass it back
+  and a stale write fails closed with `revision mismatch; re-read before editing` plus the current
+  revision, instead of corrupting the file (0.2.19+; verified on `patch`, on `edit {range}` and on
+  `edit {symbol}`). This is the guard that doesn't depend on you remembering — re-reading and
+  `dry_run:true` both still work, but only if you stop to think first.
+- **`expected:N` is a fail-closed count guard.** `edit {op:"str_replace", old_string, new_string,
+  expected:1}` errors with `expected 1 matches but found 6` instead of writing six times. Use
+  `replace_all:true` when you do mean every match, `match_index:N` to pick one.
 - **Prose and Markdown have no parseable scopes.** `edit {pattern}` on a `.md` file fails with
   `no enclosing scope found for pattern match`. Use `range`/`after`, or `replace` for a string swap.
 - **Don't span a doc-comment → `func` boundary in a pattern.** `// Greet says…\nfunc Greet(…)` fails
@@ -224,7 +229,8 @@ know nothing about the file      → read outline
 know the function                → read symbol / edit symbol
 replacing less than a function   → edit scope:"line"   (any pattern, 1 line or 40 = whole func)
 know the exact line              → read lines / patch range
-line numbers after a prior write → stale; re-read, or send it with dry_run:true
+line numbers after a prior write → stale; pass if_revision (fails closed), or dry_run:true
+big file, need all of it         → outline + ranges (full caps at 256 KiB, truncated:true)
 markdown or prose                → patch range / replace   (pattern edits have no scope there)
 know the exact string            → faster_search / replace (dry-run → apply)
 question is vague                → meta_search
