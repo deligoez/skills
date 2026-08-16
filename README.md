@@ -13,6 +13,7 @@ OpenCode, and others). Different skills, different topics — one repo.
 | [`typography-for-lawyers`](skills/typography-for-lawyers) | Professional typography for legal and professional documents — fonts, point size, margins, line spacing, court-rule compliance, and fixing "typewriter habits" — distilled from Matthew Butterick's *Typography for Lawyers*. |
 | [`turkish-humanizer`](skills/turkish-humanizer) | Makes Turkish text read naturally — cleans AI-generated and English-translationese patterns (signpost connectors, bureaucratic `-maktadır`, `sahip olmak`, `-lı bir şekilde`, calques, em dashes) and rewrites toward fluent, TDK-correct Turkish while preserving meaning. |
 | [`codedbpro`](skills/codedbpro) | Teaches an agent to drive the codedbpro MCP toolset efficiently — batch-everything discipline, outline-first reading, symbol-safe edits, dry-run-first refactors, and the field-tested pitfalls (stale index, dry-run defaults, blast-radius guards). |
+| [`digital-lexicography`](skills/digital-lexicography) | Turns an existing dictionary into structured data, audits it non-circularly, then grows it — the source-fidelity contract, entry-parsing traps, damaged-character forensics, safe merging and cross-verification, meaning-based search, and DMLex / TEI Lex-0 export. |
 
 ## Install
 
