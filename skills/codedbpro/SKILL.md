@@ -219,6 +219,13 @@ returned it. Build output, `node_modules` and vendored trees are invisible until
   `replace_all:true` when you do mean every match, `match_index:N` to pick one.
 - **Prose and Markdown have no parseable scopes.** `edit {pattern}` on a `.md` file fails with
   `no enclosing scope found for pattern match`. Use `range`/`after`, or `replace` for a string swap.
+- **In prose the echo is line-shaped, so it is expensive.** A `str_replace` diff returns the whole
+  old line *and* the whole new line. A markdown paragraph is usually one long line, so a 40-byte
+  wording fix on a 1,900-byte paragraph echoes about 4 KB — in Go or PHP the same edit echoes ~90 B
+  because the lines are short. Target a narrow `patch {range}`, and don't touch one paragraph twice.
+- **`dry_run:true` measures without touching.** It returns the real diff, the match count and the
+  resolved scope for a write that never happens — the safe way to ask "how many places would this
+  hit?" about a file you must not modify yet.
 - **Don't span a doc-comment → `func` boundary in a pattern.** `// Greet says…\nfunc Greet(…)` fails
   the same way: the comment sits outside the symbol's scope. Match from the `func` line instead.
 - `replace` is **dry-run by default**: preview, then re-send with `apply:true`. It refuses
