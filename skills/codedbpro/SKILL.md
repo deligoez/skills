@@ -15,9 +15,20 @@ compatibility: any-agent
 
 # codedbpro — daemon-backed read/search/edit for agents
 
-A persistent daemon over MCP: eleven code tools with no fork/exec per call (~1–13 ms/op measured),
-a symbol index, and shell-free writes. Content travels as JSON, so curly quotes, non-ASCII,
-backticks and `$` are all safe — this replaces python/perl heredoc surgery and its classic traps.
+A persistent daemon over MCP: eleven code tools, a symbol index, and shell-free writes.
+
+**Three things earn its place, and none of them is raw speed.** A `git grep` across a mid-size repo
+runs in tens of milliseconds — the same order as an MCP round-trip — so "it's faster" is not the
+argument, and neither is "fewer tokens" against a disciplined `grep … | head`:
+
+1. **Writes fail closed.** `expected`, `if_revision` and `lines_removed` turn a silently-wrong write
+   into an error instead of a corrupted file.
+2. **Output is bounded.** `limit`, `max_per_file` and the 256 KiB response ceiling make it hard to
+   burn your whole context on one careless call. The win is that the *worst* case is capped.
+3. **Content travels as JSON.** Curly quotes, non-ASCII, backticks and `$` are safe — this replaces
+   python/perl heredoc surgery and its classic traps.
+
+Fewer ways to be badly wrong, not fewer milliseconds.
 
 Where hooks block native `Read`/`Write`/`Edit`/`grep`, codedbpro is the primary toolchain, not a
 fallback. The CLI twins (`zigread`/`zigrep`/`zigpatch`/`zigcreate`) are for bash loops or a dead
