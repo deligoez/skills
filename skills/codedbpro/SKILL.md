@@ -110,6 +110,10 @@ take **`path`**. Passing `path` to `create` fails with `missing 'file'`; passing
 ## Rule 1 — two or more operations = ONE `batch`
 
 - Reads and searches run **in parallel**.
+- **A batch amortizes round-trips, not response bytes.** Every op's result is the same full object
+  inside a batch as outside it, plus the wrapper — so a batch of tiny writes costs marginally *more*
+  bytes than the same writes sent one by one. What you buy is one model turn instead of N. If you
+  want fewer tokens, ask for less output (Rule 3), not for more batching.
 - Same-file writes are serialized, but **applied in call order, top-down — they are not reordered**.
   Tested on 0.2.14 and again on 0.2.22: `{after:2, op:"insert"}` followed by `{range:"6-6"}` in one
   batch hit the original line 5, and two plain `patch` ranges behave the same. The 0.1.04 release
