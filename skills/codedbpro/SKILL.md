@@ -285,6 +285,9 @@ big file, need all of it         → outline + ranges (full caps at 256 KiB, tru
 markdown or prose                → patch range / replace   (pattern edits have no scope there)
 know the exact string            → faster_search / replace (dry-run → apply)
 question is vague                → meta_search
+broad or unfamiliar search       → c:true / l:true first, then max_per_file + limit
+must not touch the file yet      → dry_run:true (real diff, real counts, no write)
+writing a hook or script         → after edit/patch: ls -l, chmod +x (the bit is dropped)
 ≥2 of anything                   → batch
 just rebased/pulled              → fresh:true
 long task, fragile context       → memo
