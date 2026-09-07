@@ -243,9 +243,17 @@ returned it. Build output, `node_modules` and vendored trees are invisible until
    of the returned diff, not just the tally.
 2. `edit`/`patch` return a diff synthesized from that edit alone, so a follow-up read is usually
    waste. Want the change in context? `diff {file}` (or `diff {stat:true}`, `staged:true`).
-3. `lint {file}` auto-detects the project linter and returns normalized diagnostics. It returns
-   `{linter:null, pass:null}` when the repo has no supported linter config (it looks for a
-   project-local install before PATH) — then your verification is the test suite.
+3. **Check the file mode after writing anything executable.** `edit` and `patch` write through a
+   temp file and rename, and the renamed file comes back `0644`. Measured on 0.2.22: a `0755`
+   script edited by either tool ended up non-executable, `ok:true`, no warning (its `backup:true`
+   `.bak` too). `create {force:true}` and `replace {apply:true}` — even with `atomic_write:true` —
+   keep the bit. So after touching a hook, a git hook or any script: `ls -l`, then `chmod +x`.
+   **A hook that lost its exec bit fails open** — the rule it enforces silently stops running, and
+   nothing in the transcript says so.
+4. The project's test suite is the real gate. Run it.
+5. `lint {file}` last, and only if the repo has one. It auto-detects the project linter (a
+   project-local install before PATH) and returns normalized diagnostics, or
+   `{linter:null, pass:null}` when there is no supported config — which is not verification.
 
 ## Rule 6 — memo for anything that must survive context loss
 
@@ -260,6 +268,7 @@ compression. Use it on multi-hour tasks instead of re-deriving state.
 - **codedbpro is not repo-locked.** read/search/edit/create all succeed on `/tmp`, `~/.claude`, or
   another checkout. A failure out there is a missing parent (`parents:true`) or a scope error — not
   a workspace boundary.
+- `edit` and `patch` **drop the executable bit**; `create` and `replace` keep it (Rule 5).
 - `replace` without `apply:true` **wrote nothing** — don't move on after a preview.
 - Batch `ops` passed as a string instead of an array is the most common malformed call.
 - Two independent facts you need → still one batch. Only serialize when call B needs call A's output.
