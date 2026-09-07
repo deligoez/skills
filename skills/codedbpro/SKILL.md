@@ -173,6 +173,11 @@ signature line. Use `lines`/`smart_range` for those.
   several strategies and merges. Once you know the exact pattern, go back to `faster_search`.
 - After a rebase / checkout / pull / any out-of-band edit → add `fresh:true` once. A stale index is
   the usual cause of "it's there but search can't see it".
+- **Give every search a ceiling.** `max_per_file` (default 25) and `limit` (default 500) are loose
+  for an investigation. One undisciplined broad search can cost more than a whole session of narrow
+  ones; the bounded worst case is the point of this tool, so set the bound.
+- **Count before you read.** `c:true` (counts) or `l:true` (paths only) first, then pull bodies only
+  where the count says it is worth it.
 
 **You cannot force a literal search — escape instead.** `mode:"literal"` *and* `regex:false` were
 both overridden in testing: `alpha|beta` still matched lines containing only `alpha` or only `beta`
