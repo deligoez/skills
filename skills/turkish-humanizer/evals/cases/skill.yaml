@@ -1,0 +1,154 @@
+# SKILL.md çekirdeği: bürokratik yüklem, bilgi koruma, biçim, kilitli türler, iki kip.
+cases:
+- id: maktadir-kurumsal
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  input: Yeni sistem, işlem sürelerini önemli ölçüde düşürmektedir.
+  expected_contains: [önemli ölçüde, işlem sürelerini]
+  expected_not_contains: [düşürmektedir]
+
+- id: mistir-zinciri
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  context: Çalışanlara giden bilgilendirme e-postası.
+  input: Gerekli önlemler zamanında atılmış ve tespit edilen eksiklikler giderilmiştir.
+  expected_contains: [zamanında, eksiklik]
+  expected_not_contains: [giderilmiştir]
+
+- id: onem-sahip-agirlik-degistirme
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  input: Enerji verimliliği, sürdürülebilir kalkınma açısından kritik bir öneme sahiptir.
+  expected_contains: [kritik, enerji verimliliği]
+  expected_not_contains: [öneme sahiptir, önem taşımaktadır]
+
+- id: uclu-liste-korunur
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  input: Platformumuz hızlı, esnek ve erişilebilir bir altyapı sunmaktadır.
+  expected_contains: [hızlı, esnek, erişilebilir]
+  expected_not_contains: [sunmaktadır]
+
+- id: niteleyici-korunur
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  input: Verileriniz, en üst düzey şifreleme standartlarıyla korunmaktadır.
+  expected_contains: [en üst düzey, şifreleme]
+  expected_not_contains: [korunmaktadır]
+
+- id: cumle-sayisi-korunur
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  context: Kurumsal faaliyet raporundan bir paragraf.
+  input: >-
+    Söz konusu çalışmalar geçen yıl başlatılmıştır. Çalışmaların gerçekleştirilmesinde yerel
+    yönetimlerle iş birliği yapılmıştır. Sonuçlar önümüzdeki ay kamuoyuyla paylaşılacaktır.
+  expected_sentences: 3
+  expected_contains: [yerel yönetimler, önümüzdeki ay]
+  expected_not_contains: [söz konusu]
+
+- id: yeni-bilgi-eklenmez
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  input: Klevia kullanıcıların bilgilerini korumaktadır.
+  expected_not_contains: [korumaktadır]
+  expected_property: >-
+    Şifreleme, sertifika, saklama süresi gibi girdide olmayan bir güvenlik önlemi eklenmez.
+
+- id: resmi-duyuru-kilitli
+  source: skill
+  ref: SKILL.md
+  kind: control
+  context: Belediyenin resmî duyurusu.
+  input: >-
+    Taşınmazın kullanımına ilişkin usul ve esaslar yönetmelikte belirtilmiştir. İlgililere
+    saygıyla duyurulur.
+  expected: >-
+    Taşınmazın kullanımına ilişkin usul ve esaslar yönetmelikte belirtilmiştir. İlgililere
+    saygıyla duyurulur.
+
+- id: klinik-kayit-kilitli
+  source: skill
+  ref: SKILL.md
+  kind: control
+  context: Epikriz.
+  input: Hastanın şikâyetleri üç gün önce başlamıştır. Muayenede patolojik bulguya rastlanmamıştır.
+  expected: Hastanın şikâyetleri üç gün önce başlamıştır. Muayenede patolojik bulguya rastlanmamıştır.
+
+- id: resmi-sure-kilitli
+  source: turkish-native/p41-register-formal
+  ref: SKILL.md
+  kind: control
+  context: Kamu kurumunun başvuru sayfası; resmî ton korunmalı.
+  input: Başvurunuz en geç 30 gün içinde sonuçlandırılır.
+  expected: Başvurunuz en geç 30 gün içinde sonuçlandırılır.
+
+- id: hukuk-kilitli
+  source: turkish-native/p42-legal-control
+  ref: SKILL.md
+  kind: control
+  input: Tüketici sıfatıyla hareket eden kullanıcılar bakımından yürürlükteki tüketici mevzuatı uygulanır.
+  expected: Tüketici sıfatıyla hareket eden kullanıcılar bakımından yürürlükteki tüketici mevzuatı uygulanır.
+
+- id: sozlesme-kilitli
+  source: turkish-native/control-legal
+  ref: SKILL.md
+  kind: control
+  input: Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır.
+  expected: Bu sözleşmeye Türkiye Cumhuriyeti hukuku uygulanır.
+
+- id: dogal-anlati-dokunma
+  source: skill
+  ref: SKILL.md
+  kind: control
+  input: Sabah erkenden yola çıktık, öğlene doğru köye vardık.
+  expected: Sabah erkenden yola çıktık, öğlene doğru köye vardık.
+
+- id: gunluk-ses-dokunma
+  source: turkish-native/p41-register-sales-control
+  ref: SKILL.md
+  kind: control
+  input: Sen satışa bak.
+  expected: Sen satışa bak.
+
+- id: kisa-dogal-dokunma
+  source: turkish-native/p46-natural-control
+  ref: SKILL.md
+  kind: control
+  input: Bulamazsa uydurmaz.
+  expected: Bulamazsa uydurmaz.
+
+- id: komut-dokunma
+  source: turkish-native/p44-command
+  ref: SKILL.md
+  kind: fix
+  input: Paketi npm install -g klevia-mcp komutunun çalıştırılması suretiyle kurunuz.
+  expected_contains: [npm install -g klevia-mcp]
+  expected_not_contains: [suretiyle]
+
+- id: yol-dokunma
+  source: turkish-native/p44-route
+  ref: SKILL.md
+  kind: control
+  input: MCP uç noktası /api/mcp yolunda çalışır.
+  expected: MCP uç noktası /api/mcp yolunda çalışır.
+
+- id: inceleme-kipi-yeniden-yazmaz
+  source: skill
+  ref: SKILL.md
+  kind: fix
+  mode: review
+  context: Uzun bir kitabın 42. ekranı; metnin geri kalanı doğru.
+  input: >-
+    Röleyi kapattığında kol çekilir. Kapı da bu sırada ses eder. Devre bir sonraki adıma geçer.
+  expected_contains: [ses çıkar, hata]
+  expected_property: >-
+    Metni yeniden yazmaz; yalnız bozuk satır için konum, alıntı, sınıf, sorun ve öneri içeren bir
+    bulgu verir. Doğru iki cümleye bulgu açmaz.
