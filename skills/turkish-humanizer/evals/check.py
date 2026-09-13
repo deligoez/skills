@@ -54,6 +54,29 @@ def count_sentences(text: str) -> int:
     return len([p for p in re.split(r"(?<=[.!?…])\s+", text.strip()) if p.strip()])
 
 
+def _norm(text: str) -> str:
+    return " ".join(tr_lower(re.sub(r"[*_`]", "", text)).split())
+
+
+def skill_text() -> str:
+    files = [SKILL / "SKILL.md", *sorted((SKILL / "references").glob("*.md"))]
+    return _norm("\n".join(f.read_text(encoding="utf-8") for f in files))
+
+
+def is_seen(case: dict, corpus: str) -> bool:
+    """True when a line of the input is quoted in SKILL.md or a reference.
+
+    Such a case can pass by recalling the worked example, so it measures memory of the example
+    more than grasp of the rule. Lines under 12 characters (Hizmetler, Kaydetmek) are too common
+    to tell.
+    """
+    for line in case["input"].splitlines():
+        key = _norm(line).strip(" .!?:;")
+        if len(key) >= 12 and key in corpus:
+            return True
+    return False
+
+
 def unwrap(text: str) -> str:
     match = re.search(r"<metin>\s*(.*?)\s*</metin>", text, re.S)
     return (match.group(1) if match else text).strip()
@@ -203,7 +226,11 @@ def cmd_validate(_: argparse.Namespace) -> int:
         return 1
     controls = sum(1 for _, c in cases if c["kind"] == "control")
     files = len({p for p, _ in cases})
+    corpus = skill_text()
+    fixes = [c for _, c in cases if c["kind"] == "fix"]
+    unseen = sum(1 for c in fixes if not is_seen(c, corpus))
     print(f"OK: {len(cases)} cases in {files} files, {controls} controls, every reference covered")
+    print(f"    {unseen}/{len(fixes)} fixes use an input the skill text does not quote")
     return 0
 
 
@@ -220,6 +247,7 @@ def cmd_score(args: argparse.Namespace) -> int:
             row = json.loads(line)
             outputs[row["id"]] = row["output"]
 
+    corpus = skill_text()
     results = []
     for _, case in load():
         if case["id"] not in outputs:
@@ -230,19 +258,25 @@ def cmd_score(args: argparse.Namespace) -> int:
 
     if args.json:
         for case, status, notes in results:
-            print(json.dumps({"id": case["id"], "kind": case["kind"], "status": status, "notes": notes}, ensure_ascii=False))
+            row = {"id": case["id"], "kind": case["kind"], "seen": is_seen(case, corpus), "status": status, "notes": notes}
+            print(json.dumps(row, ensure_ascii=False))
     else:
         for case, status, notes in results:
             if status != "pass":
                 print(f"{status.upper():7} {case['id']}: {'; '.join(notes)}")
 
-    def tally(kind: str) -> str:
-        rows = [s for c, s, _ in results if c["kind"] == kind]
+    def tally(keep) -> str:
+        rows = [s for c, s, _ in results if keep(c)]
         parts = [f"{rows.count(s)} {s}" for s in ("pass", "judge", "fail", "missing") if rows.count(s)]
         return f"{', '.join(parts)} of {len(rows)}"
 
     counts = {s: sum(1 for _, st, _ in results if st == s) for s in ("fail", "missing")}
-    print(f"\nfixes: {tally('fix')}\ncontrols: {tally('control')}", file=sys.stderr)
+    print(
+        f"\nfixes, input quoted in the skill: {tally(lambda c: c['kind'] == 'fix' and is_seen(c, corpus))}"
+        f"\nfixes, input not quoted:         {tally(lambda c: c['kind'] == 'fix' and not is_seen(c, corpus))}"
+        f"\ncontrols:                        {tally(lambda c: c['kind'] == 'control')}",
+        file=sys.stderr,
+    )
     return 1 if counts["fail"] or counts["missing"] else 0
 
 
