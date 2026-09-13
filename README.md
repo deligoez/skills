@@ -67,6 +67,10 @@ is valid as soon as it has a `SKILL.md` with `name` and `description` frontmatte
 - `typography-for-lawyers` distills the freely available web edition of Matthew Butterick's
   [*Typography for Lawyers*](https://typographyforlawyers.com). All credit for the underlying rules
   belongs to Butterick — [buy the book](https://typographyforlawyers.com) to support the work.
+- `turkish-humanizer` adapts several patterns and regression cases from Oğuzhan Kayan's
+  [turkish-native](https://github.com/oguzhankayan/turkish-native) (MIT); the borrowed cases are
+  marked `source: turkish-native/…` and the license notice is kept in
+  [`skills/turkish-humanizer/evals/README.md`](skills/turkish-humanizer/evals/README.md).
 
 ## License
 
