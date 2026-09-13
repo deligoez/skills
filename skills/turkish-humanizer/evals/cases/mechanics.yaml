@@ -1,0 +1,117 @@
+# references/mechanics.md: TDK yazımı, noktalama, kesme, büyük harf, ses olayları, sayı ve saat.
+cases:
+- id: de-baglac
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Bende geliyorum.
+  expected: Ben de geliyorum.
+
+- id: de-ozel-ad-baglac
+  source: mechanics
+  ref: references/mechanics.md
+  kind: control
+  input: Ankara da bu soruna çözüm arıyor.
+  expected: Ankara da bu soruna çözüm arıyor.
+
+- id: mi-ayri
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Yarın gelecekmisin?
+  expected: Yarın gelecek misin?
+
+- id: ki-bugunku
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Bugünki toplantı ertelendi.
+  expected: Bugünkü toplantı ertelendi.
+
+- id: ki-uyuma-girmez
+  source: saha
+  ref: references/mechanics.md
+  kind: fix
+  input: Üçüncününkü daha uzun.
+  expected: Üçüncününki daha uzun.
+
+- id: cins-ada-kesme
+  source: saha
+  ref: references/mechanics.md
+  kind: fix
+  input: Maniple'yi kısa basıp bırak.
+  expected: Manipleyi kısa basıp bırak.
+
+- id: kurum-adi-kesme
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Türk Dil Kurumu'nun önerisi kabul edildi.
+  expected: Türk Dil Kurumunun önerisi kabul edildi.
+
+- id: ve-oncesi-virgul
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Hız, güvenlik, ve verimlilik öne çıktı.
+  expected: Hız, güvenlik ve verimlilik öne çıktı.
+
+- id: saat-ve-yuzde
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Toplantı 14:30'da başlıyor; katılım 50% arttı.
+  expected: Toplantı 14.30'da başlıyor; katılım %50 arttı.
+
+- id: ondalik-virgul
+  source: turkish-native/p29-decimal
+  ref: references/mechanics.md
+  kind: fix
+  input: 12 yorum, 4.8 puan
+  expected: 12 yorum, 4,8 puan
+
+- id: json-ondalik-dokunma
+  source: turkish-native/p47-machine-format-control
+  ref: references/mechanics.md
+  kind: control
+  context: Makinenin okuduğu JSON. Ondalık ayırıcıyı yerelleştirme.
+  input: '{"score": 4.8}'
+  expected: '{"score": 4.8}'
+
+- id: hala-hala
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Yağmur hala yağıyor.
+  expected: Yağmur hâlâ yağıyor.
+
+- id: kaz-tirnak
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Raporda «büyüme» kelimesi on kez geçiyor.
+  expected: Raporda "büyüme" kelimesi on kez geçiyor.
+
+- id: title-case-baslik
+  source: turkish-native/p28-title-case
+  ref: [references/mechanics.md, references/registers.md]
+  kind: fix
+  context: Sıradan bir özellik başlığı; marka yazımı değil.
+  input: Hızlı Kurulum
+  expected: Hızlı kurulum
+
+- id: sir-cini
+  source: turkish-native/p17-sir-glaze
+  ref: references/mechanics.md
+  kind: fix
+  context: Seramik atölyesi; söz edilen sır, pişirmeden önce sürülen camsı kaplama.
+  input: Sırrını sürer, fırında özenle pişiririz.
+  expected_contains: [sırını]
+  expected_not_contains: [sırrını]
+
+- id: sayi-eki-okunus
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  input: Katılımcı sayısı 30'e ulaştı.
+  expected: Katılımcı sayısı 30'a ulaştı.
