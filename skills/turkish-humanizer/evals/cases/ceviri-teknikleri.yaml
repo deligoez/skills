@@ -20,10 +20,18 @@ cases:
   source: ceviri-teknikleri
   ref: references/ceviri-teknikleri.md
   kind: fix
-  context: Arkadaşa kısa mesaj.
+  context: Arkadaşa kısa mesaj; ortada karşıtlık yok.
+  input: Dün markete gittim. Ben orada eski bir arkadaşımı gördüm. Ben ona uzun zamandır ulaşamıyordum.
+  expected_contains: [market, arkadaşımı]
+  expected_not_contains: [ben orada, ben ona]
+
+- id: karsitlik-zamiri-kalir
+  source: ceviri-teknikleri
+  ref: [references/ceviri-teknikleri.md, references/fluency.md]
+  kind: control
+  context: Arkadaşa kısa mesaj; ben/sen karşıtlığı kasıtlı.
   input: Ben bu akşam dışarı çıkacağım, sen de gelmek ister misin?
-  expected_contains: [akşam, dışarı]
-  expected_not_contains: [ben bu akşam]
+  expected: Ben bu akşam dışarı çıkacağım, sen de gelmek ister misin?
 
 - id: yerlesik-kalk-serbest
   source: ceviri-teknikleri
