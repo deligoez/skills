@@ -251,3 +251,79 @@ cases:
   context: Ana başlığın üstündeki küçük etiket; menüde böyle bir öğe yok.
   input: Kadıköy · Güzellik ve bakım
   expected: Kadıköy · Güzellik ve bakım
+
+# --- Varyantlar ---
+
+- id: ic-jargon-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  context: Teknik olmayan müşteriye görünen bildirim.
+  input: Senkronizasyon job'ı fail oldu.
+  expected_not_contains: [job, fail]
+
+- id: veritabani-dili-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  context: Kullanıcıya giden bildirim; hesabı askıya alındı.
+  input: Kullanıcı kaydınız pasife çekildi.
+  expected_not_contains: [kaydınız pasife]
+
+- id: belge-gibi-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  context: Destek sohbet penceresindeki durum mesajı.
+  input: Talebiniz ilgili birime iletilmiş olup en kısa sürede tarafınıza dönüş sağlanacaktır.
+  expected_contains: [talebiniz]
+  expected_not_contains: [iletilmiş olup, dönüş sağlanacaktır]
+
+- id: saas-kalki-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  context: Kullanıcıya görünen uyarı; aylık kullanım hakkı doldu.
+  input: Kota aşıldı.
+  expected_not_contains: [kota aşıldı]
+
+- id: baslikta-sen-siz-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  context: Sayfanın geri kalanı okura "siz" diye sesleniyor; bu bir bölüm başlığı.
+  input: Bütçene uygun paketler
+  expected_contains: [bütçenize]
+  expected_not_contains: [bütçene]
+
+- id: kume-biz-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  context: Halı yıkama firmasının sayfasından üç başlık. Küme olarak değerlendir.
+  input: "Halıyı evden alırız.\nYıkamayı iki günde bitiririz.\nTeslimatı ücretsiz yaparız."
+  expected_contains: [halı, iki gün, ücretsiz]
+  expected_property: Üç başlık aynı yüklem sonuyla bitmez; hiçbir bilgi düşmez.
+
+- id: iki-yuva-varyant
+  source: turkish-native/p50-same-sentence-two-bands
+  ref: references/registers.md
+  kind: fix
+  mode: review
+  context: Bir hizmet başlığı ve bir bant başlığı, aynı sayfada. Sayfada başka olgu verilmemiş.
+  input: "Doğru perde evi sıcacık yapar.\nDoğru perdeyle ev sıcacık olur."
+  expected_contains: [öneri]
+  expected_property: >-
+    İki yuvanın aynı şeyi söylediğini bildirir; ikinci yuva için yeni bir olgu uydurmaz.
+
+- id: menu-etiketi-varyant
+  source: heldout
+  ref: references/registers.md
+  kind: fix
+  mode: review
+  context: >-
+    "Atölyeden kareler" başlığının üstündeki küçük etiket; sayfanın menüsünde zaten "Galeri"
+    bağlantısı var. Sayfada başka konu bilgisi verilmemiş.
+  input: Galeri
+  expected_contains: [öneri]
+  expected_property: Etiketin menüyü tekrarladığını bildirir; yerine sayfadan çıkmayan bir konu uydurmaz.
