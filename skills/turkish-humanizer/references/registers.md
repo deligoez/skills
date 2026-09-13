@@ -88,6 +88,11 @@ istediğini** Türkçeye taşı.
 - ✗ *Okumaya hazır:* (Ready to read) → ✓ *Bugün:* / *Başla* · ✗ *Devam ediyor* (In progress) →
   ✓ *Sürüyor* · ✗ *Tamamlandı olarak işaretle* → ✓ *Tamamlandı.*
 - Bu sınıf arayüzde sık: kısa etiket, İngilizce kalıbı taşıyıp Türkçede tuhaf duruyor.
+- SaaS kalıpları da aynı yoldan gelir: ✗ *Kart istemiyoruz* (No card required) → ✓ *Kredi kartı
+  gerekmez.* ✗ *Kota tüketildi* → ✓ *Kullanım hakkınız doldu.*
+- **Meşru:** yerleşmiş ürün dili kalır. *Planını yükselt*, *Linki gönder*, *Demo hazır* ürünün sesi
+  buysa doğrudur; *bağlantıyı ilet* diye resmîleştirmek metni yabancılaştırır. Ölçüt kaynak dile
+  benzemek değil, Türk kullanıcının o üründe gerçekten okuduğu dil.
 
 ### 5.3 Onay kutusu
 Sonucu olan eylemde **fiili düğmeye yaz**: ✓ *Sil / Vazgeç*, *Kaldır / İptal*. *Evet / Hayır* yalnız
@@ -114,6 +119,28 @@ Türkçe eklemeli: eke gelen biçim, **önündeki kelimenin son sesine** bağlı
 ### 5.6 Tutarlılık
 Aynı eylem her yerde aynı fiille. *Sil* bir yerde *Kaldır* olmasın (bkz. `terminology.md`).
 Büyük harf: **cümle düzeni** — Title Case İngilizce ithalidir.
+
+### 5.7 Ürünün iç dili kullanıcıya sızmaz
+
+Kullanıcı **kendi nesnesini** okur (işletme, hesap, tarama), sistemin temsilini değil (kayıt, aday,
+run).
+- **İç jargon:** ✗ *Gerçek İstanbul run'ı tamamlandı.* → ✓ *Gerçek İstanbul taraması tamamlandı.*
+  ✗ *Orchestrator adayları pipeline'a taşır* (ürün sayfasında) → kullanıcının gördüğü sonucu yaz.
+- **Veritabanı dili:** ✗ *Aynı işletme için tekrar kayıt oluşturulmaz.* → ✓ *Aynı işletme ikinci kez
+  eklenmez.* ✗ *Kayıt silindi* (müşteri hesabı için) → ✓ *Hesap silindi.*
+- **Meşru:** geliştirici belgesinde, API başvurusunda ya da yönetici panelinde iç terim konunun
+  kendisidir; orada kalır.
+
+### 5.8 Arayüz metni belge gibi konuşmaz
+
+Düğme **eylemi**, durum mesajı **sonucu** söyler; ikisi de sistemin nasıl çalıştığını anlatmaz.
+- ✗ *İşlem başarıyla gerçekleştirilmiştir.* → sonucu adlandır: ✓ *Değişiklikler kaydedildi.* Hangi
+  işlem olduğu bağlamdan bilinmiyorsa uydurma: ✓ *İşlem tamamlandı.*
+- ✗ *Bu butona basıldığında sistem yeni bir kayıt oluşturur.* → düğmeyse eylem (*Yeni işletme ekle*),
+  durumsa sonuç (*İşletme eklendi*).
+- ✗ *İlgili kayıt için düzenleme işlemi gerçekleştirilebilir.* → ✓ *Düzenleyebilirsiniz.*
+- **Etiketin görevine bak:** *Telefon doğrulama* bir **düğme** ise ✓ *Telefonu doğrula*; bir **gezinme
+  başlığı** ya da ayar bölümünün adıysa ad öbeği doğrudur, dokunma (bkz. §5.1 istisnası).
 
 ## 6. Register karışımının kendisi bir izdir
 
