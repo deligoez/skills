@@ -169,3 +169,29 @@ cases:
   kind: fix
   input: Bu özellik daha fazla kontrol sunar.
   expected_not_contains: [kontrol sunar]
+
+# --- Varyantlar ---
+
+- id: kaynak-hal-eki-varyant
+  source: heldout
+  ref: references/collocations.md
+  kind: fix
+  context: Müşteri panelindeki yönerge.
+  input: Faturanızı panelde indirebilirsiniz.
+  expected: Faturanızı panelden indirebilirsiniz.
+
+- id: yer-hal-eki-kalir
+  source: heldout
+  ref: references/collocations.md
+  kind: control
+  input: Faturalarınız panelde duruyor.
+  expected: Faturalarınız panelde duruyor.
+
+- id: alan-kulagi-varyant
+  source: heldout
+  ref: references/collocations.md
+  kind: fix
+  context: Kombi servisi; cihazın dış gövdesi kastediliyor. Kaporta otomobil gövdesidir.
+  input: Bakımda kombinin kaportasını da temizleriz.
+  expected_contains: [kombi]
+  expected_not_contains: [kaporta]
