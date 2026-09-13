@@ -51,6 +51,11 @@ Sınıflar — bunları karıştırma, çünkü kullanıcı hepsine aynı şekil
 - **kalıp** — AI/çeviri izi. Düzeltilmeli ama metin yanlış değil.
 - **öneri** — üslup tercihi. İsteğe bağlı; dayatma.
 
+**Küme düzeyi.** Bir sayfanın başlık, bant ve etiketlerini ayrıca alt alta oku: hepsi aynı yüklem
+eki (`-ırız`) ile bitiyor mu, iki yuva sırası değişmiş aynı cümle mi, etiket menüyü mi tekrarlıyor?
+Bunlar tek cümlede görünmez (`references/registers.md` §7). Konum sütununa kümedeki bütün satırları
+yaz.
+
 ## Girdiler — bunlar varsayılanlarımı EZER
 
 Sana bunlardan biri verildiyse, senin varsayılanların değil **o** geçerlidir.
@@ -185,7 +190,7 @@ Düzelttiğin her yerde ad, sayı, sıfat ve sıralama eksiksiz kalır: `hem gel
 | `references/collocations.md` | **Eşdizim ve fiil değerliği** — en büyük artık hata kaynağı: hangi fiil hangi hâli ister, ışık fiil seçimi, EN→TR fiil bölünmeleri, kendini sınama |
 | `references/fluency.md` | Akıcı Türkçe ilkeleri; **nesneyi düşürme karşı kuralı**; ulaç zinciri; fazla-düzeltme uyarısı |
 | `references/mechanics.md` | TDK: de/da, `-ki`, kesme (**cins adda yok**), noktalama, i/ı, ünlü uyumu, sayı/tarih/saat + **otomasyon tuzakları** |
-| `references/registers.md` | Nesir / başlık / slogan / arayüz; Türkçe daha az eksilti kaldırır; tamlama zinciri; BÜYÜK HARF |
+| `references/registers.md` | Nesir / başlık / slogan / arayüz; Türkçe daha az eksilti kaldırır; tamlama zinciri; BÜYÜK HARF; ürünün iç dili ve veritabanı dili; **sayfa düzeyi küme denetimi** (tek kalıba çökme, iki yuvada aynı cümle, menüyü tekrarlayan etiket) |
 | `references/terminology.md` | Uzun ve iki dilli metinde **terim defteri**: kilitli karşılık + gerekçe + tuzak; rezerve kelime disiplini |
 | `references/examples.md` | Register'lara göre tam öncesi/sonrası dönüşümler + inceleme kipi örneği |
 | `references/anlati.md` | **Pozitif craft** — iyi Türkçe nesir nasıl işler: anlaşılırlık, akıcılık, tutarlılık, özgünlük. Ataç/Hepçilingirler geleneği + anlatım-bozukluğu çerçevesi. ai-tells kokuyu siler, bu dosya sesi kurar |
