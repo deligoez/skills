@@ -1,0 +1,31 @@
+# references/anlati.md: anlaşılırlık ve tutarlılık (öğe eksikliği, anlam çelişkisi, sıralama, kişi).
+cases:
+- id: oge-eksikligi
+  source: anlati
+  ref: references/anlati.md
+  kind: fix
+  input: Ben uçaktan, o trenden korkar.
+  expected_contains: [korkarım]
+
+- id: anlam-celiskisi
+  source: anlati
+  ref: references/anlati.md
+  kind: fix
+  input: Yarın kesinlikle yağabilir.
+  expected_not_contains: [kesinlikle yağabilir]
+
+- id: agirdan-hafife
+  source: anlati
+  ref: references/anlati.md
+  kind: fix
+  input: Bu yolda ölebilir, hatta yaralanabilirsin.
+  expected: Bu yolda yaralanabilir, hatta ölebilirsin.
+
+- id: govdede-sen-siz
+  source: anlati
+  ref: references/anlati.md
+  kind: fix
+  context: Metnin geri kalanı okura "siz" diye sesleniyor.
+  input: Formu doldurduktan sonra onaylayın. Ardından e-postana gelen bağlantıya tıkla.
+  expected_contains: [e-postanıza]
+  expected_not_contains: [e-postana]
