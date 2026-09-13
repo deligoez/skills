@@ -58,3 +58,16 @@ cases:
   kind: fix
   input: Çözücü bu işlem kodu'u okur.
   expected: Çözücü bu işlem kodunu okur.
+
+# --- Varyantlar ---
+
+- id: kutup-orani-varyant
+  source: heldout
+  ref: references/terminology.md
+  kind: fix
+  context: >-
+    E-ticaret sitesi, müşterilerin ürünleri neredeyse hiç geri göndermediğini (memnun kaldığını)
+    övünçle anlatıyor.
+  input: Yüksek iade oranımızla gurur duyuyoruz.
+  expected_not_contains: [yüksek iade oranı]
+  expected_property: İddianın yönü kastı söyler (iadeler az ya da memnuniyet yüksek); övünç korunur.
