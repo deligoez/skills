@@ -65,6 +65,14 @@ apart; put the emphasized element right before the verb.
     açılma stratejisi kapsamında gerçekleştirdiği yatırımlar başarıyla sonuçlandı.*
   - ✓ *Şirket geçen yıl, ekonomik belirsizliklere ve artan maliyetlere rağmen, yeni pazarlara açıldı.
     Yatırımlar başarıyla sonuçlandı.*
+- **Odak edatı ile vurgu yeri aynı öğeyi göstermeli.** `sadece / yalnızca / bile` önündeki öğeyi
+  sınırlar; ama Türkçede vurgu yüklemden hemen önceki yerdedir. İngilizce sırası (*only* başta, zaman
+  zarfı fiilin önünde) korununca ikisi ayrı öğelere düşer ve cümle iki yöne okunur:
+  - ✗ *Sadece planını istediğin zaman değiştirebilirsin.* → *yalnızca planını mı*, *yalnızca istediğin
+    zaman mı?* Kast *yalnızca planını* ise sınırlanan öğeyi vurgu yerine taşı: ✓ *İstediğin zaman
+    yalnızca planını değiştirebilirsin.* Hiçbir öğe düşmez; yalnız sıra değişir.
+  - Sınama: edatın önündeki öğe ile yüklemden hemen önceki öğe aynı mı? Değilse sırayı kaynağın
+    kastına göre kur. Kast belirsizse tahmin etme; inceleme kipinde iki okumayı da yaz.
 
 **Devrik cümle (inverted order).** Natural and expressive in speech, literary/emotional prose, and
 deliberate emphasis (Nurullah Ataç built a style on it): *"Gitmek istemiyordu. Ama gitti."* But in
