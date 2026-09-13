@@ -54,7 +54,10 @@ just **delete** the opener.
 - **İlk olarak / İkinci olarak / Son olarak** narrating a numbered structure inside prose:
   *Öncelikle maliyet, sonra da hız devreye giriyor.* — or use real bullets if it's actually a list.
 - **Özetle / Kısacası** opening a paragraph that isn't summarizing anything: state the point directly.
-- **Bu bağlamda** as a content-free bridge: delete; move to the next sentence.
+- **Bu bağlamda / Bu noktada / Bu aşamada** as a content-free bridge: delete; move to the next
+  sentence. *Bu noktada ekipler arası iletişim belirleyici oluyor.* → *Ekipler arası iletişim
+  belirleyici oluyor.* **Meşru:** a real point in time or in a process (*Kurulum bu noktada durur ve
+  onay bekler*) — there the phrase carries information; keep it.
 - **Söz konusu** as a stiff demonstrative: *Söz konusu ürün…* → *Bu ürün…* / just repeat the noun.
   (`söz konusu` is legal/bureaucratic register — a dead giveaway in ordinary prose.)
 - **Nitekim** as generic glue (it should introduce actual confirming evidence): usually delete.
