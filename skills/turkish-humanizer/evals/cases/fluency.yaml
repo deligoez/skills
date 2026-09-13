@@ -96,3 +96,16 @@ cases:
   expected_contains: [telefon, demo, panel, müşteriye]
   expected_max_sentences: 2
   expected_property: Özne Klevia'dan okura geçtiği yerde cümle bölünür ya da açıkça bağlanır.
+
+# --- Varyantlar ---
+
+- id: odak-edati-varyant
+  source: heldout
+  ref: references/fluency.md
+  kind: fix
+  context: Kast, ay sonunda indirilebilecek tek belgenin fatura olduğu.
+  input: Sadece faturayı ay sonunda indirebilirsin.
+  expected_contains: [ay sonunda, faturayı]
+  expected_property: >-
+    Sınırlama tek anlamlı olarak faturaya bağlanır (ör. "Ay sonunda yalnızca faturayı
+    indirebilirsin"); "ay sonunda" korunur.
