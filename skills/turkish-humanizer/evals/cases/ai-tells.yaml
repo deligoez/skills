@@ -331,3 +331,20 @@ cases:
   expected_contains: [siber güvenlik, her zamankinden]
   expected_sentences: 1
   expected_not_contains: [gelmiştir]
+
+- id: bu-asamada-kopru-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  context: Kurumsal blog yazısı; öncesinde belirli bir süreç adımı anlatılmıyor.
+  input: Bu aşamada veri kalitesi, projenin başarısı için belirleyici bir rol oynamaktadır.
+  expected_contains: [veri kalitesi, belirl]
+  expected_not_contains: [bu aşamada, doğrudan]
+
+- id: bu-noktada-surec-kalir
+  source: heldout
+  ref: references/ai-tells.md
+  kind: control
+  context: Kurulum yönergesi; gerçek bir süreç adımı anlatılıyor.
+  input: Kurulum bu aşamada durur ve yönetici onayını bekler.
+  expected: Kurulum bu aşamada durur ve yönetici onayını bekler.
