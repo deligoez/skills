@@ -58,6 +58,17 @@ dative/ablative/instrumental. Getting this wrong is the single most common calqu
   ✓ *bir tanesini bile **atlamadan** sayacak* (or *şaşmadan* — *şaşmaz bir doğrulukla*).
   (The idiom *yolunu şaşırmak* exists, but that's a fixed expression, not a general valency.)
 
+**Yer mi, kaynak mı? `-DA` / `-DAn` edattan değil, olaydan seçilir.** English *on / in / via* is
+static; the Turkish verb decides whether the thing *sits* somewhere (`-DA`) or *comes out of* it
+(`-DAn`). Sending and retrieving (`göndermek, almak, indirmek, çekmek, derlemek`) usually want the
+channel or source in `-DAn`.
+- ✗ *Sayfayı WhatsApp'**ta** gönder* (send *on* WhatsApp) → ✓ *WhatsApp'**tan** gönder*
+- ✗ *Numarayı açık kaynaklar**da** bulur* (gathers it *from* them) → ✓ *açık kaynaklar**dan** bulur*
+- ✓ *Anahtarı çekmece**de** buldum* — the place where it lay; `-DA` is right. Same verb, different
+  event: *bulmak* takes `-DA` for the spot and `-DAn` for the source it is drawn from.
+
+Test: ask *nerede?* or *nereden?* of the Turkish verb, not of the English preposition.
+
 ## 2. Işık fiil seçimi — hangi ad hangi fiili çeker?
 
 The noun chooses its verb. There is no rule; there is only usage. Getting it wrong is instantly
@@ -104,6 +115,18 @@ The fix you reach for can carry an idiom of its own. Sahada yakalandı: bir meti
 **Kural:** düzeltmeyi yazdıktan sonra **ona da 2b testini uygula** ("bu ikiliyi tek başına söyle:
 aklına önce bir deyim mi geliyor?"). Deyim çarpışması yalnız orijinalde değil, **çarenin içinde de**
 olur — ve anadili konuşanın refleks önerisi de bu tuzağa düşer.
+
+### 2e. Alan kulağı — doğru kelime, yanlış zanaat
+
+Bir sözcük Türkçede var ve gerçek bir parçayı adlandırıyor olabilir, ama **başka bir alanın**
+parçasını. O zanaatın içindeki okur bunu hemen fark eder; dışarıdan bakan (ve model) fark etmez.
+- ✗ (bisikletçi) *Fren, vites ve **rot**ları ayarlarız* → *rot* otomobilin direksiyon bağlantısıdır.
+  Bisiklette ayarlanan tekerlektir: ✓ *Fren, vites ve **jant** ayarını yaparız.*
+- **Sınama:** bu kelimeyi o dükkânın ustası kullanır mı? Emin değilsen alanın kendi metinlerinde
+  (servis fiyat listesi, parça kataloğu) tanık ara. Bulamazsan parçanın adını uydurma, yapılan işi
+  anlat.
+- Aynı aile: bir sektörün **olumlu** oranını olumsuz kutbun adıyla söylemek (*kalıp oranı* ↔ geçme
+  oranı). Kutupluluk çiftleri `terminology.md` içinde kilitlenir.
 
 ## 3. Bir İngilizce fiil → çok Türkçe fiil
 
