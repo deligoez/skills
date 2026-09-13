@@ -1,6 +1,6 @@
 ---
 name: turkish-humanizer
-version: 3.0.0
+version: 3.1.0
 description: >-
   Türkçe metni doğal ve akıcı hâle getirir; yapay zekâ ile yazılmış ya da İngilizceden çeviri kokan
   kalıpları temizler. Use whenever you write, edit, review, proofread, or "humanize" Turkish — a
