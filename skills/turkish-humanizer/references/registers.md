@@ -24,6 +24,9 @@ The rest of the skill. Full predicates, suffix-chained clauses, register held co
   - ✓ *Gerilim darbelerine karşı koruma devresi nasıl tasarlanır* / *Koruma devresini tasarlamak*
   - **Rule:** ikiden fazla ad tamlaması katı varsa cümleyi yeniden kur — bir fiil ya da bir ilgi
     cümlesiyle böl.
+- **Kişi başlıkta da sabit.** Başlıklar gövde metninden ayrı yazıldığı için *sen/siz* kayması en çok
+  orada kaçar. Sayfa okura *siz* diyorsa: ✗ *Seviyene özel, hedefe odaklı.* → ✓ *Seviyenize özel,
+  hedefe odaklı.*
 - Soru başlıkları Türkçede doğal çalışır. Ama "X: Neden Önemli?" tarzı iki noktalı listicle başlığı
   İngilizce içerik pazarlamasının kalıbıdır — kaçın.
 
@@ -148,3 +151,68 @@ Mixing registers mid-text — a bureaucratic *-maktadır* inside a chatty blog, 
 at the end of a technical explainer, a slogan's ellipsis inside body prose — is itself the tell,
 independent of whether either register is individually correct. Infer the target register, hold it,
 and change it only at a real boundary (a pull-quote, a caption, a button).
+
+## 7. Sayfa düzeyi — başlıklar bir küme olarak okunur
+
+Cümle cümle kusursuz bir sayfa, küme olarak şablon kokabilir. Aşağıdaki üç sınıf **tek cümleye
+bakılarak görülmez**; başlıkları, bantları ve etiketleri alt alta yazıp birlikte oku.
+
+**Kip sınırı.** İnceleme kipinde bunları bildir; konum sütununa kümedeki bütün satırları yaz. Yeniden
+yazma kipinde yalnız başlık, bant ve etiket kümelerinde uygula; gövde nesrini bu gerekçeyle yeniden
+kurma (SKILL.md: fark dar ve tek eksenli kalır). Hiçbir düzeltme yeni bilgi eklemez: bir yuvaya
+koyacak başka bilgi yoksa uydurma, **öneri** olarak yazarı sor.
+
+### 7.1 Tek kalıba çökme — yüklem sonu tekdüzeliği
+
+Türkçede çekimli fiil sona gelir ve kişiyi ekte taşır; satırın en görünür yeri sonudur. Dört
+başlığın dördü de `-ırız` ile bitince sayfa yazı gibi değil kalıp gibi okunur, oysa her başlık tek
+başına doğrudur.
+
+**Kötü, küme olarak:**
+- *Ekmeği her sabah taze pişiririz.*
+- *Pastayı siparişe göre hazırlarız.*
+- *Siparişi aynı gün teslim ederiz.*
+
+**İyi, küme olarak:**
+- *Ekmek her sabah fırından taze çıkar.*
+- *Pastayı siparişe göre hazırlarız.*
+- *Sipariş aynı gün teslim edilir.*
+
+Aynı olgu için Türkçenin birkaç doğal kalıbı var; bir sayfa birden fazlasını kullanmalı:
+
+| Kalıp | Örnek |
+|---|---|
+| Ad yüklem | *Pazar günleri kahvaltı da var.* |
+| Okur özne | *Yorgunluğunuzu kapıda bırakırsınız.* |
+| Nesne özne | *Fırın her sabah erken yanar.* |
+| Edilgen | *Arıza cihazla tespit edilir.* |
+| Eksiltili dizi (başlıkta) | *Keşiften teslime üç adım.* |
+| Birinci çoğul | *Sütü köyden alırız.* |
+
+Ölçü sayfadır, cümle değil: bir `-ırız` bir sestir, dördü tiktir. Edilgen de aynı yolla çöker: üç
+edilgen başlık üst üste gelince işletme sayfadan tamamen kaybolur. Bizim kendi tuzak yönümüz de bu:
+`-maktadır` yığınını topluca `-yor`'a çevirmek aynı çöküşü başka bir ekle üretir. Kişi değişince
+fail de değişir; *biz*'den edilgene geçerken yazının kimin ne yaptığını hâlâ söylediğinden emin ol.
+
+### 7.2 Aynı cümle iki yuvada
+
+Türkçede söz dizimi serbest olduğu için tekrar tek kelime tekrarlanmadan yaşayabilir: ikinci yuva
+çoğu kez aynı cümlenin sırası değişmiş hâlidir ve başka bir cümle gibi görünür.
+
+- ✗ Başlık *Sofranız katkısız, üreticimiz belgeli.*, altındaki bant *Üreticimiz belgeli, ürünümüz
+  katkısız.*
+- Dizgiyi değil anlamı karşılaştır: aynı soruyu yanıtlayan iki yuva tek yuvadır. Sayfada ikinci yuvaya
+  koyacak başka bir olgu varsa onu kullan; yoksa **öneri** olarak bildir, bilgi uydurma.
+- **Meşru:** benzer görünüp farklı olgu söyleyen yuvalar (*Ekmeği her gün taze pişiririz* /
+  *Pastayı siparişe göre yaparız*). Dokunma.
+
+### 7.3 Menüyü tekrarlayan bölüm etiketi
+
+Türkçe gezinme ve bölüm etiketleri aynı adlara uzanır (*Hizmetler, Galeri, İletişim*); başlığın
+üstündeki küçük etiket çoğu zaman okurun oraya gelmek için tıkladığı bağlantıyı tekrarlar.
+
+- ✗ Menüde *Hizmetler* → etiket *Hizmetler* → başlık *Bakım menüsü*.
+- ✓ Etiket okurun **nerede** olduğunu değil bölümün **neyle** ilgili olduğunu söylesin:
+  *Güzellik ve bakım* → *Bakım menüsü*.
+- Etiket konu, yer ya da vesile ekliyorsa yerini hak eder (*Kadıköy · Güzellik ve bakım*). Yalnız
+  bölümün adını yineliyorsa kaldırılmasını **öner**; yerine koyulacak konu sayfadan çıkmıyorsa uydurma.
