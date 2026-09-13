@@ -22,12 +22,19 @@ errors or dumb the content down.
 - "-maktadır" bürokratik; "Sonuç olarak" otomatik kapanış; rule-of-three'e yakın sıfat yığını.
 
 **Sonrası:**
-> Platformumuz iş akışlarınızı hızlandırır ve ekiplerin daha uyumlu çalışmasını sağlar.
-> Kullanımı da baştan sona sorunsuz. Kısacası işinizi kolaylaştırır.
+> Günümüzde verimlilik işletmeler için her zamankinden daha kritik. Yeni platformumuz hem iş
+> akışlarınızı hızlandırıyor hem de ekiplerin güçlü bir uyum içinde çalışmasını sağlıyor.
+> Kullanıcılar platformu sorunsuz ve kesintisiz kullanacak. Platformumuz işinize gerçek anlamda
+> fayda getiriyor.
 
-*Değişenler:* boş açılış silindi; "sahip olma / sinerji / deneyim yaşama / değer katma" jargonu düz
-fiillere indi; "hem…hem" mantığı tek cümlede toplandı; "-maktadır" → "-ir/-sağlar"; üç sıfat ikiye
-düştü; abartı ("gerçek anlamda", "kesintisiz") kesildi.
+*Değişenler:* dört cümle dört cümle olarak ve aynı sırayla kaldı; "Günümüzün hızla değişen
+dünyasında" çerçevesi "Günümüzde"ye indi (zaman bilgisi duruyor); "öneme sahiptir" kalkı ve
+"-maktadır" sadeleşti; "sadece… değil, aynı zamanda… de" → "hem… hem de"; "sinerji oluşturmak /
+deneyim yaşamak / değer katmak" düz fiillere döndü; refleks "Sonuç olarak" düştü.
+
+*Kalanlar ve nedeni:* "sorunsuz ve kesintisiz", "güçlü", "gerçek anlamda" metnin iddiasıdır; yeniden
+yazma kipinde silinmez. Abartılı bulunuyorsa inceleme kipinde **öneri** olarak işaretlenir. (Bu
+örneğin ilk sürümü açılışı silip üç sıfatı ikiye indiriyordu; v3 ölçümü bunu bilgi kaybı sayar.)
 
 ---
 
@@ -45,12 +52,15 @@ düştü; abartı ("gerçek anlamda", "kesintisiz") kesildi.
 - Kişisel bir metin ama hiç kişi yok — düz, ruhsuz.
 
 **Sonrası:**
-> Benim için kahve bir içecekten fazlası. Sabah ilk fincanı içmeden gün başlamıyor sanki. İyi
-> demlenmiş bir kahvenin insanın keyfini nasıl değiştirdiğini anlatmak zor; deneyince anlıyorsun.
+> Kahve çoğumuz için bir içecekten fazlası, bir yaşam biçimi. Güne sabah bir fincan kahveyle
+> başlamak kadar iyisi yok. Saymakla bitmeyen faydaları da var. İyi demlenmiş bir kahve bütün
+> gününüzü güzelleştirebilir.
 
-*Değişenler:* birinci tekil şahıs ve gerçek bir bakış geldi; kalıplar ("Ayrıca / Unutmayın ki")
-gitti; "-maktadır" konuşma diline döndü; ritim değişti (kısa + uzun cümle). Yeni bilgi eklenmedi,
-ses eklendi.
+*Değişenler:* "sadece… değil, aynı zamanda…" kalkı "bir içecekten fazlası, bir yaşam biçimi" oldu;
+"mükemmel bir yol sunmaktadır" yerli bir deyişle ("kadar iyisi yok") karşılandı; "Ayrıca" silindi,
+ekleme işini `da` üstlendi; "sayısız faydası bulunmaktadır" → "saymakla bitmeyen faydaları da var";
+okuru azarlayan "Unutmayın ki" çerçevesi düştü. Dört iddianın dördü de duruyor; ses, yeni bilgi
+eklenerek değil, kalıplar yerli söyleyişe döndürülerek geldi.
 
 ---
 
@@ -68,12 +78,18 @@ ses eklendi.
 
 **Sonrası:**
 > Bu çalışmada iklim değişikliğinin tarımsal üretime etkileri incelendi. Bulgular, sıcaklık artışının
-> verimi doğrudan düşürdüğünü gösteriyor. Sulama yönetimi de belirleyici bir etken. Kısacası verimi
-> en çok sıcaklık ve su belirliyor.
+> verimi önemli ölçüde etkilediğini gösteriyor. Sulama yönetiminin de kritik bir etken olduğu
+> görüldü. Kısacası sıcaklık ve su, üretimi belirleyen iki unsur.
 
-*Değişenler:* akademik ton korundu (abartıya kaçılmadı) ama "önemli bir rol oynamak" somut fiile
-("düşürmek") döndü; refleks bağlaçlar kalktı; edilgen yığını hafifledi. Not: burada dili *fazla*
-samimileştirmek de hata olurdu — register sabit tutuldu.
+*Değişenler:* akademik ton korundu ama "önemli bir rol oynamak" kalıbı düz fiile ("etkilemek") döndü;
+refleks bağlaçlar ("Bununla birlikte", "Sonuç olarak") kalktı; "-maktadır/-miştir" yığını hafifledi.
+Not: burada dili *fazla* samimileştirmek de hata olurdu, register sabit tutuldu.
+
+*Tuzak:* "önemli bir rol oynadığını" → *"verimi doğrudan düşürdüğünü"* akıcı görünür ama girdide
+olmayan bir **yön** (düşürmek) ve **derece** (doğrudan) ekler. Bu örneğin ilk sürümü tam olarak bunu
+yapıyordu. Somutlaştırırken bilgi uydurma; kaynağın söylediğinden fazlasını söyleme. "tespit
+edilmiştir" de bir bulgu olduğunu bildirir; "Sulama yönetimi de belirleyici bir etken" diye düz
+yargıya çevirmek o kaydı siler.
 
 ---
 
