@@ -121,6 +121,11 @@ sırasının kararı verdiğini gösterir.
 Bazı alanlar bir **kutupluluk/durum kelime çifti** sabitler; eşini yanlış kullanmak **öneri değil,
 hata**dır. Bunlar terim defterinin parçasıdır.
 - ✗ *lamba açık* → ✓ **lamba yanık.** Lamba **yanık/sönük**tür, **açık/kapalı** değil.
+- **Oranlar da kutupludur ve ters kutup iddiayı tersine çevirir.** ✗ *Yüksek kalıp oranıyla sınava
+  hazırlıyoruz* (sürücü kursu, kastı: çok öğrenci **geçiyor**) → okur *çok öğrenci kalıyor* anlıyor.
+  ✓ **Yüksek geçme oranıyla** / *başarı oranıyla*. Aynı sınıf: *ret/kabul oranı*, *kayıp/kazanım*.
+  Kural: *yüksek* ya da *düşük* sıfatını oranın adıyla yan yana okuyup iddianın yönünü sına; yön
+  kaynakla ters düşüyorsa **hata**dır, öneri değil.
 - Anahtar **açık/kapalı**; devre **açık/kapalı** (açık = akım yok — bkz. `collocations.md`).
 - Bir kelime bir kutba kilitlendiyse öbür kutup için başka kelime kullan; karıştırmak sızıntıdır.
 - Defterde tut: her kutupluluk çifti (yanık/sönük, açık/kapalı, dolu/boş, geçerli/geçersiz) tek bir
