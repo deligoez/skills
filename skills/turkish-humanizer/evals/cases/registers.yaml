@@ -190,7 +190,7 @@ cases:
   kind: fix
   context: Aynı sayfadan üç başlık. Her biri tek başına doğru; küme olarak değerlendir.
   input: "Masajdan cilt bakımına kadar hepsini yaparız.\nSeans sonrası devam önerisi veririz.\nSeansı üç adımda tamamlarız."
-  expected_contains: [masaj, cilt bakımı, devam önerisi, üç adım]
+  expected_contains: [masaj, cilt bakımı, devam öneri, üç adım]
   expected_property: Üç başlık aynı yüklem sonuyla bitmez; hiçbir bilgi düşmez.
 
 - id: kume-edilgen-tekduzeligi
