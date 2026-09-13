@@ -148,7 +148,7 @@ Metni bir bütün olarak "iyi görünüyor" diye geçme. Cümleleri baştan sona
 
 Nicel eşik: yedi sekiz cümlelik bir metinde bir ya da iki dokunuşla çıkmak yetersizdir; uygun türlerde **cümlelerin yarısına yakınında** ya yüklem ya da bir öbek düzelmiş olmalı. Cümlelerin çoğunu hiç ellememişsen taramayı yeniden yap; büyük olasılıkla yüklemlere bakıp ad öbeklerini atlamışsındır.
 
-Aynı ağırlıkta bir kalıbı başka bir ağırlıkla değiştirmek düzeltme sayılmaz: `kritik bir öneme sahiptir` → *kritik bir önem taşımaktadır* hâlâ aynı şişkinliktir; `büyük önem taşır` ya da `kritik önemdedir` düzeltmedir.
+Aynı ağırlıkta bir kalıbı başka bir ağırlıkla değiştirmek düzeltme sayılmaz: `kritik bir öneme sahiptir` → *kritik bir önem taşımaktadır* hâlâ aynı şişkinliktir; `kritik önemdedir` düzeltmedir. Niteleyici değişmez: *kritik* → *büyük* bir düzeltme değil, iddiayı değiştirmektir.
 
 Tarama neyi düzeltmen gerektiğini söyler; ne kadarını değiştireceğini değil. Müdahale ettiğin her yerde fark **dar ve tek eksenli** kalsın: değişen şey yüklemin çekimi ya da adı geçen şişkin öbektir; onun dışındaki ad öbekleri, sıfatlar, bağlaçlar, noktalama ve cümle sırası harfi harfine aynı kalır. Çıktıyı vermeden önce girdiyle yan yana koy: değişen yerler tek tek sayılabiliyorsa ve her birinin yukarıdaki listelerden somut bir gerekçesi varsa doğru ölçüdesin. Cümlenin baştan kurulduğu bir çıktı — daha akıcı görünse bile — fazla müdahaledir.
 
@@ -169,7 +169,7 @@ Bu metinlerde de ölçü aynı: birkaç öbek düzelir, cümle sırası, paragra
 
 Bu türlerde en çok atlanan kusur yüklemin çekimi değil, **ad + zayıf yüklem** birleşimidir. Somut karşılıklar:
 
-- `kritik bir öneme sahiptir` / `büyük önem taşımaktadır` → `kritik önemdedir`, `büyük önem taşır`
+- `kritik bir öneme sahiptir` → `kritik önemdedir` · `büyük önem taşımaktadır` → `büyük önem taşır` (her biri kendi niteleyicisiyle)
 - `gözler önüne sermektedir` → `gösteriyor`, `ortaya koyuyor`
 - `zorunlu kılmaktadır` → `gerektiriyor`
 - `esas almaktadır` → `temel alıyor`
