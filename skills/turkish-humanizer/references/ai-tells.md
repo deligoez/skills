@@ -12,6 +12,13 @@ reliable fix is not a synonym swap but **deletion** — cut the redundant word a
 carry the meaning. Look for **clusters**, not single instances (see the false-positive guard in
 `SKILL.md`).
 
+**Deletion means words, never information.** `SKILL.md` wins over this catalog: in rewrite mode no
+list item, claim, qualifier, or sentence is dropped. Delete the redundant *word* (a signpost, a
+pronoun, a light verb, `bir şekilde`); when a tell below seems to call for dropping an *item* or a
+*sentence* (a third adjective, a scene-setting opener, a motivational closer, an unsourced claim),
+simplify how it is said and keep what it says. If it truly should go, that is the author's call:
+report it in review mode as **öneri**.
+
 ## Table of contents
 1. [Overused connectors / discourse markers](#1-connectors)
 2. [Bureaucratic / over-formal verb forms](#2-bureaucratic-verbs)
@@ -124,17 +131,21 @@ abstract noun, instead of one plain verb.
 ## 5. English-style rhetoric {#5-rhetoric}
 
 - **Rule of three** — three near-synonymous adjectives padding a claim: *Hızlı, güvenilir ve verimli
-  bir çözüm.* → *Hızlı ve güvenilir bir çözüm.* (or the single most precise word). The third item is
-  usually the weakest.
+  bir çözüm.* In rewrite mode **the three items stay** (each is the author's claim); fix only how the
+  list is said. If the third is pure synonym padding, flag it in review mode as **öneri**
+  (*"verimli" ile "hızlı" aynı iddiayı taşıyor*) — never drop it silently. Keep three items without
+  comment when they are three distinct points.
 - **"sadece X değil, aynı zamanda Y de"** (not only… but also) — calque; use the idiomatic
   coordinator: → *hem X hem de Y*. *…sadece maliyetleri düşürmüyor, aynı zamanda verimliliği de
   artırıyor* → *…hem maliyetleri düşürüyor hem de verimliliği artırıyor.*
 - **"X'ten Y'ye"** as a "spanning the spectrum" flourish (not a literal range): *Küçük işletmelerden
   büyük şirketlere kadar herkes…* → *Her ölçekten işletme…*
 - **Hollow scene-setting intro:** *Günümüzün hızla değişen dünyasında, teknoloji hayatımızın her
-  alanına nüfuz etmiş durumdadır.* → delete; open with the actual claim.
-- **Hollow / restating conclusion:** a *Sonuç olarak…* paragraph that re-lists what was said → cut,
-  or add one genuinely new closing thought.
+  alanına nüfuz etmiş durumdadır.* → shrink the frame, keep the claim: *Günümüzde teknoloji
+  hayatımızın her alanına girdi.* Deleting the whole sentence is an **öneri** for review mode.
+- **Hollow / restating conclusion:** a *Sonuç olarak…* paragraph that re-lists what was said → drop
+  the reflex connector and the bureaucratic predicate; the sentence stays. Cutting the paragraph is an
+  **öneri**. Never add a "genuinely new" closing thought: that is new information.
 - **"unutmayın ki"** (don't forget that): → drop the imperative frame; state the fact.
 - **"şunu belirtmek gerekir ki"** (it should be noted that): → delete; the clause after it is the
   sentence.
@@ -163,10 +174,13 @@ Brief here; full rules in `mechanics.md`.
 
 - **Uniform over-politeness / customer-service smoothness** regardless of context: *Elbette, bu
   konuda size yardımcı olmaktan memnuniyet duyarım.* (before a routine answer) → just answer.
-- **Motivational-poster closers** on neutral content: *Unutmayın, her adım önemlidir!* → cut.
-- **Over-explaining / restating the previous sentence** in near-synonyms → say it once, precisely.
-- **Marketing superlatives on mundane facts:** *harika bir şekilde performansı artırıyor* →
-  *performansı artırıyor.*
+- **Motivational-poster closers** on neutral content: *Unutmayın, her adım önemlidir!* → drop the
+  imperative frame and the `!`: *Her adım önemli.* Cutting the line is an **öneri**.
+- **Over-explaining / restating the previous sentence** in near-synonyms → in review mode, flag the
+  pair as **öneri**; in rewrite mode keep both and make the second one lighter.
+- **Marketing superlatives on mundane facts:** *harika bir şekilde performansı artırıyor* → undo the
+  calque, keep the claim: *performansı çok artırıyor.* Whether the claim is inflated is the author's
+  call (**öneri**).
 - **Hedge-stacking:** *muhtemelen, genel olarak, bir dereceye kadar daha etkili olabilir* →
   *genellikle daha etkili.* (one honest degree of certainty)
 - **No genuine casual register even when asked** — AI stays one register too formal (full vowels, no
@@ -203,13 +217,14 @@ genuinely merit them; otherwise cut or use a concrete descriptor.
 These come from LLM decoding itself, not English specifically, so they surface in Turkish too (fuller
 treatment in the English `humanizer` skill; here are the Turkish forms):
 
-- **Vague attribution:** *Uzmanlara göre… / Araştırmalar gösteriyor ki…* with no named source → name
-  the source or cut the claim.
+- **Vague attribution:** *Uzmanlara göre… / Araştırmalar gösteriyor ki…* with no named source → flag
+  it (**öneri**: kaynak adı gerekli). Never invent a source; never cut the claim on your own.
 - **Puffery / significance inflation:** *…tarihi bir dönüm noktasıdır*, *…kalıcı bir iz bırakmıştır*
-  → state the fact; add significance only with a concrete reason.
+  → simplify the wording (*…bir dönüm noktası oldu*); whether the significance is earned is an
+  **öneri**.
 - **Trailing "-arak/-ması" significance clauses** (the Turkish analog of English's trailing "-ing"):
-  *…tamamlandı, bölgenin gelişimine katkıda bulunarak.* → delete the clause or replace with a real
-  reason.
+  *…tamamlandı, bölgenin gelişimine katkıda bulunarak.* → turn the tacked-on converb into a real
+  clause: *…tamamlandı ve bölgenin gelişimine de katkıda bulundu.* Deleting it is an **öneri**.
 - **Uniform sentence rhythm (low burstiness):** vary length — follow a long sentence with a short one.
 - **Formatting:** emoji as bullets, chat preambles (*Tabii ki! İşte…*, *Umarım yardımcı olmuştur!*),
   Markdown bleeding into plain text → remove.
