@@ -122,6 +122,10 @@ Türkçe eklemeli: eke gelen biçim, **önündeki kelimenin son sesine** bağlı
 ### 5.6 Tutarlılık
 Aynı eylem her yerde aynı fiille. *Sil* bir yerde *Kaldır* olmasın (bkz. `terminology.md`).
 Büyük harf: **cümle düzeni** — Title Case İngilizce ithalidir.
+**Sayı biçimi de kullanıcıya görünen metnin parçasıdır.** Kısa bir etiket ya da veri satırı olması onu
+makine biçimi yapmaz: ✗ *12 yorum, 4.8 puan* → ✓ *12 yorum, 4,8 puan* · ✗ *%15.5 indirim* →
+✓ *%15,5 indirim*. Nokta yalnız makinenin okuduğu yerde kalır: JSON, CSV, API alanı, kod, sürüm
+numarası (*v2.4*). Kural ve istisnalar için `mechanics.md` §6.
 
 ### 5.7 Ürünün iç dili kullanıcıya sızmaz
 
