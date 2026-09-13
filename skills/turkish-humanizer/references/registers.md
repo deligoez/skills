@@ -193,7 +193,8 @@ Aynı olgu için Türkçenin birkaç doğal kalıbı var; bir sayfa birden fazla
 | Eksiltili dizi (başlıkta) | *Keşiften teslime üç adım.* |
 | Birinci çoğul | *Sütü köyden alırız.* |
 
-Ölçü sayfadır, cümle değil: bir `-ırız` bir sestir, dördü tiktir. Edilgen de aynı yolla çöker: üç
+Ölçü sayfadır, cümle değil: bir `-ırız` bir sestir, dördü tiktir. Farklı olgu söyleyen **iki** satırın
+aynı ekle bitmesi tek başına tik sayılmaz; küme üç ve üstü satırda başlar. Edilgen de aynı yolla çöker: üç
 edilgen başlık üst üste gelince işletme sayfadan tamamen kaybolur. Bizim kendi tuzak yönümüz de bu:
 `-maktadır` yığınını topluca `-yor`'a çevirmek aynı çöküşü başka bir ekle üretir. Kişi değişince
 fail de değişir; *biz*'den edilgene geçerken yazının kimin ne yaptığını hâlâ söylediğinden emin ol.
