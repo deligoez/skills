@@ -1,0 +1,34 @@
+# references/ceviri-teknikleri.md: transpozisyon, eşdeğerlik, açımlama.
+cases:
+- id: transpozisyon-ad-yigini
+  source: ceviri-teknikleri
+  ref: references/ceviri-teknikleri.md
+  kind: fix
+  input: Kurulumun tamamlanmasının ardından uygulama kullanıma hazır hâle gelecektir.
+  expected_contains: [kullanıma hazır]
+  expected_not_contains: [tamamlanmasının ardından]
+
+- id: esdegerlik-metafor
+  source: saha
+  ref: [references/ceviri-teknikleri.md, references/ai-tells.md]
+  kind: fix
+  context: Genel okura yazılmış elektronik kitabı; "kara kutu" burada uçuş kaydedicisi değil.
+  input: Bu kitapta kara kutu yok.
+  expected_not_contains: [kara kutu]
+
+- id: acimlama-zamir
+  source: ceviri-teknikleri
+  ref: references/ceviri-teknikleri.md
+  kind: fix
+  context: Arkadaşa kısa mesaj.
+  input: Ben bu akşam dışarı çıkacağım, sen de gelmek ister misin?
+  expected_contains: [akşam, dışarı]
+  expected_not_contains: [ben bu akşam]
+
+- id: yerlesik-kalk-serbest
+  source: ceviri-teknikleri
+  ref: references/ceviri-teknikleri.md
+  kind: control
+  context: Yazılım testi metni; kara kutu testi yerleşik terim.
+  input: Modülü önce kara kutu testiyle sınadık.
+  expected: Modülü önce kara kutu testiyle sınadık.
