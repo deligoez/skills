@@ -40,6 +40,11 @@ anlatım bozukluklarını medyadan avlama; tenafür), **anlatım-bozukluğu
   keser — Hepçilingirler'in avladığı şey. "Okunuşu tökezleten her yeri düzelt."
 - **Cümle uzunluğunu değiştir.** Ritim monotonluktan kaçar: uzun bir akış
   cümlesi, sonra kısa bir vuruş. Hepsi aynı boyda = düz bir uğultu.
+- **Yüklem sonlarını da dinle.** Türkçede fiil sona gelir ve kişi ekini taşır; art arda dört cümle
+  `-ırız` ya da `-mıştır` ile bitince kulak uzunluktan önce o eki duyar. Bir paragrafta bir iki
+  cümlenin sonunu başka bir kalıpla kur (ad yüklem, edilgen, özne değişimi). Bu, kendi yazdığın
+  metin içindir; başkasının metnini yeniden yazarken `SKILL.md`'nin dar müdahale ölçüsü geçerli.
+  Başlık ve bant kümelerindeki hâli için bkz. `registers.md` §7.1.
 - **Devrik cümle = vurgu ve konuşma ritmi aracı (Ataç).** Yazıya konuşmanın
   nefesini taşır; *ölçülü*, vurgu için kullanılır. UYARI: "devrik cümle
   kullanma" öğüdü MAKİNE çevirisi içindir (kurallı cümle daha kolay çevrilir) —
