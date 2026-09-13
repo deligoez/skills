@@ -22,7 +22,7 @@ boşluğu da kısmen kapatır.
 ```yaml
 cases:
 - id: whatsapptan-gonder          # kebab-case, benzersiz
-  source: turkish-native/p10-whatsapp-case   # saha | <referans adı> | turkish-native/<vaka id>
+  source: turkish-native/p10-whatsapp-case   # saha | <referans adı> | heldout | turkish-native/<vaka id>
   ref: references/collocations.md # vakayı öğreten dosya (liste olabilir); SKILL.md de geçerli
   kind: fix                       # fix: bir şey değişmeli · control: hiçbir şey değişmemeli
   mode: rewrite                   # rewrite (varsayılan) | review
@@ -64,6 +64,14 @@ uv run evals/check.py score outputs.jsonl      # {id, output} satırlarını pua
 ```
 
 `score` başarısız ve eksik vakaları listeler, özeti stderr'e yazar, biri bile varsa 1 ile çıkar.
+Özet düzeltme vakalarını ikiye ayırır: girdisi `SKILL.md` ya da bir referans dosyasında birebir geçenler
+ve geçmeyenler. Birinci grup, model örneği hatırlayarak da geçebileceği için kuralın kendisini
+ölçmez; bir kuralın işe yarayıp yaramadığına ikinci gruptan bak. Yeni bir kural eklerken referansa
+koyduğun örneğin yanına, referansta geçmeyen bir **varyant** vaka da ekle (`source: heldout`).
+
+Model çıktıları örneklemeyle üretildiği için tek koşu gürültülüdür: aynı vaka bir koşuda geçip ötekinde
+kalabilir. İki sürümü karşılaştırırken her birini en az üç kez koştur ve yalnız üç koşunun en az
+ikisinde yön değiştiren vakalara güven.
 `expected_property` taşıyan vakalar deterministik denetimleri geçerse `judge` olarak işaretlenir;
 onları bir hakem okumalı. Çıktının `<metin>…</metin>` sarmalayıcısı puanlamadan önce açılır.
 
