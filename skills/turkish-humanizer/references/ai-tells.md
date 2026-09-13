@@ -118,6 +118,10 @@ abstract noun, instead of one plain verb.
 - **`değer katmak`** (add value): → say what it concretely improves — *ürüne değer katıyor* → *ürünü
   çok daha kullanışlı yapıyor*.
 - **`aksiyon almak`** (take action): → *harekete geçmek / önlem almak*.
+- **Deyimi kelimesiyle çevirmek** — the idiom's words arrive, its meaning does not. *walk in* (no
+  appointment): ✗ *Yürüyerek gelebilirsiniz* (okur ulaşım biçimi anlıyor) → ✓ *Randevusuz
+  gelebilirsiniz.* *close the deal / close the customer:* ✗ *müşteriyi kapatmak* → ✓ *satışı
+  tamamlamak / bağlamak* (see §12.11). Ask what the reader of the Turkish sentence pictures.
 - **`günün sonunda`** (at the end of the day) as a hedge: → *sonuçta / neticede*.
 - **`realize etmek`, `farkındalık yaratmak`, `vizyon/misyon belirlemek`, `kolektif bilgelik`** —
   management-speak transplants; prefer plain equivalents (*hayata geçirmek*, *dikkat çekmek /
@@ -140,6 +144,10 @@ abstract noun, instead of one plain verb.
   artırıyor* → *…hem maliyetleri düşürüyor hem de verimliliği artırıyor.*
 - **"X'ten Y'ye"** as a "spanning the spectrum" flourish (not a literal range): *Küçük işletmelerden
   büyük şirketlere kadar herkes…* → *Her ölçekten işletme…*
+  - **Başsız `kadar` listeyi kapatınca:** ✗ *levrek, çipura, hamsi, palamuta kadar birçok balık* —
+    `-a kadar` bir sınır ya da ölçü bildirir (*palamut büyüklüğünde?*); ortada başlangıç noktası
+    (`-dAn`) ve sıralanabilir bir ölçek yok. ✓ *levrek, çipura, hamsi, palamut gibi birçok balık.*
+    Liste öğeleri eksiksiz kalır; yalnız kapanış edatı değişir.
 - **Hollow scene-setting intro:** *Günümüzün hızla değişen dünyasında, teknoloji hayatımızın her
   alanına nüfuz etmiş durumdadır.* → shrink the frame, keep the claim: *Günümüzde teknoloji
   hayatımızın her alanına girdi.* Deleting the whole sentence is an **öneri** for review mode.
@@ -290,11 +298,13 @@ Bunlar İngilizce humanizer'dan devşirilmiş izlerden **daha güçlüdür**. Ö
 | Kaliteli hizmet **anlamında** ayrışıyoruz | Kaliteli hizmet**te** ayrışıyoruz |
 | **Söz konusu** belge gönderildi | Belge gönderildi |
 | **Bu anlamda**, yeni strateji belirledik | Yeni strateji belirledik *(sil)* |
+| Müşteriye e-posta **üzerinden** ulaşabilirsin | Müşteriye e-posta**yla** ulaşabilirsin |
 
 **Ama fazla düzeltme yapma:** *açısından* gerçek bir bakış açısı değişimi için doğrudur
 ("hukuki açıdan bakıldığında"). ***bakımından* hukuk dilinde terimdir** ("usul bakımından", "esas
 bakımından") — orada dokunma. *söz konusu* gerçek belirsizlikte meşrudur ("söz konusu üç şirketten
-hangisi"). İz olan, **yığılma** ve **hâl ekinin işini gasp etmesi**.
+hangisi"). *üzerinden* gerçek bir kanal ya da aracı adlandırıyorsa kalır: *API üzerinden bağlanır*,
+*sunucu üzerinden yönlendirilir*. İz olan, **yığılma** ve **hâl ekinin işini gasp etmesi**.
 
 ### 12.2 Cümle sonu `-dır` — hata değil, **register uyuşmazlığı**
 Dilbilgisel olarak doğru (bildirme eki) ve sözlük/hukuk/akademi register'ında **gereklidir**. Sohbet
@@ -348,7 +358,10 @@ Ban list yapma; işlevine bak.
 
 ### 12.11 Plaza dili
 *deadline* → teslim tarihi · *assign etmek* → atamak · *attach etmek* → eklemek · *update etmek* →
-güncellemek · *focuslanmak* → odaklanmak · *aksiyon almak* → harekete geçmek.
+güncellemek · *focuslanmak* → odaklanmak · *aksiyon almak* → harekete geçmek (ya da somut eylemi
+yaz: *Bildirim gelince müşteriye yaz*) · *satışı kapatmak* → satışı tamamlamak / bağlamak.
+**Meşru:** hedef kitle satışçıysa ve terim o ekipte gerçekten dolaşıyorsa (iç raporda *lead*,
+*pipeline*) dokunma; müşteriye giden metinde düzelt.
 
 ### 12.12 Eksiltili soruda hâl eki YANLIŞ BAŞA bağlanır
 
@@ -363,6 +376,38 @@ bağlanır ve çoğu kez **madde/köken** okunur.
 İngilizceden daha az eksilti kaldırır (`registers.md` → başlık eksiltisi); **soru cümlesinde bu
 daha da sıkıdır**, çünkü okurun ayırt edecek bağlamı yok. En riskli ekler: `-DAn` (madde/köken),
 `-lI` (nitelik), tamlayan eki.
+
+### 12.13 Gömülü soru çekimli fiille kalıyor
+
+**Teşhis:** İngilizce gömülü soruyu çekimli fiille kurar (*see who opened it*). Bu iskelet Türkçeye
+taşınınca soru cümlesi, onu nesne olarak alan fiilin önünde çıplak kalır.
+
+- ✗ *Kim açtı, kim düzenledi gör.* → ✓ *Kimin açtığını, kimin düzenlediğini gör.*
+- ✗ *Hangi dosyalar değişti öğren.* → ✓ *Hangi dosyaların değiştiğini öğren.*
+
+**Kural:** soru, `görmek / bilmek / öğrenmek / sormak` gibi bir fiilin nesnesiyse `-DIğI / -(y)AcAğI`
+ile ad cümlesine çevir. **Meşru:** gerçek soru (*Kim açtı?*); konuşma dilinin yerleşik kalıbı
+(*Kim geldi kim gitti, belli değil*); diyalog. Sorun, yazılı yönerge ve arayüz metninde çıkar.
+
+### 12.14 Ettirgen yığını — *have something done* kalkı
+
+✗ *Sisteme listeyi tarattırıp demoları hazırlattırabilirsin.* → ✓ *Sisteme listeyi taratıp demoları
+hazırlatabilirsin.* Ettirgen eki kadar **fail** olmalı: tek ettirgen (`tarat-`) bir başkasına
+yaptırmaktır; ikinci ek (`tarattır-`) araya üçüncü bir kişi sokar. Say: kim istiyor, kim yaptırıyor,
+kim yapıyor? İki kişi varsa tek ek yeter. **Meşru:** zincirde gerçekten bir halka daha varsa
+(*ölmek → öldürmek → öldürtmek*: ölen, öldüren, öldürten).
+
+### 12.15 Emir + `ve` + bildirme — ilişki gizleniyor
+
+İngilizcenin *Do X and Y happens* kalıbı koşul ya da zaman ilişkisini `and` ile kurar. Türkçede emirle
+bildirme cümlesini `ve` bağlamaz; ilişki eke taşınır.
+
+- ✗ *Listeyi onayla ve demolar hazırlanır.* → ✓ *Listeyi onaylayınca demolar hazırlanır.* /
+  *Listeyi onaylarsan demolar hazırlanır.*
+- ✗ *Butona bas ve dosya iner.* → ✓ *Butona basınca dosya iner.*
+
+**Meşru:** iki emir (*Kaydet ve çık*); iki bağımsız bildirme (*Liste onaylandı ve demolar
+hazırlandı*). Zincir ayrıca `ve … ve` ise §12.7'yi de uygula.
 
 ## 13. Aşırı düzeltme yasağı — iyi Türkçeyi bozma {#13-asiri-duzeltme}
 
