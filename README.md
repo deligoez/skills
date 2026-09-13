@@ -48,7 +48,8 @@ npx skills update deligoez/skills
 skills/
 └── <skill-name>/
     ├── SKILL.md        # entry point: name, description (the trigger), and instructions
-    └── references/     # deeper docs loaded on demand
+    ├── references/     # deeper docs loaded on demand
+    └── evals/          # optional: regression cases and their checker, never loaded at runtime
 ```
 
 Each `SKILL.md` uses progressive disclosure: the `name` + `description` are always in context, the
