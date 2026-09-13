@@ -1,0 +1,249 @@
+# references/registers.md: başlık, slogan, arayüz metni, ürün dili, sayfa düzeyi küme denetimi.
+cases:
+- id: slogan-nesnesiz
+  source: saha
+  ref: references/registers.md
+  kind: fix
+  context: Kitap kapağında tek başına duran slogan; okur devreleri kendisi kuruyor.
+  input: Okumazsın, kurarsın.
+  expected_not_contains: ["Okumazsın, kurarsın."]
+  expected_property: Slogan bağlamsız okunduğunda anlaşılır; fiilin nesnesi ya da tamlayıcısı geri gelir.
+
+- id: baslik-eksiltisi
+  source: saha
+  ref: references/registers.md
+  kind: fix
+  context: Kitap kapağı alt başlığı; kaynak "the name comes last" (okur önce keşfediyor, adı sonra öğreniyor).
+  input: Adı en sonda.
+  expected_property: Başlık bağlamsız anlaşılır; fiil geri gelir.
+
+- id: ad-yigini-tamlama
+  source: turkish-native/p06-noun-stack
+  ref: references/registers.md
+  kind: fix
+  input: Müşteri veri güvenlik politikası güncellendi.
+  expected_contains: [politika, güncellendi]
+  expected_not_contains: [müşteri veri güvenlik politikası]
+
+- id: dugme-mastar
+  source: registers
+  ref: references/registers.md
+  kind: fix
+  context: Düğme etiketi.
+  input: Kaydetmek
+  expected: Kaydet
+
+- id: yonerge-kibar-emir
+  source: registers
+  ref: references/registers.md
+  kind: fix
+  context: Formun üstündeki yönerge metni.
+  input: Lütfen formu eksiksiz doldurunuz.
+  expected: Lütfen formu eksiksiz doldurun.
+
+- id: hata-mesaji-uzgunuz
+  source: registers
+  ref: references/registers.md
+  kind: fix
+  context: Hata mesajı.
+  input: Üzgünüz, dosya yüklenemedi.
+  expected_contains: [yüklenemedi]
+  expected_not_contains: [üzgünüz]
+
+- id: hata-mesaji-edilgen
+  source: registers
+  ref: [references/registers.md, references/ai-tells.md]
+  kind: control
+  context: Hata mesajı; edilgen kullanıcıyı suçlamamak için bilinçli.
+  input: Dosya silinemedi.
+  expected: Dosya silinemedi.
+
+- id: degiskene-ek
+  source: registers
+  ref: [references/registers.md, references/mechanics.md]
+  kind: fix
+  context: Yazılım dizgisi; %s dosya adıyla doldurulur.
+  input: "%s'yi sil"
+  expected_contains: ["%s"]
+  expected_not_contains: ["%s'yi"]
+
+- id: sayidan-sonra-cogul
+  source: turkish-native/p29-plural
+  ref: references/registers.md
+  kind: fix
+  input: 3 kullanıcılar davet edildi.
+  expected: 3 kullanıcı davet edildi.
+
+- id: ready-to-kalki
+  source: saha
+  ref: references/registers.md
+  kind: fix
+  context: Kitap uygulamasında bugün okunacak bölümün rozet etiketi.
+  input: "Okumaya hazır:"
+  expected_not_contains: [okumaya hazır]
+
+- id: kart-istemiyoruz
+  source: turkish-native/p23-card
+  ref: references/registers.md
+  kind: fix
+  input: Kart istemiyoruz.
+  expected: Kredi kartı gerekmez.
+
+- id: plani-yukselt
+  source: turkish-native/p23-plan-control
+  ref: references/registers.md
+  kind: control
+  context: SaaS ürününün yerleşik sesi.
+  input: Planını yükselt.
+  expected: Planını yükselt.
+
+- id: linki-gonder
+  source: turkish-native/p30-link-control
+  ref: references/registers.md
+  kind: control
+  input: Linki müşteriye gönder.
+  expected: Linki müşteriye gönder.
+
+- id: demo-hazir
+  source: turkish-native/control-demo
+  ref: references/registers.md
+  kind: control
+  input: Demo hazır.
+  expected: Demo hazır.
+
+- id: api-anahtari
+  source: turkish-native/control-api
+  ref: references/registers.md
+  kind: control
+  input: API anahtarını ayarlardan iptal edebilirsin.
+  expected: API anahtarını ayarlardan iptal edebilirsin.
+
+- id: ic-jargon-run
+  source: turkish-native/p21-run
+  ref: references/registers.md
+  kind: fix
+  input: Gerçek İstanbul run'ı tamamlandı.
+  expected: Gerçek İstanbul taraması tamamlandı.
+
+- id: ic-jargon-urun-sayfasi
+  source: turkish-native/p21-orchestrator
+  ref: references/registers.md
+  kind: fix
+  context: Teknik olmayan ürün sayfası.
+  input: Orchestrator adayları pipeline'a taşır.
+  expected_not_contains: [orchestrator, pipeline]
+
+- id: veritabani-dili
+  source: turkish-native/p22-record
+  ref: references/registers.md
+  kind: fix
+  input: Aynı işletme için tekrar kayıt oluşturulmaz.
+  expected: Aynı işletme ikinci kez eklenmez.
+
+- id: belge-gibi-durum-mesaji
+  source: turkish-native/p25-success
+  ref: references/registers.md
+  kind: fix
+  context: Durum mesajı; hangi işlemin yapıldığı bilinmiyor.
+  input: İşlem başarıyla gerçekleştirilmiştir.
+  expected_not_contains: [gerçekleştirilmiştir]
+  expected_property: Hangi işlem olduğu uydurulmaz (ör. "Kaydedildi" yazılmaz).
+
+- id: ic-isleyisi-anlatma
+  source: turkish-native/p27-implementation
+  ref: references/registers.md
+  kind: fix
+  context: Düğme ya da durum metni; iç işleyişi anlatmadan yaz.
+  input: Bu butona basıldığında sistem yeni bir kayıt oluşturur.
+  expected_not_contains: [butona basıldığında, kayıt oluşturur]
+
+- id: dugme-ad-etiket
+  source: turkish-native/p26-label-button
+  ref: references/registers.md
+  kind: fix
+  context: Doğrulamayı başlatan düğme.
+  input: Telefon doğrulama
+  expected: Telefonu doğrula
+
+- id: gezinme-ad-etiket
+  source: turkish-native/p26-label-nav-control
+  ref: references/registers.md
+  kind: control
+  context: Gezinme bölümünün başlığı; düğme değil.
+  input: Telefon doğrulama
+  expected: Telefon doğrulama
+
+- id: baslikta-sen-siz
+  source: turkish-native/p41-sen-siz-mix
+  ref: [references/registers.md, references/anlati.md]
+  kind: fix
+  context: Sayfanın geri kalanı okura "siz" diye sesleniyor; bu bir bölüm başlığı.
+  input: Seviyene özel, hedefe odaklı.
+  expected_contains: [seviyenize]
+  expected_not_contains: [seviyene]
+
+- id: kume-biz-tekduzeligi
+  source: turkish-native/p49-we-verb-monotony
+  ref: references/registers.md
+  kind: fix
+  context: Aynı sayfadan üç başlık. Her biri tek başına doğru; küme olarak değerlendir.
+  input: "Masajdan cilt bakımına kadar hepsini yaparız.\nSeans sonrası devam önerisi veririz.\nSeansı üç adımda tamamlarız."
+  expected_contains: [masaj, cilt bakımı, devam önerisi, üç adım]
+  expected_property: Üç başlık aynı yüklem sonuyla bitmez; hiçbir bilgi düşmez.
+
+- id: kume-edilgen-tekduzeligi
+  source: turkish-native/p49-passive-monotony
+  ref: references/registers.md
+  kind: fix
+  context: Aynı sayfadan üç başlık.
+  input: "Arıza cihazla tespit edilir.\nÜcret işlem öncesi bildirilir.\nİş üç adımda tamamlanır."
+  expected_contains: [cihaz, ücret, üç adım]
+  expected_property: Üç başlık da edilgen kalmaz; işletme en az bir başlıkta görünür.
+
+- id: kume-tek-biz-ses
+  source: turkish-native/p49-single-we-control
+  ref: references/registers.md
+  kind: control
+  context: Sayfadaki tek birinci çoğul başlık; bu bir ses, tik değil.
+  input: Sütü köyden alırız.
+  expected: Sütü köyden alırız.
+
+- id: iki-yuvada-ayni-cumle
+  source: turkish-native/p50-reordered-duplicate
+  ref: references/registers.md
+  kind: fix
+  mode: review
+  context: Bir bölüm başlığı ve altındaki bant. Sayfada başka olgu verilmemiş.
+  input: "Sofranız katkısız, üreticimiz belgeli.\nÜreticimiz belgeli, ürünümüz katkısız."
+  expected_contains: [öneri]
+  expected_property: >-
+    İki yuvanın aynı şeyi söylediğini bildirir ve ikinci yuva için yazardan bilgi ister; yeni bir
+    olgu uydurmaz.
+
+- id: iki-yuva-farkli-olgu
+  source: turkish-native/p50-similar-but-different-control
+  ref: references/registers.md
+  kind: control
+  context: Benzer görünen ama farklı olgu söyleyen iki bant.
+  input: "Ekmeği her gün taze pişiririz.\nPastayı siparişe göre yaparız."
+  expected: "Ekmeği her gün taze pişiririz.\nPastayı siparişe göre yaparız."
+
+- id: menuyu-tekrarlayan-etiket
+  source: turkish-native/p51-nav-echo
+  ref: references/registers.md
+  kind: fix
+  mode: review
+  context: >-
+    "Bakım menüsü" başlığının üstündeki küçük etiket; sayfanın menüsünde zaten "Hizmetler"
+    bağlantısı var.
+  input: Hizmetler
+  expected_contains: [öneri]
+  expected_property: Etiketin menüyü tekrarladığını bildirir; yerine sayfadan çıkmayan bir konu uydurmaz.
+
+- id: yerini-hak-eden-etiket
+  source: turkish-native/p51-label-earns-place-control
+  ref: references/registers.md
+  kind: control
+  context: Ana başlığın üstündeki küçük etiket; menüde böyle bir öğe yok.
+  input: Kadıköy · Güzellik ve bakım
+  expected: Kadıköy · Güzellik ve bakım
