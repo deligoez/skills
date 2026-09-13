@@ -69,25 +69,37 @@ ve geçmeyenler. Birinci grup, model örneği hatırlayarak da geçebileceği i�
 ölçmez; bir kuralın işe yarayıp yaramadığına ikinci gruptan bak. Yeni bir kural eklerken referansa
 koyduğun örneğin yanına, referansta geçmeyen bir **varyant** vaka da ekle (`source: heldout`).
 
-Model çıktıları örneklemeyle üretildiği için tek koşu gürültülüdür: aynı vaka bir koşuda geçip ötekinde
-kalabilir. İki sürümü karşılaştırırken her birini en az üç kez koştur ve yalnız üç koşunun en az
-ikisinde yön değiştiren vakalara güven.
 `expected_property` taşıyan vakalar deterministik denetimleri geçerse `judge` olarak işaretlenir;
 onları bir hakem okumalı. Çıktının `<metin>…</metin>` sarmalayıcısı puanlamadan önce açılır.
 
-Örnek koşucu (skill'in yüklü olduğu Claude Code ile):
+Model çıktıları örneklemeyle üretildiği için tek koşu gürültülüdür: aynı vaka bir koşuda geçip ötekinde
+kalabilir. İki sürümü karşılaştırırken her birini en az üç kez koştur ve yalnız üç koşunun en az
+ikisinde yön değiştiren vakalara güven. Hakem de gürültülüdür: birebir aynı çıktıya bir kararı önbelleğe
+al ki iki kol aynı metin için farklı puan almasın.
+
+Örnek koşucu. Skill'i ajanın kurulu kopyasından değil **repodaki metinden** yükle: kurulu kopya eski
+olabilir, `claude -p` da kullanıcının hook'ları ve ayarlarıyla koşar. Aşağıdaki koşu SKILL.md ile
+referansları sistem istemine koyar, araçları, MCP'yi, skill yüklemeyi ve kullanıcı ayarlarını kapatır:
 
 ```bash
+{ echo "Sen dikkatli bir Türkçe editörüsün. Yalnızca istenen çıktıyı döndür."
+  echo "=== SKILL.md ==="; cat SKILL.md
+  for f in references/*.md; do echo "=== $f ==="; cat "$f"; done
+} > /tmp/th-system.txt
+
 uv run evals/check.py prompts > /tmp/th-prompts.jsonl
 while IFS= read -r row; do
   id=$(jq -r .id <<<"$row")
-  out=$(jq -r .prompt <<<"$row" | claude -p)
+  out=$(jq -r .prompt <<<"$row" | claude -p --model sonnet --tools "" --strict-mcp-config \
+    --disable-slash-commands --setting-sources "" --no-session-persistence \
+    --system-prompt-file /tmp/th-system.txt)
   jq -nc --arg id "$id" --arg output "$out" '{id: $id, output: $output}'
 done < /tmp/th-prompts.jsonl > /tmp/th-outputs.jsonl
 uv run evals/check.py score /tmp/th-outputs.jsonl
 ```
 
-Skill'in etkisini görmek için aynı istemleri skill yüklü olmadan da koştur ve iki sonucu karşılaştır.
+Skill'in etkisini görmek için aynı koşuyu yalnız ilk satırı içeren bir sistem istemiyle de yap; eski
+bir sürümle karşılaştırmak için sistem istemini `git show <commit>:<yol>` ile o sürümden kur.
 
 ## Vaka eklemek
 
