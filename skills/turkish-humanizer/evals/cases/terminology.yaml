@@ -1,0 +1,60 @@
+# references/terminology.md: kilitli terim, tanıklık, kutupluluk, çekimli değiştirme.
+cases:
+- id: kalip-orani-kutup
+  source: turkish-native/p17-kalip-orani
+  ref: references/terminology.md
+  kind: fix
+  context: Sürücü kursu, sınavı GEÇEN öğrencilerin çokluğunu duyuruyor.
+  input: Yüksek kalıp oranıyla sınava hazırlıyoruz.
+  expected_contains: [geçme]
+  expected_not_contains: [kalıp oranı]
+
+- id: lamba-yanik
+  source: terminology
+  ref: references/terminology.md
+  kind: fix
+  context: Deney anlatımı; lamba ışık veriyor.
+  input: Lamba açık, devre çalışıyor.
+  expected_contains: [yan]
+  expected_not_contains: [lamba açık]
+
+- id: taniksiz-terim
+  source: saha
+  ref: references/terminology.md
+  kind: fix
+  context: Elektronik kitabı; ring oscillator anlatılıyor.
+  input: Halka salıngaç, tek sayıda eviriciden oluşur.
+  expected_contains: [halka salınıcı]
+  expected_not_contains: [salıngaç]
+
+- id: kilitli-terim-cesitlenmez
+  source: terminology
+  ref: references/terminology.md
+  kind: fix
+  context: "Terim defteri: instruction → buyruk (kilitli)."
+  input: Buyruk belleğe yazılır. Ardından komut çözülür.
+  expected_contains: [buyruk]
+  expected_not_contains: [komut]
+
+- id: kilitli-terim-dokunma
+  source: terminology
+  ref: references/terminology.md
+  kind: control
+  context: "Terim defteri: register → yazmaç (kilitli)."
+  input: Sonuç yazmaca yazılır.
+  expected: Sonuç yazmaca yazılır.
+
+- id: terim-adlastirma-dokunma
+  source: terminology
+  ref: [references/terminology.md, references/fluency.md]
+  kind: control
+  context: Bilgisayar mimarisi metni; kesme (interrupt) bir terim.
+  input: Kesme gelince işlemci geçerli buyruğu bitirir.
+  expected: Kesme gelince işlemci geçerli buyruğu bitirir.
+
+- id: cekimli-degistirme
+  source: terminology
+  ref: [references/terminology.md, references/mechanics.md]
+  kind: fix
+  input: Çözücü bu işlem kodu'u okur.
+  expected: Çözücü bu işlem kodunu okur.
