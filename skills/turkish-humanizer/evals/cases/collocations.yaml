@@ -1,0 +1,171 @@
+# references/collocations.md: eşdizim, fiil değerliği, hâl eki seçimi, deyim çarpışması, alan kulağı.
+cases:
+- id: ses-etmek
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  input: Eski kapı her açılışta ses eder.
+  expected_contains: [kapı]
+  expected_not_contains: [ses eder]
+
+- id: guvenmek-yonelme
+  source: collocations
+  ref: references/collocations.md
+  kind: fix
+  input: Seni güveniyorum.
+  expected: Sana güveniyorum.
+
+- id: katilmak-yonelme
+  source: collocations
+  ref: references/collocations.md
+  kind: fix
+  input: Dün toplantıyı katıldı.
+  expected: Dün toplantıya katıldı.
+
+- id: dinlemek-belirtme
+  source: collocations
+  ref: references/collocations.md
+  kind: fix
+  input: Sana dikkatle dinliyorum.
+  expected: Seni dikkatle dinliyorum.
+
+- id: sasirmak-gecissiz
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  input: Bir tanesini bile şaşırmadan sayar.
+  expected_contains: [bir tanesini bile]
+  expected_not_contains: [şaşırmadan]
+
+- id: gibi-gorunuyor
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  input: Röle akımı tutuyor görünüyor.
+  expected_not_contains: [tutuyor görünüyor]
+
+- id: tasimak-iletmek
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  input: İp bir çekmeyi öbür uca taşır.
+  expected_contains: [ilet]
+  expected_not_contains: [taşır]
+
+- id: saglamak-olumsuz-sonuc
+  source: collocations
+  ref: references/collocations.md
+  kind: fix
+  input: Tembelliğim geç kalmamı sağladı.
+  expected_not_contains: [sağladı]
+
+- id: icini-acmak-deyim
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  context: Elektronik kitabının tanıtımı; okur parçaları inceleyebiliyor.
+  input: Her parçanın içini açarsın.
+  expected_not_contains: [içini açarsın]
+
+- id: caresi-de-deyim
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  context: Kitabın kapanış cümlesi; okur makineyi topraktan bulduğu malzemeyle kurdu.
+  input: Dönüş yolunu dünyaya verdin.
+  expected_not_contains: [dünyaya verdin, toprağa verdin]
+
+- id: tamlama-mantigi
+  source: saha
+  ref: references/collocations.md
+  kind: fix
+  input: Duvarın ardını açıyorsun.
+  expected_not_contains: [ardını açıyorsun]
+
+- id: whatsapptan-gonder
+  source: turkish-native/p10-whatsapp-case
+  ref: references/collocations.md
+  kind: fix
+  input: Sayfayı WhatsApp'ta gönder.
+  expected: Sayfayı WhatsApp'tan gönder.
+
+- id: kaynaklardan-bulur
+  source: turkish-native/p10-source-case
+  ref: references/collocations.md
+  kind: fix
+  input: Numarayı açık kaynaklarda bulur.
+  expected: Numarayı açık kaynaklardan bulur.
+
+- id: bulmak-yer
+  source: collocations
+  ref: references/collocations.md
+  kind: control
+  input: Anahtarı çekmecede buldum.
+  expected: Anahtarı çekmecede buldum.
+
+- id: rot-bisiklet
+  source: turkish-native/p12-rot-on-a-bicycle
+  ref: references/collocations.md
+  kind: fix
+  context: Bisiklet dükkânı. Bisiklet tekerleğinin ayarı kastediliyor; rot otomobil parçasıdır.
+  input: Fren, vites ve rotları usta elinden ayarlarız.
+  expected_contains: [fren, vites, jant]
+  expected_not_contains: [rot]
+
+- id: sayfa-kurmak
+  source: turkish-native/p11-build-page
+  ref: references/collocations.md
+  kind: fix
+  input: Klevia her işletmeye sayfa kurar.
+  expected_not_contains: [sayfa kurar]
+
+- id: kendi-sayfasini-kursun
+  source: turkish-native/p05-possessive
+  ref: [references/collocations.md, references/anlati.md]
+  kind: fix
+  context: Klevia'nın bulup listelediği her işletme için bir tanıtım sayfası hazırlanacak.
+  input: Her birine kendi adıyla sayfasını kursun.
+  expected_contains: [adıyla]
+  expected_not_contains: [sayfasını kursun]
+
+- id: site-kurmak
+  source: turkish-native/p11-site-control
+  ref: references/collocations.md
+  kind: control
+  input: Müşteri için sıfırdan web sitesi kuruyoruz.
+  expected: Müşteri için sıfırdan web sitesi kuruyoruz.
+
+- id: site-kurmak-alan-adi
+  source: turkish-native/p46-site-control
+  ref: references/collocations.md
+  kind: control
+  input: Site kurmak için alan adını bağla.
+  expected: Site kurmak için alan adını bağla.
+
+- id: sayfanin-ustunde-oynamak
+  source: turkish-native/p12-play-page
+  ref: references/collocations.md
+  kind: fix
+  input: Sayfanın üstünde oynayan işletmeyi gör.
+  expected_not_contains: [üstünde oynayan]
+
+- id: saat-yiyen
+  source: turkish-native/p12-hour-eating
+  ref: references/collocations.md
+  kind: fix
+  input: Saat yiyen iki işi Klevia devralsın.
+  expected_not_contains: [saat yiyen]
+
+- id: musteriyi-kapatmak
+  source: turkish-native/p17-close-customer
+  ref: references/collocations.md
+  kind: fix
+  input: Bu özellik müşteriyi kapatmanı kolaylaştırır.
+  expected_not_contains: [müşteriyi kapat]
+
+- id: kontrol-sunar
+  source: turkish-native/p14-control-offer
+  ref: references/collocations.md
+  kind: fix
+  input: Bu özellik daha fazla kontrol sunar.
+  expected_not_contains: [kontrol sunar]
