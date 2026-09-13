@@ -7,7 +7,9 @@ cases:
   context: Kitap kapağında tek başına duran slogan; okur devreleri kendisi kuruyor.
   input: Okumazsın, kurarsın.
   expected_not_contains: ["Okumazsın, kurarsın."]
-  expected_property: Slogan bağlamsız okunduğunda anlaşılır; fiilin nesnesi ya da tamlayıcısı geri gelir.
+  expected_property: >-
+    Slogan bağlamsız okunduğunda anlaşılır; çıplak "kurarsın" kalmaz. Nesne, tümleç ya da eylemi
+    okura bağlayan bir öğe (ör. "kendin") gelmesi yeterlidir; nesnenin açıkça yazılması şart değil.
 
 - id: baslik-eksiltisi
   source: saha
@@ -198,7 +200,9 @@ cases:
   context: Aynı sayfadan üç başlık.
   input: "Arıza cihazla tespit edilir.\nÜcret işlem öncesi bildirilir.\nİş üç adımda tamamlanır."
   expected_contains: [cihaz, ücret, üç adım]
-  expected_property: Üç başlık da edilgen kalmaz; işletme en az bir başlıkta görünür.
+  expected_property: >-
+    Üç başlığın üçü birden edilgen kalmaz (bir ya da ikisinin edilgen kalması serbest); işletme en az
+    bir başlıkta görünür; bilgi düşmez.
 
 - id: kume-tek-biz-ses
   source: turkish-native/p49-single-we-control
