@@ -1,0 +1,98 @@
+# references/fluency.md: nesne düşürme, ulaç öznesi, odak, gereksiz sözcük, uyum.
+cases:
+- id: zorunlu-nesne-dusmez
+  source: saha
+  ref: references/fluency.md
+  kind: fix
+  context: Anne, uyuyan çocuğundan söz ediyor; önceki cümlede çocuk geçmiyor.
+  input: Yatağa göndereli, ışıkları söndüreli çok oldu.
+  expected_property: >-
+    Kimin yatağa gönderildiği çıkarılabilir: nesne geri yazılır ya da cümle edilgen/geçişsiz kurulur.
+
+- id: ulac-ozne-catisi
+  source: fluency
+  ref: references/fluency.md
+  kind: fix
+  input: Yola çıkılıp köye ulaştık.
+  expected: Yola çıkıp köye ulaştık.
+
+- id: odak-edati-yeri
+  source: turkish-native/p09-focus
+  ref: references/fluency.md
+  kind: fix
+  context: Kast, istenen zamanda değiştirilebilecek tek şeyin plan olduğu.
+  input: Sadece planını istediğin zaman değiştirebilirsin.
+  expected_contains: [istediğin zaman, planını]
+  expected_property: >-
+    Sınırlama tek anlamlı olarak plana bağlanır ve hiçbir öğe düşmez ("istediğin zaman" kalır).
+
+- id: geri-iade
+  source: fluency
+  ref: references/fluency.md
+  kind: fix
+  input: Ürünü geri iade etti.
+  expected: Ürünü iade etti.
+
+- id: yaklasik-civarinda
+  source: ai-tells
+  ref: [references/fluency.md, references/ai-tells.md]
+  kind: fix
+  input: Toplantıya yaklaşık olarak 100 civarında kişi katıldı.
+  expected_contains: ["100"]
+  expected_not_contains: [yaklaşık olarak 100 civarında]
+
+- id: zamir-yinelemesi
+  source: fluency
+  ref: references/fluency.md
+  kind: fix
+  input: O, sabah erken kalktı. O, kahvaltısını yaptı. O, işe gitti.
+  expected_contains: [kahvaltı, işe]
+  expected_not_contains: ["O, kahvaltısını", "O, işe"]
+
+- id: ozne-yinelemesi
+  source: turkish-native/p04-pronoun-repeat
+  ref: references/fluency.md
+  kind: fix
+  input: Kullanıcı listeyi açar. Kullanıcı işletmeyi seçer. Kullanıcı demoyu hazırlar.
+  expected_not_contains: [kullanıcı işletmeyi, kullanıcı demoyu]
+
+- id: devrik-edebi
+  source: fluency
+  ref: references/fluency.md
+  kind: control
+  input: Gitmek istemiyordu. Ama gitti.
+  expected: Gitmek istemiyordu. Ama gitti.
+
+- id: herkes-tekil
+  source: fluency
+  ref: references/fluency.md
+  kind: fix
+  input: Herkes aynı fikirdeydiler.
+  expected: Herkes aynı fikirdeydi.
+
+- id: amac-ad-yuklem
+  source: turkish-native/p03-purpose
+  ref: references/fluency.md
+  kind: fix
+  input: Bu sistemin temel amacı kullanıcı deneyiminin iyileştirilmesidir.
+  expected_contains: [kullanıcı deneyimini]
+  expected_not_contains: [iyileştirilmesidir]
+
+- id: adlastirma-zinciri
+  source: turkish-native/p02-bureaucratic
+  ref: references/fluency.md
+  kind: fix
+  input: İşlemin gerçekleştirilmesi için butona basılması gerekmektedir.
+  expected_contains: [buton]
+  expected_not_contains: [gerçekleştirilmesi, gerekmektedir]
+
+- id: uzun-cumle-ozne-degisimi
+  source: turkish-native/p08-boundary-long
+  ref: references/fluency.md
+  kind: fix
+  input: >-
+    Klevia işletmeleri bulur, telefonlarını kontrol eder, demoları hazırlar, bunları panelde
+    görürsün, sonra bağlantıyı müşteriye gönderebilirsin.
+  expected_contains: [telefon, demo, panel, müşteriye]
+  expected_max_sentences: 2
+  expected_property: Özne Klevia'dan okura geçtiği yerde cümle bölünür ya da açıkça bağlanır.
