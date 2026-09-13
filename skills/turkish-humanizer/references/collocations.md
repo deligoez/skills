@@ -69,6 +69,10 @@ channel or source in `-DAn`.
 
 Test: ask *nerede?* or *nereden?* of the Turkish verb, not of the English preposition.
 
+This rule is about the **case suffix** only. The separate conjunction `da/de` is not a location and
+never takes an apostrophe: ✓ *İzmir de aynı kararı aldı* (İzmir, too) is correct and must not become
+*İzmir'de*. When a sentence reads well both ways and no context decides, leave it (`mechanics.md` §1).
+
 ## 2. Işık fiil seçimi — hangi ad hangi fiili çeker?
 
 The noun chooses its verb. There is no rule; there is only usage. Getting it wrong is instantly
