@@ -149,6 +149,11 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
 - **Kaynaştırma (y, ş, s, n):** only when a vowel-initial suffix meets a vowel-final stem: ✓ *arabaya,
   arabası, arabasına, altışar* ✗ *arabaa, arabaı.* After a consonant, none: ✓ *okula.*
 - **Ünsüz türemesi** (Arabic doubles): ✓ *hakkı, hissi, reddi, tıbbı* ✗ *hakı, hisi, redi.*
+  - **Eşyazımlı tuzağı:** türeme kelimeye değil **anlama** bağlıdır. *sır* (gizem, Ar.) → **sırrı**;
+    *sır* (seramiğe ve çiniye sürülen camsı kaplama; ayna sırı) → **sırı**. ✗ *Sırrını sürer, fırında
+    pişiririz* (seramik atölyesi) → ✓ ***Sırını** sürer…* Model ve yazım denetleyicisi yaygın olan
+    anlamın çekimini seçer. Emin değilsen TDK Güncel Türkçe Sözlük'te iki ayrı madde başı olup
+    olmadığına ve çekim notuna bak.
 
 ## 6. Sayı, tarih, saat, birim — the mirror of English {#6-sayi}
 
