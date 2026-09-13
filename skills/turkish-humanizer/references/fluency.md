@@ -47,6 +47,12 @@ most reliable rewrite is usually **deletion**.
 > **Ulaç zinciri kuralı:** `-ip / -erek / -ince / -eli` ana cümleyle **aynı özneyi** paylaşır. Özne
 > değişiyorsa bu ekleri kullanma, cümleyi böl. Çatı da uyuşmalı: ✗ *yola çıkılıp köye ulaştık* →
 > ✓ *yola çıkıp köye ulaştık.*
+>
+> **Virgül dizisinde özne kayması bir hatadır, üslup değil.** Virgülle dizilen yüklemlerin ortasında
+> özne değişiyorsa okur ilk özneyle okumaya devam eder: ✗ *Sistem raporu hazırlar, grafikleri çizer,
+> sonucu e-postayla alırsın.* → ✓ *Sistem raporu hazırlar ve grafikleri çizer; sen de sonucu
+> e-postayla alırsın.* Özne değiştiği yerde cümleyi böl ya da yeni özneyi açıkça yaz. Bu, dar
+> müdahale ölçüsünün koruduğu bir noktalama tercihi sayılmaz; bilgi eksilmeden düzeltilir.
 
 ## 1. Word order and focus (vurgu)
 
