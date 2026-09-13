@@ -1,0 +1,237 @@
+# references/ai-tells.md: bağlaçlar, kalklar, retorik, Türkçeye özgü izler, aşırı düzeltme yasağı.
+cases:
+- id: ayrica-de-ile
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Ayrıca, bu ürün kullanım kolaylığını da artırmaktadır.
+  expected_contains: [kullanım kolaylığını]
+  expected_not_contains: [ayrıca]
+
+- id: sahip-olmak
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Bu ürün birçok özelliğe sahiptir.
+  expected_contains: [birçok özelliği]
+  expected_not_contains: [sahiptir]
+
+- id: basarili-bir-sekilde
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Güncelleme başarılı bir şekilde tamamlandı.
+  expected: Güncelleme başarıyla tamamlandı.
+
+- id: sadece-degil-ayni-zamanda
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Yeni yöntem sadece maliyetleri düşürmüyor, aynı zamanda verimliliği de artırıyor.
+  expected_contains: [hem, maliyetleri, verimliliği]
+  expected_not_contains: [aynı zamanda]
+
+- id: sadece-liste-degil
+  source: turkish-native/p33-not-x
+  ref: references/ai-tells.md
+  kind: fix
+  input: Bu sadece bir liste değil, aynı zamanda satış motorun.
+  expected_contains: [liste, satış motor]
+  expected_not_contains: [aynı zamanda]
+
+- id: uzun-cizgi-ara-soz
+  source: ai-tells
+  ref: [references/ai-tells.md, references/mechanics.md]
+  kind: fix
+  input: Proje ekibi — özellikle yeni üyeler — çok şey öğrendi.
+  expected_contains: [özellikle yeni üyeler]
+  expected_not_contains: ["—"]
+
+- id: noktasinda-sarmalayici
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Transfer noktasında önemli bir gelişme yaşanmadı.
+  expected_not_contains: [noktasında]
+
+- id: bakimindan-hukuk-terimi
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: control
+  input: Dava, usul bakımından reddedildi.
+  expected: Dava, usul bakımından reddedildi.
+
+- id: eposta-uzerinden
+  source: turkish-native/p20-email-over
+  ref: references/ai-tells.md
+  kind: fix
+  input: Müşteriye e-posta üzerinden ulaşabilirsin.
+  expected: Müşteriye e-postayla ulaşabilirsin.
+
+- id: api-uzerinden-kanal
+  source: turkish-native/p20-api-control
+  ref: references/ai-tells.md
+  kind: control
+  input: API üzerinden bağlanır.
+  expected: API üzerinden bağlanır.
+
+- id: olarak-arac
+  source: turkish-native/p19-olarak
+  ref: references/ai-tells.md
+  kind: fix
+  input: Bu özellik ekipler için bir kontrol aracı olarak çalışır.
+  expected_not_contains: [olarak çalışır]
+
+- id: yurutulmekte-olan
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Yürütülmekte olan projeler yıl sonunda değerlendirilecek.
+  expected_contains: [projeler, yıl sonunda]
+  expected_not_contains: [yürütülmekte olan]
+
+- id: ve-ve-zinciri
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Bütçe konuşuldu ve proje ele alındı ve görevler dağıtıldı.
+  expected_contains: [bütçe, proje, görevler]
+  expected_not_contains: [konuşuldu ve]
+
+- id: artik-dolgu-degil
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: control
+  input: Bu sürümden sonra eski eklentiler artık çalışmıyor.
+  expected: Bu sürümden sonra eski eklentiler artık çalışmıyor.
+
+- id: gercek-ikileme
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: control
+  input: Sağ salim eve döndüler.
+  expected: Sağ salim eve döndüler.
+
+- id: kasitli-vurus
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: control
+  context: Anlatıda tek başına duran, ritim için bırakılmış kısa paragraf.
+  input: Bir sır.
+  expected: Bir sır.
+
+- id: uclu-farkli-noktalar
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: control
+  input: Hızlı, güvenilir ve verimli bir çözüm sunuyoruz.
+  expected: Hızlı, güvenilir ve verimli bir çözüm sunuyoruz.
+
+- id: kaynaksiz-atif
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  input: Uzmanlara göre bu yöntem daha etkilidir.
+  expected_contains: [uzmanlara göre, etkili]
+  expected_property: Kaynak adı uydurulmaz ve iddia silinmez.
+
+- id: gercek-karsitlik-asil
+  source: turkish-native/p34-real-contrast-control
+  ref: references/ai-tells.md
+  kind: control
+  input: Fiyat önemli ama bu karşılaştırmada asıl fark destek süresi.
+  expected: Fiyat önemli ama bu karşılaştırmada asıl fark destek süresi.
+
+- id: eksiltili-soru-hal-eki
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  context: Karakter, karanlıkta pencereden işaret vermeyi öneriyor.
+  input: Camdan el feneri?
+  expected_not_contains: ["Camdan el feneri?"]
+  expected_property: Fiil geri gelir; okur feneri camdan yapılmış sanmaz.
+
+- id: kisilestirme-kalki
+  source: ai-tells
+  ref: references/ai-tells.md
+  kind: fix
+  context: Kitap kapağı; okur kitaptaki makineyi kendi kuruyor.
+  input: Bu kitap Türkçe düşünür.
+  expected_not_contains: [kitap türkçe düşünür]
+
+- id: gomulu-soru
+  source: turkish-native/p01-who-opened
+  ref: references/ai-tells.md
+  kind: fix
+  input: Kim açtı, kim düzenledi gör.
+  expected: Kimin açtığını, kimin düzenlediğini gör.
+
+- id: gercek-soru
+  source: turkish-native/p01-direct-question-control
+  ref: references/ai-tells.md
+  kind: control
+  input: Kim açtı?
+  expected: Kim açtı?
+
+- id: ettirgen-yigini
+  source: turkish-native/p16-causative
+  ref: references/ai-tells.md
+  kind: fix
+  input: Sisteme listeyi tarattırıp demoları hazırlattırabilirsin.
+  expected_not_contains: [tarattırıp, hazırlattırabilirsin]
+
+- id: emir-ve-bildirme
+  source: turkish-native/p07-coordination
+  ref: references/ai-tells.md
+  kind: fix
+  input: Listeyi onayla ve demolar hazırlanır.
+  expected_contains: [demolar hazırlanır]
+  expected_not_contains: [onayla ve]
+
+- id: walk-in-kalki
+  source: turkish-native/p17-walk-in-calque
+  ref: references/ai-tells.md
+  kind: fix
+  context: Gözlükçü, randevu gerekip gerekmediği sorusunu yanıtlıyor. Kaynak deyim "walk in".
+  input: Yürüyerek gelebilirsiniz; yoğun saatlerde randevu da alabilirsiniz.
+  expected_contains: [randevusuz, yoğun saatlerde]
+  expected_not_contains: [yürüyerek]
+
+- id: bassiz-kadar
+  source: turkish-native/p47-palamuta-kadar
+  ref: references/ai-tells.md
+  kind: fix
+  context: Balık listesi; bir aralık değil.
+  input: Mevsimine göre levrek, çipura, hamsi, palamuta kadar birçok balık.
+  expected_contains: [levrek, çipura, hamsi, palamut]
+  expected_not_contains: [palamuta kadar]
+
+- id: satisi-kapat
+  source: turkish-native/p24-close-sale
+  ref: references/ai-tells.md
+  kind: fix
+  input: Demoyu gönder ve satışı kapat.
+  expected_not_contains: [satışı kapat]
+
+- id: aksiyon-al
+  source: turkish-native/p24-action
+  ref: references/ai-tells.md
+  kind: fix
+  input: Bildirim gelince aksiyon al.
+  expected_not_contains: [aksiyon al]
+
+- id: silme-islemi-gerceklestirmek
+  source: turkish-native/p13-perform
+  ref: references/ai-tells.md
+  kind: fix
+  input: Kullanıcı silme işlemini gerçekleştirebilir.
+  expected_not_contains: [işlemini gerçekleştir]
+  expected_property: Neyin silindiği girdide yok; silinen nesne (hesap, kayıt) uydurulmaz.
+
+- id: bos-kurumsal-kalip
+  source: turkish-native/p37-corporate
+  ref: references/ai-tells.md
+  kind: fix
+  input: Bu noktada kullanıcı odaklı bir çözüm sunmak kritik öneme sahiptir.
+  expected_contains: [kullanıcı odaklı, kritik]
+  expected_not_contains: [bu noktada, öneme sahiptir]
