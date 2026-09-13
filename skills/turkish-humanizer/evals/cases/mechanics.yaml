@@ -115,3 +115,28 @@ cases:
   kind: fix
   input: Katılımcı sayısı 30'e ulaştı.
   expected: Katılımcı sayısı 30'a ulaştı.
+
+# --- Varyantlar ---
+
+- id: sir-ayna-varyant
+  source: heldout
+  ref: references/mechanics.md
+  kind: fix
+  context: Antika ayna; aynanın arkasındaki yansıtıcı kaplama kastediliyor.
+  input: Aynanın sırrı yer yer dökülmüş.
+  expected: Aynanın sırı yer yer dökülmüş.
+
+- id: ondalik-arayuz-varyant
+  source: heldout
+  ref: [references/mechanics.md, references/registers.md]
+  kind: fix
+  context: Sipariş sayfasındaki kısa bilgi satırı.
+  input: "Ortalama teslimat: 2.5 gün"
+  expected: "Ortalama teslimat: 2,5 gün"
+
+- id: surum-numarasi-kalir
+  source: heldout
+  ref: [references/mechanics.md, references/registers.md]
+  kind: control
+  input: Sürüm 2.4 yayında.
+  expected: Sürüm 2.4 yayında.
