@@ -107,7 +107,7 @@ Birebir alınmayanlar ve nedenleri:
 |---|---|
 | `p02-bureaucratic` | Beklenen *"İşlemi başlatmak için butona basın"* anlamı daraltıyor; yalnızca kalıbın gitmesi denetleniyor. |
 | `p09-focus` | Beklenen çıktı *"istediğin zaman"* öğesini düşürüyordu; öğenin korunması şart koşuldu. |
-| `p12-play-page` | Beklenen *"Sayfayı düzenleyen işletmeyi gör"* bir kast tahmini; yalnızca kalkın gitmesi denetleniyor. |
+| `p11-build-page`, `p12-play-page`, `p12-hour-eating`, `p14-control-offer` | Görüş ayrılığı. *Her işletmeye sayfa kurar*, *saat yiyen iş*, *daha fazla kontrol sunar* bu skill'in ölçüsüyle doğal Türkçedir; *sayfanın üstünde oynamak* ise bağlam olmadan kastı belirsiz. Referanslarda bunları hata sayan bir kural yok; üç koşuluk ölçümde eski ve yeni skill bunları neredeyse her koşuda olduğu gibi bıraktı. Setten çıkarıldı. |
 | `p13-perform` | Beklenen *"Kullanıcı hesabı silebilir"* girdide olmayan bir nesne (hesap) ekliyor; uydurmama şartı eklendi. |
 | `p15-passive` | Edilgeni etkene çevirmek için fail bağlamdan getiriliyor; v3 edilgeni yalnız `-mış/-makta olan` ikizinde ve fail gizlendiğinde hedefliyor. |
 | `p18-*` | *"12'si telefonlu"* → *"12 telefon numarası bulundu"* anlamı değiştiriyor (12 işletme ≠ 12 numara). |

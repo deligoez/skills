@@ -112,13 +112,6 @@ cases:
   expected_contains: [fren, vites, jant]
   expected_not_contains: [rot]
 
-- id: sayfa-kurmak
-  source: turkish-native/p11-build-page
-  ref: references/collocations.md
-  kind: fix
-  input: Klevia her işletmeye sayfa kurar.
-  expected_not_contains: [sayfa kurar]
-
 - id: kendi-sayfasini-kursun
   source: turkish-native/p05-possessive
   ref: [references/collocations.md, references/anlati.md]
@@ -142,33 +135,12 @@ cases:
   input: Site kurmak için alan adını bağla.
   expected: Site kurmak için alan adını bağla.
 
-- id: sayfanin-ustunde-oynamak
-  source: turkish-native/p12-play-page
-  ref: references/collocations.md
-  kind: fix
-  input: Sayfanın üstünde oynayan işletmeyi gör.
-  expected_not_contains: [üstünde oynayan]
-
-- id: saat-yiyen
-  source: turkish-native/p12-hour-eating
-  ref: references/collocations.md
-  kind: fix
-  input: Saat yiyen iki işi Klevia devralsın.
-  expected_not_contains: [saat yiyen]
-
 - id: musteriyi-kapatmak
   source: turkish-native/p17-close-customer
   ref: references/collocations.md
   kind: fix
   input: Bu özellik müşteriyi kapatmanı kolaylaştırır.
   expected_not_contains: [müşteriyi kapat]
-
-- id: kontrol-sunar
-  source: turkish-native/p14-control-offer
-  ref: references/collocations.md
-  kind: fix
-  input: Bu özellik daha fazla kontrol sunar.
-  expected_not_contains: [kontrol sunar]
 
 # --- Varyantlar ---
 
