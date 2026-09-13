@@ -235,3 +235,99 @@ cases:
   input: Bu noktada kullanıcı odaklı bir çözüm sunmak kritik öneme sahiptir.
   expected_contains: [kullanıcı odaklı, kritik]
   expected_not_contains: [bu noktada, öneme sahiptir]
+
+# --- Varyantlar: kuralın referansta geçmeyen örnekleri (ezberi değil kuralı ölçer) ---
+
+- id: gomulu-soru-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  context: Güvenlik ayarları sayfasındaki yönerge.
+  input: Kim giriş yaptı, hangi cihazdan bağlandı incele.
+  expected_contains: [cihaz]
+  expected_not_contains: ["Kim giriş yaptı,"]
+
+- id: ettirgen-yigini-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  input: Raporu ekibe yazdırttırıp müdüre onaylattırabilirsin.
+  expected_contains: [rapor, müdür]
+  expected_not_contains: [yazdırttırıp, onaylattırabilirsin]
+
+- id: emir-ve-bildirme-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  input: Kodu gir ve hesabın açılır.
+  expected_contains: [kod, hesabın açılır]
+  expected_not_contains: [gir ve]
+
+- id: deyim-kalki-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  context: Kuaför, randevu gerekip gerekmediğini açıklıyor. Kaynak ifade "walk-ins welcome".
+  input: Yürüyerek gelenleri de ağırlıyoruz.
+  expected_not_contains: [yürüyerek]
+  expected_property: Kast (randevusuz gelenler de kabul ediliyor) korunur; ulaşım biçimi anlamı kalmaz.
+
+- id: bassiz-kadar-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  context: Pastane vitrini; bir aralık değil, ürün listesi.
+  input: Kek, kurabiye, börek, pastaya kadar her şey taze.
+  expected_contains: [kek, kurabiye, börek, pasta]
+  expected_not_contains: [pastaya kadar]
+
+- id: uzerinden-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  input: Randevunuzu telefon üzerinden alabilirsiniz.
+  expected_contains: [randevu]
+  expected_not_contains: [telefon üzerinden]
+
+- id: uzerinden-araci-kalir
+  source: heldout
+  ref: references/ai-tells.md
+  kind: control
+  context: Ödeme gerçekten aracı bir ödeme kuruluşundan geçiyor.
+  input: Ödeme, lisanslı bir ödeme kuruluşu üzerinden alınır.
+  expected: Ödeme, lisanslı bir ödeme kuruluşu üzerinden alınır.
+
+- id: musteriyi-kapat-varyant
+  source: heldout
+  ref: references/ai-tells.md
+  kind: fix
+  context: Müşteriye görünen ürün tanıtımı.
+  input: Teklifi tek tıkla gönder, müşteriyi aynı gün kapat.
+  expected_contains: [teklif]
+  expected_not_contains: [müşteriyi aynı gün kapat]
+
+- id: uclu-korunur-varyant
+  source: heldout
+  ref: [references/ai-tells.md, SKILL.md]
+  kind: fix
+  input: Uygulamamız güvenli, hızlı ve kullanıcı dostu bir deneyim sunmaktadır.
+  expected_contains: [güvenli, hızlı, kullanıcı dostu]
+  expected_not_contains: [sunmaktadır]
+
+- id: motivasyon-kapanisi-kalir
+  source: heldout
+  ref: [references/ai-tells.md, SKILL.md]
+  kind: fix
+  context: Kurumsal blog yazısının son cümlesi.
+  input: Unutmayın, küçük adımlar büyük farklar yaratır!
+  expected_contains: [küçük adım, büyük fark]
+  expected_sentences: 1
+
+- id: bos-acilis-iddiasi-kalir
+  source: heldout
+  ref: [references/ai-tells.md, SKILL.md]
+  kind: fix
+  input: Günümüzün hızla dijitalleşen dünyasında siber güvenlik her zamankinden daha kritik bir hale gelmiştir.
+  expected_contains: [siber güvenlik, her zamankinden]
+  expected_sentences: 1
+  expected_not_contains: [gelmiştir]
