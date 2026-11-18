@@ -106,7 +106,7 @@ Yeniden yazma kipinde `SKILL.md`'nin "dar ve tek eksenli fark" kuralı bunları 
 metnine ikileme, deyim, devrik ya da parçacık **ekleme**; bunlar düzeltme değil, ses değişikliğidir.
 Üslup sözleşmesi açıkça istiyorsa istisnadır.
 
-Kaynak: insanca'nın 25 akış kuralı (Tahir Yıldız, MIT) — 2012-2019 köşe yazıları ve bloglar, Hüseyin
+Kaynak: insanca'nın 25 akış kuralı (Tahir Yıldız, MIT, github.com/tahiryildiz/insanca) — 2012-2019 köşe yazıları ve bloglar, Hüseyin
 Rahmi Gürpınar, modern bir roman ve usta işi bir çeviri okunarak çıkarılmış. Burada yalnız bu dosyada
 olmayan katman var.
 
