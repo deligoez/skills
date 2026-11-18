@@ -177,7 +177,10 @@ Brief here; full rules in `mechanics.md`.
   *"Yapay zekayla metin nasıl yazılır."*
 - **Comma before "ve"** (Oxford-style): *Hız, güvenlik, ve verimlilik* → *Hız, güvenlik ve
   verimlilik.*
-- **Semicolon splicing two full clauses** (English essay style) → new sentence or *hem…hem*.
+- **Semicolon splicing two full clauses** (English essay style): a tell only in your own writing,
+  where a new sentence or *hem…hem* often reads better. **In someone else's text keep it:** a
+  semicolon separating a series or two closely linked clauses is established, correct Turkish
+  (`SKILL.md`). In review mode flag it only when the two clauses are unrelated.
 - **Mechanical bold** on individual words for emphasis → let word order and particles (*bile, zaten,
   tam da*) carry stress.
 - **Bullet/heading skeletons dropped into what should be flowing prose** → convert to connected
