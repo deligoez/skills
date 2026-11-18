@@ -186,14 +186,15 @@ Düzelttiğin her yerde ad, sayı, sıfat ve sıralama eksiksiz kalır: `hem gel
 
 | Dosya | Ne için |
 |---|---|
-| `references/ai-tells.md` | Tam katalog: bağlaçlar, bürokratik fiiller, kalıp fiil, kalklar, **metafor kalkı**, Türkçeye özgü izler, noktalama, üslup izleri, aşırı kullanılan kelimeler, Türkçeye geçmeyen İngilizce izler |
-| `references/collocations.md` | **Eşdizim ve fiil değerliği** — en büyük artık hata kaynağı: hangi fiil hangi hâli ister, ışık fiil seçimi, EN→TR fiil bölünmeleri, kendini sınama |
+| `references/ai-tells.md` | Tam katalog: bağlaçlar, bürokratik fiiller, kalıp fiil, kalklar, **metafor kalkı**, Türkçeye özgü izler, **yetenek kipi ve kof geniş zaman**, noktalama, üslup izleri, aşırı kullanılan kelimeler, Türkçeye geçmeyen İngilizce izler, **söylem iskeleti izleri** ("X değil, Y", "asıl" + iki nokta, koşaç kaçışı, yapı nakli) ve **inceleme kipinde bulgu ağırlığı** (kesin imza, yumuşak sinyal, insan izi) |
+| `references/collocations.md` | **Eşdizim ve fiil değerliği** — en büyük artık hata kaynağı: hangi fiil hangi hâli ister, ışık fiil seçimi, EN→TR fiil bölünmeleri, **İngilizce fiil metaforu kalkları** (*peşinden gitmek, -e dokunmak*), kendini sınama |
 | `references/fluency.md` | Akıcı Türkçe ilkeleri; **nesneyi düşürme karşı kuralı**; ulaç zinciri; fazla-düzeltme uyarısı |
 | `references/mechanics.md` | TDK: de/da, `-ki`, kesme (**cins adda yok**), noktalama, i/ı, ünlü uyumu, sayı/tarih/saat + **otomasyon tuzakları** |
-| `references/registers.md` | Nesir / başlık / slogan / arayüz; Türkçe daha az eksilti kaldırır; tamlama zinciri; BÜYÜK HARF; ürünün iç dili ve veritabanı dili; **sayfa düzeyi küme denetimi** (tek kalıba çökme, iki yuvada aynı cümle, menüyü tekrarlayan etiket) |
+| `references/registers.md` | Nesir / başlık / slogan / arayüz; Türkçe daha az eksilti kaldırır; tamlama zinciri; BÜYÜK HARF; ürünün iç dili ve veritabanı dili; **sayfa düzeyi küme denetimi** (tek kalıba çökme, iki yuvada aynı cümle, menüyü tekrarlayan etiket); ürün ve e-posta şablonları |
+| `references/turler-ve-alanlar.md` | **Tür ve alan dokunulmazları** (doz, faiz, yasal uyarı, iddianın gücü; şiir, hukuk, şartname, haber…), alana göre modelin izi, **kitleye göre terim kararı** ve aşırı çeviri listesi |
 | `references/terminology.md` | Uzun ve iki dilli metinde **terim defteri**: kilitli karşılık + gerekçe + tuzak; rezerve kelime disiplini |
 | `references/examples.md` | Register'lara göre tam öncesi/sonrası dönüşümler + inceleme kipi örneği |
-| `references/anlati.md` | **Pozitif craft** — iyi Türkçe nesir nasıl işler: anlaşılırlık, akıcılık, tutarlılık, özgünlük. Ataç/Hepçilingirler geleneği + anlatım-bozukluğu çerçevesi. ai-tells kokuyu siler, bu dosya sesi kurar |
+| `references/anlati.md` | **Pozitif craft** — iyi Türkçe nesir nasıl işler: anlaşılırlık, akıcılık, tutarlılık, özgünlük. Ataç/Hepçilingirler geleneği + anlatım-bozukluğu çerçevesi; **gündelik ve anlatı dokusu** (ikileme, -miş'li aktarım, -ivermek, diyalog) ve **deyim dozu** — yalnız kendi Türkçeni yazarken ve incelemede öneri olarak. ai-tells kokuyu siler, bu dosya sesi kurar |
 | `references/ceviri-teknikleri.md` | **Düzeltme operasyonları** — kendi örtük İngilizceni deyimsel Türkçeye çevir: Vinay-Darbelnet 7 işlem (transpozisyon, modülasyon, eşdeğerlik…), açımlama, EN→TR yapısal asimetri. ai-tells kokuyu bulur, bu dosya nasıl düzelteceğini söyler |
 
 ---
