@@ -412,6 +412,26 @@ bildirme cümlesini `ve` bağlamaz; ilişki eke taşınır.
 **Meşru:** iki emir (*Kaydet ve çık*); iki bağımsız bildirme (*Liste onaylandı ve demolar
 hazırlandı*). Zincir ayrıca `ve … ve` ise §12.7'yi de uygula.
 
+### 12.16 Geniş zaman: yetenek ve okura dönük metin
+
+Geniş zaman Türkçede **alışkanlık ve genel doğru** bildirir. İki yerde yanlış kipe kayar:
+
+- **Yetenek `-ebilir` ister.** İngilizce *"counting says everything"* der; Türkçesi **"her şeyi
+  söyleyebilir"**dir. Bir aracın ya da yöntemin **kapasitesini** anlatan cümlede geniş zaman
+  alışkanlık iddiasına döner: ✗ *Saymak her şeyi söyler ama yavaş* → ✓ *Saymak her şeyi söyleyebilir
+  ama yavaş.* Bu, "gereksiz `-ebilir` ihtimalini azalt" öğüdünün zıddı değil: orada *ihtimal*, burada
+  *yetenek* var. Karşılaştırmada ikinci yarıya **`da`** paralelliği kurar: *Anlaşmak **da** hızlı ama
+  az şey söyleyebilir.*
+- **Kof geniş zaman — okura dönük metinde genel doğru pozu.** ✗ *Pro planda bu özellik ücretsiz
+  **olur**.* Cümlede ne özne var ne okur ne eylem; `olmak` boş bir yüklem. Üst üste dizilince
+  (*çalışır, ölçer, verir, yazdırır*) broşür sesi gelir. Çare: okur özne olabiliyorsa onu özne yap,
+  boş `olmak` yerine işin fiilini koy: ✓ *Pro plandaysanız bu özelliği ücretsiz kullanabilirsiniz.*
+  **İddianın gücünü koru:** *ücretsiz olur* bir olanak bildirir, *kullanabilirsiniz* de öyle;
+  *kullanıyorsunuz* ise olanağı olguya çevirir.
+- **Dokunma:** sistem tanımı ve değişmez kural geniş zamanla doğrudur (*Redis veriyi bellekte
+  tutar*). Atasözü, şartnamedeki gereklilik kipi ve akademik genelleme de kalır. Hata geniş zamanın
+  kendisi değil, okura dönük açıklamada kof kalmasıdır. Kaynak: insanca §56 (Tahir Yıldız, MIT).
+
 ## 13. Aşırı düzeltme yasağı — iyi Türkçeyi bozma {#13-asiri-duzeltme}
 
 Bu skill **kuralcı bir dil polisi değildir.** Necmiye Alpay'ın uyarısı yerinde: doğruluğu "arılık/
