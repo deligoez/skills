@@ -191,6 +191,12 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
 - **Sayı çekim eki okunuşa göredir**, son rakama göre değil: *30'a* = *otuza*, *62'ye* = *altmış
   ikiye*, *100'ü* = *yüzü*, *2011'de* = *iki bin on birde*, *1000'e* = *bine.* ✗ *30'e, 62'ya, 100'u.*
 
+- **Kısaltmaya gelen ek de okunuşa göredir:** *KDV'ye* (ka-de-ve), *TBMM'ye*, *NATO'ya*, *URL'ye*,
+  *API'ye*, *PDF'ye*. **K ve H ile biten kısaltmalar iki türlü okunur:** TDK *ke, he* okur (*SGK'ye,
+  TDK'nin*), gündelik dil *ka, ha* da kullanır (*SGK'da*). Resmî metinde TDK'ye uy, öbür metinde
+  yazarın okunuşuna; **aynı metinde iki biçimi karıştırma.** Saate gelen ek de okunuşa göre: *13.00'te*
+  (on üçte), *10.30'da* (on otuzda), *09.00'da* (dokuzda).
+
 ## 7. Otomasyon ve araç tuzakları {#7-otomasyon}
 
 Türkçe metinle **kod** çalışıyorsa bunlar yazım kuralı değil, **araç kuralıdır** — ve sessizce bozarlar.
