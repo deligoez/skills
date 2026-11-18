@@ -2,8 +2,8 @@
 
 > *Günümüzün hızla değişen dünyasında, verimlilik kritik bir öneme sahiptir.*
 
-Bu cümleyi okuyunca "bunu bir model yazmış" dediysen, neye takıldığını da biliyorsun: boş bir sahne
-kurulumu, İngilizceden birebir gelmiş *öneme sahip olmak*, cümle sonunda *-maktadır* ağırlığı.
+Bu cümleyi okuyunca "bunu bir model yazmış" dediysen, neye takıldığını da biliyorsun: boş bir
+açılış, İngilizceden birebir gelmiş *öneme sahip olmak*, cümle sonunda *-dir* ağırlığı.
 
 `turkish-humanizer`, yapay zekâ ile yazılmış ya da İngilizceden çevrilmiş kokan Türkçeyi **dikkatli
 bir Türk yazarın elinden çıkmış gibi** okunur hâle getiren bir ajan skill'idir. Metni baştan yazmaz:
@@ -17,10 +17,10 @@ Sonrası: Günümüzde verimlilik işletmeler için her zamankinden daha kritik.
 
 ## Üç söz
 
-1. **Cümleyi düzelt, metni yeniden yazma.** Değişiklik dar ve tek eksenlidir. Zaten doğal olan bir
+1. **Cümleyi düzelt, metni yeniden yazma.** Yalnız kokan öbek değişir; cümlenin geri kalanı olduğu gibi kalır. Zaten doğal olan bir
    ifade eşanlamlısıyla değiştirilmez; doğal bir metin olduğu gibi geri döner.
 2. **Hiçbir bilgi eksilmez.** Ad, sayı, tarih, oran, liste öğesi, niteleyici ve iddianın gücü korunur.
-   Paragraf sayısı ve cümle sırası girdiden gelir. Doğallaştırma özetleme değildir.
+   Paragraf sayısı ve cümle sırası girdiden gelir.
 3. **Hedef dedektör değil, okur.** Puan düşürmek için metne hata, kişilik ya da süs eklenmez.
 
 ## Yapay zekâ Türkçesi nasıl kokar?
@@ -30,7 +30,7 @@ Skill'in yakaladığı aileler, her biri birer örnekle. Tam katalog `references
 | Aile | ✗ Kokan | ✓ Türkçesi |
 |---|---|---|
 | Bürokratik yüklem | Toplantı gerçekleştirilmiştir. | Toplantı yapıldı. |
-| *Sahip olmak* kalkı | Bu karar büyük bir öneme sahiptir. | Bu karar çok önemli. |
+| *Sahip olmak* kalkı | Bu karar büyük bir öneme sahiptir. | Bu karar büyük önem taşıyor. |
 | *-lı bir şekilde* | Sorunu hızlı bir şekilde çözdük. | Sorunu hızla çözdük. |
 | Tabela bağlaç | Ayrıca, bununla birlikte, söz konusu… | (gerekmiyorsa düşer; cümleler ekle bağlanır) |
 | *Sadece… değil, aynı zamanda* | sadece hızlandırmıyor, aynı zamanda kolaylaştırıyor | hem hızlandırıyor hem kolaylaştırıyor |
@@ -56,17 +56,17 @@ yeniden yazılmaz; konumlu bir bulgu listesi döner, çünkü yazar yalnız bozu
 | Ekran 42 | "kapı ses eder" | hata | *ses etmek* = konuşmak, itiraz etmek | "kapı ses çıkarır" |
 | Ekran 7 | "kara kutu yok" | kalıp | Türkçede ilk çağrışım uçuş kayıt cihazı | "Sihir yok: her parçayı açıp bakarsın" |
 
-Sınıflar ayrıdır: **hata** yanlıştır ve düzeltilir, **kalıp** yanlış değildir ama izdir, **öneri**
+Sınıflar ayrıdır: **hata** yanlıştır ve düzeltilir, **kalıp** yanlış değildir ama yapay zekâ ya da çeviri izidir, **öneri**
 üslup tercihidir ve dayatılmaz.
 
 ## Neye dokunmaz
 
 - Birebir ve tarihî alıntılar, özel adlar, kod, komut ve dosya adları, markup.
 - Terim defterindeki kilitli terimler. Ekibin her gün kullandığı *deadline* zorla Türkçeleştirilmez.
-- Doz, faiz oranı, tarih, madde numarası, yasal uyarı ve bilgilendirme cümleleri.
-- Şiir (varsayılanı incelemedir) ve hukuki sonucu olabilecek cümleler.
+- Doz, faiz oranı, tarih ve madde numarası; yasal uyarı ve bilgilendirme cümleleri.
+- Şiir (varsayılan kip incelemedir) ve hukuki sonucu olabilecek cümleler.
 - Kaydın kendisi: kurumsal metin kurumsal, resmî duyuru resmî, blog samimi kalır.
-- İnsan yazısının izleri: kendi ritmi, deyimi, kasıtlı tekrarı. Cila AI demek değildir.
+- İnsan yazısının izleri: kendi ritmi, deyimi, kasıtlı tekrarı. Özenli, cilalı yazı yapay zekâ işareti sayılmaz.
 
 ## Örnek
 
@@ -84,19 +84,19 @@ Sınıflar ayrıdır: **hata** yanlıştır ve düzeltilir, **kalıp** yanlış 
 > Kullanıcılar platformu sorunsuz ve kesintisiz kullanacak. Platformumuz işinize gerçek anlamda
 > fayda getiriyor.
 
-Dört cümle dört cümle ve aynı sırayla kaldı. *Sorunsuz ve kesintisiz*, *güçlü*, *gerçek anlamda*
+Dört cümle yine dört cümle kaldı, sıraları da değişmedi. *Sorunsuz ve kesintisiz*, *güçlü*, *gerçek anlamda*
 metnin iddiasıdır; silinmedi. Abartılı bulunursa inceleme kipinde **öneri** olarak işaretlenir. Beş
-kayıtta daha fazla örnek: [`references/examples.md`](references/examples.md).
+farklı üslupta daha fazla örnek: [`references/examples.md`](references/examples.md).
 
 ## Nasıl ölçüldü
 
-- **Gövde (v3)** SkillOpt ile paragraf düzeyinde, bir hakem modelle ölçülerek iyileştirildi: koku
-  azalması, anlam koruma ve insan metnine dokunmama birlikte puanlandı. O ölçüm resmî kayıt
-  üzerindeydi.
+- **SKILL.md'nin ana metni (v3)** SkillOpt ile paragraf düzeyinde, bir hakem modelle ölçülerek iyileştirildi: koku
+  azalması, anlam koruma ve insan metnine dokunmama birlikte puanlandı. O ölçüm resmî üsluptaki
+  metinler üzerindeydi.
 - **Regresyon seti** ([`evals/`](evals/README.md)): 178 kısa vaka, 43'ü "dokunma" kontrolü. Her vaka
   tek bir kurala bağlı; bir kural gerilediğinde hangisi olduğu görünür. 135 düzeltme vakasının
-  98'inin girdisi skill metninde geçmez, yani model onu örneği hatırlayarak değil kuralı uygulayarak
-  geçmek zorundadır. Puanlama bu iki grubu ayrı raporlar.
+  98'inin girdisi skill metninde geçmez; model bu vakaları örneği hatırlayarak geçemez, kuralı
+  uygulaması gerekir. Puanlama bu iki grubu ayrı raporlar.
 - Aşırı düzeltme, kaçan düzeltme kadar hata sayılır. Kontrol vakaları bunun için var.
 
 ## Kurulum
@@ -131,22 +131,22 @@ Uzun bir işte şunları da verirsen skill kendi varsayılanları yerine onlara 
 | Dosya | İçerik |
 |---|---|
 | [`SKILL.md`](SKILL.md) | Giriş noktası: iki kip, girdiler, temel ölçü, bilgi koruma |
-| [`references/ai-tells.md`](references/ai-tells.md) | Tam iz kataloğu, söylem iskeleti, inceleme kipinde ağırlık |
+| [`references/ai-tells.md`](references/ai-tells.md) | Tam iz kataloğu, söylem iskeleti, inceleme kipinde bulguların ağırlığı |
 | [`references/collocations.md`](references/collocations.md) | Eşdizim, fiil değerliği, İngilizce fiil mecazı |
 | [`references/fluency.md`](references/fluency.md) | Akıcılık, düşen nesne, ulaç zinciri |
 | [`references/mechanics.md`](references/mechanics.md) | TDK yazımı, noktalama, kesme, sayı ve saat |
 | [`references/registers.md`](references/registers.md) | Nesir, başlık, slogan, arayüz, ürün ve e-posta şablonları |
 | [`references/turler-ve-alanlar.md`](references/turler-ve-alanlar.md) | Tür ve alan dokunulmazları, kitleye göre terim kararı |
 | [`references/terminology.md`](references/terminology.md) | Uzun ve iki dilli metinde terim defteri |
-| [`references/anlati.md`](references/anlati.md) | Pozitif nesir zanaatı, gündelik ve anlatı dokusu, deyim dozu |
+| [`references/anlati.md`](references/anlati.md) | İyi nesrin zanaatı, gündelik ve anlatı dokusu, deyim dozu |
 | [`references/ceviri-teknikleri.md`](references/ceviri-teknikleri.md) | Düzeltme işlemleri: transpozisyon, modülasyon, açımlama |
-| [`references/examples.md`](references/examples.md) | Kayıtlara göre öncesi/sonrası ve inceleme kipi örneği |
+| [`references/examples.md`](references/examples.md) | Üsluba göre öncesi/sonrası ve inceleme kipi örneği |
 
 ## Kaynaklar ve teşekkür
 
 - Nurullah Ataç'ın sadelik ve konuşur gibi yazma ilkeleri; Feyza Hepçilingirler'in *Türkçe Off*'u;
   Türkçe kompozisyon pedagojisinin anlatım bozukluğu çerçevesi.
-- TDK Yazım Kılavuzu ve Güncel Türkçe Sözlük. Deyim anlamları sözlükten doğrulandı.
+- TDK Yazım Kılavuzu ve Güncel Türkçe Sözlük. Çok anlamlı deyimlerin anlamları sözlükten doğrulandı.
 - [turkish-native](https://github.com/oguzhankayan/turkish-native) (Oğuzhan Kayan, MIT): bazı
   kalıplar ve regresyon vakaları. Alınan vakalar `source: turkish-native/…` taşır.
 - [insanca](https://github.com/tahiryildiz/insanca) (Tahir Yıldız, MIT): söylem iskeleti izleri, tür
