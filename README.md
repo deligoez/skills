@@ -71,6 +71,12 @@ is valid as soon as it has a `SKILL.md` with `name` and `description` frontmatte
   [turkish-native](https://github.com/oguzhankayan/turkish-native) (MIT); the borrowed cases are
   marked `source: turkish-native/…` and the license notice is kept in
   [`skills/turkish-humanizer/evals/README.md`](skills/turkish-humanizer/evals/README.md).
+- `turkish-humanizer` also adapts discourse-skeleton tells, genre and domain do-not-touch rules,
+  narrative flow rules, an idiom list and product-copy templates from Tahir Yıldız's
+  [insanca](https://github.com/tahiryildiz/insanca) (MIT), which in turn draws on
+  [insanlik-oldu-mu](https://github.com/MesutARIDORU/insanlik-oldu-mu) and
+  [turkish-anti-ai-skill](https://github.com/yucezerey/turkish-anti-ai-skill) (both MIT). Each
+  adapted section names its source.
 
 ## License
 
