@@ -522,7 +522,8 @@ somut iddiayı yazara sor.
   cümle yerindedir; kalıp hâlinde tekrar eden teselli değil.
 - **Bilgi sınırı artığı:** *eldeki bilgilere göre · kamuya açık kaynaklarda yer almamaktadır ·
   muhtemelen … olduğu düşünülmektedir* — modelin kendi sınırını anlatan cümle metne sızmıştır;
-  bilinmeyeni açıkça söyle ya da cümleyi at, tahmini bilgi gibi sunma.
+  bilinmeyeni açıkça söyle, tahmini bilgi gibi sunma. Kendi metninde cümleyi atabilirsin; başkasının
+  metninde silme, inceleme kipinde bulgu olarak göster.
 
 ### 14.8 Paragraf mühürleri ve özet sandviçi
 - **Mini özet:** her paragraf *Kısacası…, Bu da gösteriyor ki…, Bu sayede…* ile ve çoğu zaman ilk
