@@ -105,6 +105,11 @@ A sentence can be grammatical *and* idiom-clean and still be something **no one 
 - **Ama** aynı ifade **somut bir sahnede** meşrudur: ortada gerçek bir kutu varsa *"Kapağı kaldır."*
   doğrudur. Bağlamsız genelleme sırıtır; cümleyi **geçtiği yerde** değerlendir. (İnceleme kipinde bu
   **öneri** sınıfıdır, otomatik düzeltme değil.)
+- **Bağlam nakli — genel kural.** Metnin İÇİNDE meşru olan bir ifade, bağlamsız bir kopyaya (slogan,
+  kredo, özet, kapak yazısı) taşınınca kalıba döner. Yukarıdaki *kapağı kaldır* tam olarak böyle bozuldu:
+  sahnede doğruydu, kapak kredosuna *her parçanın kapağını kaldırırsın* diye taşınınca kimsenin
+  kurmadığı bir cümle oldu. Alıntıyı taşımadan önce sor: **bu ifadeyi ayakta tutan sahne burada var
+  mı?** (v2'de `SKILL.md`'deydi; v3 gövdesi değişince düştü, buraya geri alındı.)
 
 ### 2d. Çarenin kendi tuzağı — önerdiğin karşılığı da sına
 
