@@ -62,7 +62,7 @@ modelin o türde bıraktığı iz var.
 |---|---|---|---|
 | **Yazılım** | Geliştirici: yerleşik İngilizce terim kalır · genel okur: yaşayan Türkçe · BT yöneticisi: net, satışsız | Kod, komut, sürüm no., hata kodu, API/kütüphane adı, arayüz etiketi, CVE no. ve etkilenen sürüm aralığı, kesinti saatleri | Sürüm notunda heyecan anonsu, failsiz kesinti açıklaması (*bir sorun yaşanmış olup giderilmiştir*: ne, ne kadar, kimi?), hata mesajında terapist sesi |
 | **Finans** | Bireysel müşteri: rakam önde · uzman: terim kalır | Faiz ve kâr payı oranı, yıllık maliyet oranı, ücret, komisyon, vade, risk bildirimi, ürün adı. Katılım bankası *kâr payı* der, *faiz*e çevirme | Değişikliği saklayan edilgen (*faiz oranlarımız güncellenmiştir*: hangisi, ne kadar, ne zaman?), *finansal özgürlüğünüze giden yolda*, kaynaksız getiri iddiası |
-| **Sağlık** | Hasta: sade, sakin, ne yapacağı · hekim: terim kalır | İlaç ve etken madde adı, doz, birim, sıklık, süre, yan etki listesi, *doktorunuza danışın*. Dozda en küçük belirsizlikte değiştirme, sor | Her cümleye serpilen teselli, kesinlik şişirmesi (*tamamen güvenli, yan etkisi yoktur*), talimatı *-mesi gerekmektedir*'e gömmek |
+| **Sağlık** | Hasta: sade, sakin, ne yapacağı · hekim: terim kalır | İlaç ve etken madde adı, doz, birim, sıklık, süre, yan etki listesi, *doktorunuza danışın*. Dozda en küçük belirsizlikte değiştirme, bulgu olarak göster | Her cümleye serpilen teselli, kesinlik şişirmesi (*tamamen güvenli, yan etkisi yoktur*), talimatı *-mesi gerekmektedir*'e gömmek |
 | **Eğitim** | Veli: tarih, saat, yer, ne yapacağı · öğretmen: mevzuat dili | Tarih, saat, sınıf/şube, kazanım kodu, yönetmelik maddesi, not, ücret, son başvuru tarihi | *potansiyellerini en üst düzeye çıkarmak amacıyla*, *21. yüzyıl becerileri*, *katılımınız büyük önem arz etmektedir* |
 | **Hukuk** | Mahkeme ve karşı taraf: kalıp korunur · müvekkil: sade dil | Bkz. §1 Hukuki metin. Kaynaktaki atıfı değiştirme, olmayan atıf ekleme | Müvekkile giden yazıda *kapsamlı bir hukuki değerlendirme sonucunda*, aydınlatma metninde boş doğru |
 | **Perakende** | Müşteri: ürün, sipariş, iade | Ölçü, malzeme oranı, beden tablosu, fiyat, kampanya koşulu, garanti ve iade süresi, *stoklarla sınırlıdır* | Bilgi yerine sıfat (*tarzınızı yansıtan bu eşsiz çanta*), **veride olmayan özellik** (*su geçirmez*): yanıltıcı reklamdır |
@@ -70,7 +70,7 @@ modelin o türde bıraktığı iz var.
 | **İnsan kaynakları** | Aday: iş, koşul, başvuru · çalışan: duyuru, politika | Pozisyon adı, lokasyon, çalışma modeli, yazan yan haklar ve maaş aralığı, son tarih, kişisel veri notu | Boş sıfat yığını (*dinamik, takım oyuncusu*), şablon övgü, ret e-postasında *kariyer yolculuğunuzda başarılar* |
 
 **Ayrımcı okunabilecek kalıbı ayrıca söyle.** *Genç ve dinamik ekibimize* yaş ayrımı gibi okunur;
-yeniden yazma kipinde kelimeyi sessizce silme (bilgi düşürmek olur), metnin sahibine not düş.
+yeniden yazma kipinde kelimeyi sessizce silme (bilgi düşürmek olur); inceleme kipinde bulgu yap.
 
 ## 3. Terim kararı kitleye göre verilir
 
