@@ -1,0 +1,42 @@
+# references/turler-ve-alanlar.md: tür ve alan dokunulmazları, iddianın gücü, kitleye göre terim.
+cases:
+- id: doz-harfi-harfine
+  source: turler-ve-alanlar
+  ref: references/turler-ve-alanlar.md
+  kind: control
+  context: Hastaya giden ilaç kullanım talimatı.
+  input: Günde iki kez 500 mg alın. Tedavi 7 gün sürer, belirtiler geçse de ilacı bırakmayın.
+  expected: Günde iki kez 500 mg alın. Tedavi 7 gün sürer, belirtiler geçse de ilacı bırakmayın.
+
+- id: yasal-uyari-kalir
+  source: turler-ve-alanlar
+  ref: references/turler-ve-alanlar.md
+  kind: fix
+  context: Bir yatırım fonunun tanıtım metni.
+  input: Bu fon, uzun vadede yüksek getiri potansiyeli sunmaktadır. Burada yer alan yatırım bilgi, yorum ve tavsiyeleri yatırım danışmanlığı kapsamında değildir.
+  expected_contains: [yatırım danışmanlığı kapsamında değildir]
+  expected_not_contains: [sunmaktadır]
+
+- id: iddia-gucu-korunur
+  source: turler-ve-alanlar
+  ref: references/turler-ve-alanlar.md
+  kind: fix
+  input: Bu krem, cildin yenilenmesine yardımcı olabilmektedir.
+  expected_not_contains: [olabilmektedir, yeniler.]
+  expected_property: İhtimal kipi korunur; çıktı kremin cildi yenilediğini kesin olarak söylemez.
+
+- id: iddia-gucu-heldout
+  source: heldout
+  ref: references/turler-ve-alanlar.md
+  kind: fix
+  input: Düzenli yürüyüş, kan basıncının düşmesine katkı sağlayabilmektedir.
+  expected_not_contains: [sağlayabilmektedir, düşürür.]
+  expected_property: İhtimal korunur; çıktı yürüyüşün kan basıncını kesin olarak düşürdüğünü söylemez.
+
+- id: ekip-ici-deadline
+  source: turler-ve-alanlar
+  ref: [references/turler-ve-alanlar.md, references/ai-tells.md]
+  kind: control
+  context: Ekip içi bir sohbet mesajı; ekip bu terimi her gün kullanıyor.
+  input: Deadline cuma, yetişmeyecekse bugün haber verin.
+  expected: Deadline cuma, yetişmeyecekse bugün haber verin.
