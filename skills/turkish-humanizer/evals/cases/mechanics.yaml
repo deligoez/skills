@@ -140,3 +140,20 @@ cases:
   kind: control
   input: Sürüm 2.4 yayında.
   expected: Sürüm 2.4 yayında.
+
+- id: ingilizce-terim-kesme
+  source: mechanics
+  ref: references/mechanics.md
+  kind: fix
+  context: Yazılım ekibine giden teknik not; render için yerleşik bir Türkçe karşılık kullanılmıyor.
+  input: Sayfanın renderı iki saniye sürüyor.
+  expected_not_contains: [renderı]
+  expected_property: render İngilizce kalıyorsa eki kesmeyle alır (render'ı); yerleşik bir Türkçe karşılığa çevrilmişse de geçer.
+
+- id: ingilizce-terim-kesme-kontrol
+  source: heldout
+  ref: references/mechanics.md
+  kind: control
+  context: Kullanıcıya giden destek yanıtı.
+  input: Tarayıcının cache'ini temizleyip sayfayı yenileyin.
+  expected: Tarayıcının cache'ini temizleyip sayfayı yenileyin.
