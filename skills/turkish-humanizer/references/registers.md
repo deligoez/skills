@@ -169,10 +169,14 @@ Karşılıklar kalıp değil öneridir; ürünün kendi sesine göre seç.
 | Don't hesitate to reach out | Herhangi bir sorunuz olursa çekinmeden iletişime geçin | Sorunuz olursa yazın |
 | I wanted to reach out regarding… | Konuyla ilgili olarak sizinle iletişime geçmek istedim | (amacı ilk cümlede söyle) |
 
+"(sil)" hücreleri **kendi metnini yazarken** geçerlidir. Başkasının metnini yeniden yazarken dolgu
+cümlesi bilgi taşımıyorsa bile paragraf ve cümle yapısını bozacak silme yapma; inceleme kipinde bulgu
+olarak göster.
+
 Kurumsal yazışmada **selamlama ve kapanış biçimi kurum kültürüdür, kalır** (*Sayın, Saygılarımla,
-İyi çalışmalar*); değişen yalnız İngilizceden gelen dolgu cümlesidir. Kaynak: insanca'nın
-`yazim-ve-terim.md` §6'sı (Tahir Yıldız, MIT; çıkışı yucezerey/turkish-anti-ai-skill, MIT) ve
-`turler.md`. Düğmede hal eki kopyası (*WhatsApp'ta gönder*) için bkz. `collocations.md` §3b.
+İyi çalışmalar*); değişen yalnız İngilizceden gelen dolgu cümlesidir. Kaynak: insanca'nın yazım, terim
+ve tür notları (Tahir Yıldız, MIT, github.com/tahiryildiz/insanca; çıkışı yucezerey/turkish-anti-ai-skill,
+MIT). Düğmede hal eki kopyası (*WhatsApp'ta gönder*) için bkz. `collocations.md` §3b.
 
 ## 6. Register karışımının kendisi bir izdir
 
