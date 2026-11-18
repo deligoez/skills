@@ -38,6 +38,24 @@ The mechanics that betray non-native / machine output, with the correct TDK rule
 - ✓ *Aldın mı? · Gelecek misin? · Okuyor musun? · Gördü mü?* ✗ *Aldınmı, gelecekmisin, okuyormusun.*
 - Soru dışı kullanımda da ayrı: ✓ *Güzel mi güzel!* · *değil mi?* (✗ dimi).
 
+### Sık bitişik / ayrı yazım hataları
+
+| ✓ Doğrusu | ✗ Sık yanlış | Gerekçe |
+|---|---|---|
+| birçok, birkaç, biraz | bir çok, bir kaç | belirsizlik sözleri bitişik |
+| pek çok, pek az | pekçok | *pek* ile kurulanlar ayrı |
+| hiçbir, herhangi bir | hiç bir, her hangi bir | *hiçbir*, *herhangi* bitişik; ardındaki *bir* ayrı |
+| bir şey, her şey, hiçbir şey | birşey, herşey | *şey* her zaman ayrı |
+| art arda, yan yana, iç içe | ard arda, yanyana | ikilemeler ayrı |
+| yanı sıra | yanısıra | *sıra* ile kurulanlar ayrı |
+| iş birliği, güç birliği | işbirliği | *birlik* ile kurulan tamlamalar ayrı |
+| fark etmek, terk etmek, ayırt etmek | farketmek, terketmek | ses olayı yoksa yardımcı fiil ayrı |
+| kaydetmek, affetmek, reddetmek | kayıt etmek, red etmek | ses düşmesi ya da türemesi varsa bitişik |
+| demek ki, öyle ki, kaldı ki | demekki, öyleki | bağlaç *ki* ayrı |
+
+Kaynak: insanca'nın `yazim-ve-terim.md` §3'ü (Tahir Yıldız, MIT; çıkışı yucezerey/turkish-anti-ai-skill,
+MIT). Şüphede güncel TDK Yazım Kılavuzu esastır.
+
 ## 2. Noktalama {#2-noktalama}
 
 ### Virgül — where English adds one and Turkish doesn't
