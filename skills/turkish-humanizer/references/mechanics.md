@@ -98,8 +98,9 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
     yerleşmiş kelime ek alırken kesme almaz: ✗ *maniple'yi* → ✓ **manipleyi**; *buffer'ı* yerine
     Türkçe terim: ✓ **arabelleği**; *opcode'u* yerine ✓ **işlem kodunu**.
   - **İngilizce kalması gereken kelimede kesme konur.** Karşılığı zor ya da yerleşmemiş, özgün
-    yazımıyla bırakılan kelimede (*render, cache, deploy, commit*) ek kesmeyle ayrılır ve **okunuşa göre**
-    seçilir: ✓ *render'ı, cache'i* (keş), *deploy'dan* (diploy), *commit'i.* ✗ *renderı, cachei.* Kesme
+    yazımıyla bırakılan kelimede (*render, commit, merge, staging*) ek kesmeyle ayrılır ve **okunuşa
+    göre** seçilir: ✓ *render'ı, commit'i, merge'ü* (mörc), *staging'e* (steycing). ✗ *renderı, mergei.*
+    Yerleşik karşılığı olanlar bu sınıfa girmez: *cache* → *önbellek*, *deploy* → *canlıya almak*. Kesme
     burada okura "bu kelime yabancı, böyle okunuyor" der; kelimenin yazımı ile okunuşu ayrıştığı için
     eksiz yazım okunamaz. Önce sor: yerleşik bir Türkçe karşılık var mı (`turler-ve-alanlar.md` §3,
     `terminology.md`)? Varsa onu kullan; yoksa kelime İngilizce kalır ve kesme alır.
