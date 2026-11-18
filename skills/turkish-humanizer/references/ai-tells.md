@@ -33,6 +33,8 @@ report it in review mode as **öneri**.
 11. [**Metafor kalkı — çağrışım taşınmaz**](#11-metafor)
 12. [**Türkçeye özgü izler** (baskın sinyaller)](#12-turkceye-ozgu)
 13. [Aşırı düzeltme yasağı — iyi Türkçeyi bozma](#13-asiri-duzeltme)
+14. [**Söylem iskeleti izleri** — cümle tek tek temiz, iskelet makine](#14-iskelet)
+15. [İnceleme kipinde ağırlık — kesin imza, yumuşak sinyal, insan izi](#15-agirlik)
 
 ## 1. Connectors / discourse markers {#1-connectors}
 
