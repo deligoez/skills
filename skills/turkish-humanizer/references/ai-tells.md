@@ -469,7 +469,10 @@ yeniden yazma kipinde bile iskeleti kır ama bilgiyi, sırayı ve paragraf düze
 - **"yerine" kılığı:** *gösteriş yerine işlevselliği öne çıkarıyor.*
 
 **Ölçü:** metindeki vurgu amaçlı "değil"leri say; üçü geçiyorsa kalıp iskelete dönmüştür. **Çare:**
-iddiayı olumlu kur (*Doğru içerik üretmek gerekiyor*); iki kanattan yalnız önemlisini söyle. Tek bir
+iddiayı olumlu kur (*Doğru içerik üretmek gerekiyor*). Kendi metnini yazarken iki kanattan yalnız
+önemlisini söyleyebilirsin; **yeniden yazma kipinde reddedilen kanat bilgi taşıyorsa düşürme** (hiçbir
+bilgi eksilmez): olumlu cümleye bağla (*X yetmez, Y de gerekir*) ya da dokunma. İnceleme kipinde
+iskeleti bulgu olarak göster. Tek bir
 "X değil, Y" meşrudur, özellikle gerçek bir yanlış anlamayı düzeltiyorsa.
 
 ### 14.2 "Asıl" takıntısı ve katafor iki nokta
