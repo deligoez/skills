@@ -450,3 +450,121 @@ temizlik" fetvasına çevirmek dili fakirleştirir. Amaç, metnin işini yapmas�
   aracıdır — başlık/slogan eksiltisi **hatası değildir.** Ayrım niyettedir: *çeviri* eksiltisi
   (kaynağın fiilsiz yapısını taşıyan bir slogan) izdir; *kasıtlı* vuruş (üslup sözleşmesinin izin
   verdiği, ritim için tek satır) doğrudur. Üslup sözleşmesi varsa ona bak; yoksa çevredeki ritme.
+
+## 14. Söylem iskeleti izleri — cümle tek tek temiz, iskelet makine {#14-iskelet}
+
+Bu sınıfta tek bir kelime yanlış değildir; iz, cümlenin ya da paragrafın **kuruluşundadır.** Kelimeyi
+eşanlamlısıyla değiştirmek izi silmez, kılığını değiştirir (bkz. §14.10). Kaynak: insanca skill'inin
+(Tahir Yıldız, MIT) kalıp dizini; bu skill'in ölçüsüne göre süzüldü. Düzeltmeler **dar** tutulur:
+yeniden yazma kipinde bile iskeleti kır ama bilgiyi, sırayı ve paragraf düzenini koru (`SKILL.md`).
+
+### 14.1 "X değil, Y" iskeleti — ailesiyle birlikte
+`sadece X değil, aynı zamanda Y` (§5) bu ailenin yalnız bir üyesidir. Ötekiler:
+- **Çıplak ret-vurgu:** *Mesele daha çok içerik değil, doğru içerik.* · *Başarı tesadüf değil, tercihtir.*
+- **Geçmiş zaman kılığı:** *Bu yalnızca bir araç değildi, bir dönüşümün başlangıcıydı.*
+- **Kesik kılık:** *Tek başına yeterli değil. Kültür gerekiyor.*
+- **Üç aşamalı ret:** *Ne hız. Ne fiyat. Sadece güven.*
+- **"yerine" kılığı:** *gösteriş yerine işlevselliği öne çıkarıyor.*
+
+**Ölçü:** metindeki vurgu amaçlı "değil"leri say; üçü geçiyorsa kalıp iskelete dönmüştür. **Çare:**
+iddiayı olumlu kur (*Doğru içerik üretmek gerekiyor*); iki kanattan yalnız önemlisini söyle. Tek bir
+"X değil, Y" meşrudur, özellikle gerçek bir yanlış anlamayı düzeltiyorsa.
+
+### 14.2 "Asıl" takıntısı ve katafor iki nokta
+- **"Asıl" enflasyonu:** *asıl mesele, asıl değer, asıl beceri, asıl soru şu* — bir metinde üç dörtten
+  fazlaysa vurgu değerini yitirmiştir.
+- **Önden anons + iki nokta + tek cümlelik vuruş:** *Sorun şu: Çalışanlar kullanmıyor.* · *Cevap
+  basit: güven.* · *Ortak nokta şu: …* İnsan önce söyler, sonra adlandırır: *…değiştirecek mi? Asıl
+  soru bu.* Ya da etiketi hiç kurmaz: *Çalışanlar kullanmıyor.*
+- **Meşru iki nokta** arkasından liste, alıntı ya da örnek dizisi getirir (*birleşik kelimeler bitişik
+  yazılır: gökdelen, dedikodu*). Arkasından tek cümlelik vuruş geliyorsa kalıptır.
+
+### 14.3 Koşaç kaçışı — "-dır" diyememek
+Düz bir bilgi tören kıyafeti giyer: *işlevi görmektedir · konumundadır · olarak hizmet vermektedir ·
+niteliği taşımaktadır · olma özelliğine sahiptir · olarak öne çıkmaktadır · barındırmaktadır.*
+(İngilizce *serves as* kalkı.) ✗ *Galeri, derneğin sergi alanı işlevi görmektedir.* → ✓ *Galeri,
+derneğin sergi alanı.* ✗ *Bina dört salona sahip olma özelliğiyle öne çıkmaktadır.* → ✓ *Binada dört
+salon var.* (§3'teki kalıp fiil şişkinliğinin koşaçtaki kardeşi.)
+
+### 14.4 Sağa dallanma — niteleyici ismin arkasında
+İngilizce niteleyiciyi ismin arkasına koyar (*a system that…*); Türkçe sola dallanır, niteleyici
+sıfat-fiille (`-an, -dık, -acak`) önden gelir. İki kalk biçimi:
+- **İsmi zamirle tekrarlamak:** ✗ *Bir raporlama aracı geliştirdik, bu araç her sabah satışları
+  özetliyor.* → ✓ *Her sabah satışları özetleyen bir raporlama aracı geliştirdik.*
+- **İlgi "ki"si:** ✗ *Öyle bir altyapı kurduk ki yoğun trafikte bile çökmüyor.* → ✓ *Yoğun trafikte bile
+  çökmeyen bir altyapı kurduk.* Konuşmadaki şaşkınlık *ki*'si (*öyle yorulmuşum ki…*) meşrudur.
+- Soru zamirli yan cümle ad-fiile döner: ✗ *kim açtı, kim düzenledi gör* → ✓ *kimin açıp
+  düzenlediğini gör.*
+
+### 14.5 Gereksiz "kendi" ve zamir
+İngilizce *own* kalıntısı: iyelik eki aitliği zaten taşır. ✗ *Her servis kendi veritabanına bağlanır ve
+onun kendi ayarlarını okur.* → ✓ *Her servis kendi veritabanına bağlanıp ayarlarını okur.* Karşıtlık
+yoksa (*başkasınınkini değil, kendininkini*) ikinci "kendi"yi at. Aynı mantıkla her cümlede yinelenen
+*siz/ben/o* zamiri de düşer (pro-drop; `fluency.md` ilke 4 — nesne karşı kuralını unutma).
+
+### 14.6 Boş doğrular
+Kimsenin itiraz etmeyeceği, hiçbir şey söylemeyen cümle: *güven zamanla inşa edilir · iletişim her
+ilişkinin temelidir · başarı bir gecede gelmez · değişim kaçınılmazdır.* **Test:** tersini savunacak
+biri var mı? Yoksa cümle bilgi taşımıyordur. Yeniden yazma kipinde bilgi eklenemez (`SKILL.md`), o
+yüzden çare çoğu kez söyleyişi yalınlaştırmaktır; **inceleme kipinde** "kalıp" olarak işaretle ve
+somut iddiayı yazara sor.
+
+### 14.7 Yağcı ton ve terapist modu
+- **Yağcılık** (iltifat muhataba): *Harika bir soru! · Kesinlikle haklısınız · Bu çok önemli bir nokta.*
+- **Terapist modu** (duygusal onay, istenmediği bağlamda): *Yalnız değilsiniz · Bunu hissetmeniz çok
+  normal · Kendinize karşı nazik olun.* İş yazısında, teknik rehberde, ürün metninde tuhaf ve
+  manipülatif durur. Gerçekten duygusal bir bağlamda (hastaya giden metin) tek ve somut bir sıcak
+  cümle yerindedir; kalıp hâlinde tekrar eden teselli değil.
+- **Bilgi sınırı artığı:** *eldeki bilgilere göre · kamuya açık kaynaklarda yer almamaktadır ·
+  muhtemelen … olduğu düşünülmektedir* — modelin kendi sınırını anlatan cümle metne sızmıştır;
+  bilinmeyeni açıkça söyle ya da cümleyi at, tahmini bilgi gibi sunma.
+
+### 14.8 Paragraf mühürleri ve özet sandviçi
+- **Mini özet:** her paragraf *Kısacası…, Bu da gösteriyor ki…, Bu sayede…* ile ve çoğu zaman ilk
+  cümlesini başka kelimelerle tekrarlayarak kapanır. İnsan paragrafı fikir geçişiyle bırakır.
+- **Yol haritalı giriş:** *Bu yazıda önce X'i, ardından Y'yi ele alacağız.*
+- **Özet sandviçi:** kapanış girişin kelimelerini geri çağırıp aynı şeyi yeniden söyler.
+- **Kapanış tekdüzeliği:** jenerik kapanışı (§5) silip her metinde aynı yedek hamleyi (okura soru,
+  *Peki ya siz?*, *Belki de…* vecizesi) koymak da kalıptır.
+
+### 14.9 Gönderim merdiveni — ad öbeğini her cümlede yeniden kurmak
+Model aynı ad öbeğini her cümlede tekrar kurar (*Uygulama zaman kazandırıyor. Uygulama ayrıca… Uygulama
+bu yönleriyle…*) ya da tekrar cezasından kaçmak için eşanlamlı döndürür (*şirket… firma… kuruluş…
+marka*). Türkçe yolu: adı **bir kez** tam kur, sonra adıla ve gizli özneye bırak; ad öbeğini ancak konu
+gerçekten değişince yeniden kur. Aynı kelimeyle açılan art arda cümleler (açılış tekrarı) bu kusurun
+yüzeydeki görünüşüdür. **Sınır:** teknik metinde terim sabit kalır, eşanlamlıyla çeşitlendirme hatadır
+(`terminology.md`) — burada hedef, terimi değiştirmek değil, gereksiz yinelemeyi fiil çekimine
+bırakmaktır.
+
+### 14.10 Yapı nakli ve ikame tiki — düzeltmenin kendi izleri
+- **Yapı nakli:** kalıbı kelime değiştirerek yeniden giydirmek. *Sadece X yapmıyor, Y yapıyor* →
+  *X'le kalmıyor, Y oluyor* hâlâ aynı çift kanatlı iskelettir; iki noktayı silip *kazandıran beceri, X*
+  yazmak katafor tanımı kaldırmaz; uzun tireyi noktalı virgüle çevirip aynı "iddia — dramatik ek"
+  vuruşunu korumak izi taşır. Kendi çıktına sor: **kalıbı kaldırdım mı, yeniden mi giydirdim?**
+- **İkame tiki:** *kritik bir rol oynuyor*, *kusursuz bir şekilde* gibi öbekleri silerken her cümleye
+  refleksle *doğrudan, aslında, gerçekten, ciddi ölçüde* sokmak. Model yeni bir dolgu kelimesine
+  kilitlenir; çoğu zaman en doğal çözüm zarfı tamamen atıp fiili yalnız bırakmaktır.
+- **Anti-slop sicili:** zorlama kesik cümleler (*Verim mi? Arttı. Hem de nasıl.*), sahte pürüz,
+  yapmacık argo. Doğallık ölçülü olandır.
+
+## 15. İnceleme kipinde ağırlık — kesin imza, yumuşak sinyal, insan izi {#15-agirlik}
+
+İzler eş ağırlıkta değildir; inceleme tablosunda bulguyu buna göre sınıfla.
+
+- **Kesin imza** — tek başına yeterli, kümelenme beklemeden işaretle: sohbet artıkları (*Umarım
+  yardımcı olur, Elbette!, Bir yapay zekâ dil modeli olarak, Dilerseniz … da açıklayabilirim*),
+  arayüz artıkları (*Regenerate response*), kopyala-yapıştır kekemeliği, bilgi sınırı artığı (§14.7).
+- **Yumuşak sinyal** — tek başına hiçbir şey değildir, **küme** bekle: tek bir *kapsamlı*, tek bir
+  üçleme, tek bir *ayrıca*, tek bir retorik soru, tek bir *dürüst olmak gerekirse*, tek bir *belki de*.
+- **İnsan hatası ≠ yapay zekâ izi.** Özne-yüklem uyumsuzluğu, mantık yanlışı, öge eksikliği, sıra
+  yanlışlığı gibi anlatım bozuklukları çoğunlukla insan işidir; model bunları nadiren yapar. Bunları
+  **hata** sınıfında, nazikçe düzelt — **kalıp** diye etiketleme.
+- **Cila yapay zekâ demek değildir.** Kusursuz dilbilgisi ve tutarlı üslup editörden geçmiş insan
+  yazısında da vardır. O teller yoksa kuruluk yalnız kuruluktur.
+- **İnsan yazısının işaretleri — bunları koru:** uydurması zor, tuhaf ve somut ayrıntı; çözülmemiş,
+  karışık duygu; döneme özgü gönderme; ara söz ve kendini düzeltme (*burada "neredeyse" diyesim var ama
+  …*); noktalamaya sızan duygu (ünlem, üç nokta, yarım cümle); bilinçli devrik. Bunları görünce
+  metne dokunmamaya meyilli ol: fazla düzenleme metni insan yapan şeyi öldürür.
+- **Dedektör puanı hedef değildir.** Dedektörler sade, resmî, kusursuz insan yazısını da işaretler.
+  Bu skill'in işi iyi Türkçe yazmaktır; düşük puan için insan metnini "daha insansı" yapmaya kalkma
+  (§10).
