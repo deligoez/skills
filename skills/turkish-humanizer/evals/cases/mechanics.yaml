@@ -154,6 +154,6 @@ cases:
   source: heldout
   ref: references/mechanics.md
   kind: control
-  context: Kullanıcıya giden destek yanıtı.
-  input: Tarayıcının cache'ini temizleyip sayfayı yenileyin.
-  expected: Tarayıcının cache'ini temizleyip sayfayı yenileyin.
+  context: Yazılım ekibine giden kod inceleme notu; ekip commit'i İngilizce kullanıyor.
+  input: Son commit'i geri alıp testleri yeniden çalıştırın.
+  expected: Son commit'i geri alıp testleri yeniden çalıştırın.
