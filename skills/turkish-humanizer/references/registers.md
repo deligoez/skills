@@ -149,6 +149,31 @@ Düğme **eylemi**, durum mesajı **sonucu** söyler; ikisi de sistemin nasıl �
 - **Etiketin görevine bak:** *Telefon doğrulama* bir **düğme** ise ✓ *Telefonu doğrula*; bir **gezinme
   başlığı** ya da ayar bölümünün adıysa ad öbeği doğrudur, dokunma (bkz. §5.1 istisnası).
 
+### 5.7 Ürün, mağaza ve e-posta şablonları — İngilizce kalıp birebir
+
+SaaS sayfası, uygulama mağazası ve iş e-postası metinleri İngilizce şablondan birebir çevrilir.
+Karşılıklar kalıp değil öneridir; ürünün kendi sesine göre seç.
+
+| İngilizce şablon | ✗ Çeviri kokan | ✓ Türkçede |
+|---|---|---|
+| Ready to get started? | Başlamaya hazır mısınız? | Hemen başlayın · Ücretsiz deneyin |
+| Take X to the next level | X'i bir üst seviyeye taşıyın | X'i büyütün / hızlandırın |
+| Empower your team | Ekibinizi güçlendirin | Ekibinizin işini kolaylaştırın |
+| Save time and money | Zamandan ve paradan tasarruf edin | Zaman da para da kazanın |
+| Tailored to your needs | İhtiyaçlarınıza göre özel olarak tasarlanmış | İşinize göre ayarlanan |
+| All-in-one / one-stop shop | Hepsi bir arada çözüm · tek durak noktası | Gereken her şey tek yerde |
+| Seamlessly integrates | Kusursuz bir şekilde entegre olur | Ek ayar istemeden bağlanır |
+| No credit card required | Kredi kartı gerekmemektedir | Kredi kartı gerekmez |
+| Let's dive in! | Hadi başlayalım! · Haydi dalalım! | (sil, içerikle başla) |
+| I hope this email finds you well | Umarım bu e-posta sizi iyi bulur | (sil; Türkçe yazışmada yok, *Merhaba* yeter) |
+| Don't hesitate to reach out | Herhangi bir sorunuz olursa çekinmeden iletişime geçin | Sorunuz olursa yazın |
+| I wanted to reach out regarding… | Konuyla ilgili olarak sizinle iletişime geçmek istedim | (amacı ilk cümlede söyle) |
+
+Kurumsal yazışmada **selamlama ve kapanış biçimi kurum kültürüdür, kalır** (*Sayın, Saygılarımla,
+İyi çalışmalar*); değişen yalnız İngilizceden gelen dolgu cümlesidir. Kaynak: insanca'nın
+`yazim-ve-terim.md` §6'sı (Tahir Yıldız, MIT; çıkışı yucezerey/turkish-anti-ai-skill, MIT) ve
+`turler.md`. Düğmede hal eki kopyası (*WhatsApp'ta gönder*) için bkz. `collocations.md` §3b.
+
 ## 6. Register karışımının kendisi bir izdir
 
 Mixing registers mid-text — a bureaucratic *-maktadır* inside a chatty blog, a motivational closer
