@@ -171,31 +171,32 @@ seç (*anahtar iletimde / kesimde*). Kararı terim defterine kilitle (`terminolo
 
 ### 3b. İngilizce fiil metaforu — kelime Türkçe, düşünce İngilizce
 
-Betik ya da kelime listesi bunları göremez: her kelime Türkçedir, yanlış olan **fiilin İngilizceden
-taşınan mecazıdır.** Sahada bir müşteri sunumunda betik temiz dönmüş, cümle cümle okuma iki turda
-55 çeviri kokan cümle daha çıkarmıştı (insanca, `kaynaklar.md`). Sor: **Türkçe konuşan biri bunu
-ağzıyla böyle söyler mi?**
+Kelime listesi bunları göremez: her kelime Türkçedir, yanlış olan **fiilin İngilizceden taşınan
+mecazıdır.** insanca'nın sahadan bildirdiği bir vakada (16 slaytlık bir sunum) otomatik kontrol temiz
+dönmüş, cümle cümle okuma iki turda 55 çeviri kokan cümle daha çıkarmıştı. Sor: **Türkçe konuşan biri
+bunu ağzıyla böyle söyler mi?**
 
 | ✗ Kalk | EN | ✓ Türkçede |
 |---|---|---|
 | Bu rapor geçen haftaki toplantının **peşinden gidiyor** | follows | toplantının **devamı** · toplantıdan **sonra hazırlandı** |
-| Üç bölüm de bu soruya **dokunuyor** | touches on | bu soruya **değiniyor** |
-| Bu rakam müşteri anketinden **geliyor** | comes from | rakam müşteri **anketinde geçiyor** · **ankete dayanıyor** |
 | Ayrıntılar **e-posta zincirinde** | email thread | **yazışmalarda** · e-postalarda |
 | Asistan notları **sizin biçiminizde yazar** | in your format | notları **sizin kullandığınız biçimde** yazar |
 | Raporu **WhatsApp'ta** gönder · **X üzerinde** paylaş | send via / share on | **WhatsApp'tan** gönder · **X'te** paylaş |
-
-**Kalk sanılıp alınmayanlar:** *bütçe açığını kapatmak*, *masrafı kapatmak*, *bir şeyi kaynak olarak
-göstermek* Türkçede yerleşiktir; insanca'nın listesi bunları da işaretliyor, bu skill işaretlemez.
-Şüphede `§6` tanık testini uygula.
 
 Son satır ayrı bir sınıftır: İngilizce edat (*on, via*) Türkçeye yanlış **hâl ekiyle** geçer. Gönderme
 *-dan* ister, paylaşma *-da*. Arayüz düğmelerinde en sık kaçan iz budur, çünkü okur aynı düğmeyi her
 gün görür.
 
+**Kalk sanılıp alınmayanlar.** insanca'nın listesi bunları da işaretliyor; bu skill işaretlemez:
+- *bir konuya dokunmak*: TDK'de *► değinmek* anlamı kayıtlı (*Eğitim konusuna dokunan bir yazı*).
+- *bilgi/rakam X'ten geliyor*: kaynak bildiren *gelmek* gündelik Türkçede yerleşik.
+- *bütçe açığını kapatmak*, *masrafı kapatmak*, *bir şeyi kaynak olarak göstermek*: yerleşik.
+
+Şüphede §6 tanık testini uygula; tanık bulunan ifadeyi kalk diye düzeltmek fazla düzeltmedir.
+
 **Kural:** kelimeyi değiştirmek yetmez; düşünceyi Türkçe kur. Tabloyu kapalı liste sanma, çeviri
-testinin örnekleri olarak oku. Kaynak: insanca'nın `ceviri-kaliplari.tsv` listesi (Tahir Yıldız, MIT);
-karşılıklar bu skill'in.
+testinin örnekleri olarak oku. Kaynak: insanca'nın çeviri kalıbı listesi (Tahir Yıldız, MIT,
+github.com/tahiryildiz/insanca); karşılıklar ve elemeler bu skill'in.
 
 ## 4. "gibi" isteyen yapılar — evidential calques
 
