@@ -51,8 +51,8 @@ modelin o türde bıraktığı iz var.
 **Türe özgü kip kuralları:**
 - **Şiirde varsayılan kip incelemedir.** Kullanıcı açıkça istemedikçe şiiri yeniden yazma; izi göster,
   dizeye dokunmadan nedenini söyle.
-- **Hukuki metinde değişikliği uygulamadan önce sor.** Hukuki sonucu olabilecek bir değişikliği
-  sessizce yapma; önerileri cümle cümle listele.
+- **Hukuki metinde hukuki sonucu olabilecek değişikliği uygulama.** Yeniden yazma kipinde o cümleye
+  dokunma; önerileri inceleme kipinde cümle cümle bulgu olarak listele.
 - **Anlatıda satır başı konuşma çizgisi (—) TDK işaretidir, kalır;** diyaloğu tırnağa çevirme.
   Uzun tire kuralı yalnız cümle içindeki ara söz tiresine uygulanır (`mechanics.md` §2).
 
