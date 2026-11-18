@@ -53,8 +53,8 @@ The mechanics that betray non-native / machine output, with the correct TDK rule
 | kaydetmek, affetmek, reddetmek | kayıt etmek, red etmek | ses düşmesi ya da türemesi varsa bitişik |
 | demek ki, öyle ki, kaldı ki | demekki, öyleki | bağlaç *ki* ayrı |
 
-Kaynak: insanca'nın `yazim-ve-terim.md` §3'ü (Tahir Yıldız, MIT; çıkışı yucezerey/turkish-anti-ai-skill,
-MIT). Şüphede güncel TDK Yazım Kılavuzu esastır.
+Kaynak: insanca'nın yazım ve terim notları (Tahir Yıldız, MIT, github.com/tahiryildiz/insanca; çıkışı
+yucezerey/turkish-anti-ai-skill, MIT). Şüphede güncel TDK Yazım Kılavuzu esastır.
 
 ## 2. Noktalama {#2-noktalama}
 
