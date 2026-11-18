@@ -5,9 +5,14 @@ sınırı). Bu dosya iki soruyu daha yanıtlar: **bu türde değişirse zarar do
 alanın okuru hangi terimi bekliyor.** Dokunma listesinin (`SKILL.md` → Girdiler) türe ve alana göre
 genişletilmiş hâlidir.
 
-Kaynak zinciri: insanca (Tahir Yıldız, MIT) → `turler.md`, `alanlar.md`, `jargon.md`; onlar da
-MesutARIDORU'nun *insanlik-oldu-mu* skill'inden (MIT) uyarlanmış. Burada bu skill'in kurallarına göre
-süzüldü; çelişen yerlerde `SKILL.md` geçerlidir.
+Kaynak zinciri: insanca'nın tür, alan ve jargon notları (Tahir Yıldız, MIT,
+github.com/tahiryildiz/insanca); onlar da MesutARIDORU'nun *insanlik-oldu-mu* skill'inden (MIT)
+uyarlanmış. Burada bu skill'in kurallarına göre süzüldü; çelişen yerlerde `SKILL.md` geçerlidir.
+
+**Notlar nereye gider.** Aşağıdaki "sor", "öner", "not düş" talimatları çıktının içine yazılmaz:
+yeniden yazma kipinde çıktı yalnız metindir (`SKILL.md`). O kipte ilgili yere **dokunmadan bırak**;
+inceleme kipinde aynı şey konumlu bir **bulgu** olur. Kullanıcıyla sohbet ediyorsan metnin dışında,
+yanıtında sorabilirsin.
 
 ## 0. Her türde ve her alanda geçerli olanlar
 
@@ -15,7 +20,7 @@ süzüldü; çelişen yerlerde `SKILL.md` geçerlidir.
   değiştirmek, "yaklaşık" eklemek de değişikliktir.
 - **Yasal uyarı ve bilgilendirme cümleleri kısaltılmaz, sadeleştirilmez, silinmez:** risk bildirimi,
   yan etki uyarısı, cayma hakkı, kişisel veri aydınlatması, "yatırım danışmanlığı kapsamında
-  değildir". Dilleri yapay görünse bile metnin sahibine sor.
+  değildir". Dilleri yapay görünse bile dokunma; istersen inceleme bulgusu olarak göster.
 - **İddianın gücü korunur.** *Yüksek getiri sağlayabilir* → *sağlar* olmaz; *tedaviye yardımcı
   olabilir* → *tedavi eder* olmaz. Ters yön de değişikliktir: kesin bir hükmü ihtimale çevirme.
 - **Kurum, ürün, unvan ve belge adları** metnin sahibinin yazdığı gibi kalır.
