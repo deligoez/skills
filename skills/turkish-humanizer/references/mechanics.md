@@ -94,10 +94,15 @@ Turkish has **two** dashes, and **no** English-style em-dash-as-parenthesis.
 - **Used** on proper nouns before inflectional (case/possessive/bildirme) suffixes, dates, numbers,
   abbreviations: ✓ *Ankara'da, TDK'nin, 1990'da, 3'üncü, Nihat Bey'e.* ✗ *Ankarada, TDKnin.*
 - **NOT used — and the real-world error is usually kesme *fazlalığı*, not eksikliği:**
-  - **Cins ada kesme konmaz.** Kesme yalnızca **özel ad / kısaltma / sayı** içindir. Yabancı kökenli
-    olsa bile cins ad kesme almaz — ek okunuşa göre doğrudan eklenir:
-    ✗ *maniple'yi, buffer'ı, link'i* → ✓ **manipleyi, arabelleği, linki.**
-    En temizi zaten Türkçe terimi kullanmaktır: *opcode'u* → ✓ **işlem kodunu.**
+  - **Türkçeleşmiş cins ada kesme konmaz.** Sözlüğe Türkçe yazımıyla girmiş ya da Türkçe karşılığı
+    yerleşmiş kelime ek alırken kesme almaz: ✗ *maniple'yi* → ✓ **manipleyi**; *buffer'ı* yerine
+    Türkçe terim: ✓ **arabelleği**; *opcode'u* yerine ✓ **işlem kodunu**.
+  - **İngilizce kalması gereken kelimede kesme konur.** Karşılığı zor ya da yerleşmemiş, özgün
+    yazımıyla bırakılan kelimede (*render, cache, deploy, commit*) ek kesmeyle ayrılır ve **okunuşa göre**
+    seçilir: ✓ *render'ı, cache'i* (keş), *deploy'dan* (diploy), *commit'i.* ✗ *renderı, cachei.* Kesme
+    burada okura "bu kelime yabancı, böyle okunuyor" der; kelimenin yazımı ile okunuşu ayrıştığı için
+    eksiz yazım okunamaz. Önce sor: yerleşik bir Türkçe karşılık var mı (`turler-ve-alanlar.md` §3,
+    `terminology.md`)? Varsa onu kullan; yoksa kelime İngilizce kalır ve kesme alır.
   - Yapım/çokluk ekleri: ✓ *Türkçe, Türklük, Amerikalı* ✗ *Türk'çe, Türk'lük, Amerika'lı.*
   - **Kurum/kuruluş adları** (a much-missed TDK exception): ✓ *Türk Dil Kurumunun, Türkiye Büyük
     Millet Meclisine* ✗ *…Kurumu'nun, …Meclisi'ne.*
