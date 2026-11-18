@@ -67,7 +67,7 @@ sırasının kararı verdiğini gösterir.
 | carry | **elde** | ① kitap (*elde var 1*, *elde biti*) | *taşımak* fiiline kayma |
 | interrupt | **kesme** | ①② (kitap 33 / *kesinti* 6) | *kesinti* ikincil |
 | logic gate | **kapı / mantık kapısı** | ①② | — |
-| opcode | *(proje kilitlemeli)* | ① **kararsız**: işlem kodu 65 ~ opcode 61 | çekimde *opcode'u* ✗ → *işlem kodunu* |
+| opcode | *(proje kilitlemeli)* | ① **kararsız**: işlem kodu 65 ~ opcode 61 | İngilizce kalırsa *opcode'u*, Türkçe seçilirse *işlem kodunu*; ikisini karıştırma |
 | flip-flop | **flip-flop** *(çevrilmez)* | ② MEB modülü başlığı bile "FLİP-FLOP" | *çevirmece* uydurma — **mandal** çevrilir ama flip-flop çevrilmez: komşu terimler, farklı karar |
 | latch | **mandal** | ② MEB: "S-R MANDALI" | türemiş biçim *mandallayıcı* |
 | buffer | **arabellek** | ② (*arabellek taşması* evrensel) | ~~tampon~~ ikincil; kitap *ara bellek* yazıyor — projede birini seç |
