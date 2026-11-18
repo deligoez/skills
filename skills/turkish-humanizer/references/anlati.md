@@ -163,13 +163,17 @@ olmayan katman var.
   (`collocations.md` §6). Basmakalıp benzetme (*buz gibi*) deyim sayılmaz.
 - **Yanlış bilinen biçimler:** *İt ürür, kervan **yürür*** · ***Su testisi** su yolunda kırılır* ·
   ***Süt** dökmüş kediye döndü* · *Bir elin nesi var, **iki elin sesi var**.*
-- **Anlam tuzakları:** *baltayı taşa vurmak* = bilmeden kırıcı söz söylemek (işi baştan bozmak değil) ·
-  *saçını süpürge etmek* = büyük özveriyle çalışmak · *gönlü kalmak* iki anlamlıdır: *kırılmak,
-  gücenmek* ve *isteyip elde edememek* — hangisinin kastedildiğini bağlamdan kontrol et.
+- **Anlam tuzakları (TDK Güncel Türkçe Sözlük'ten doğrulandı):** çok anlamlı deyimde hangi anlamın
+  kastedildiğini bağlamdan kontrol et.
+  - *baltayı taşa vurmak*: (1) farkında olmadan birine dokunacak söz söylemek, pot kırmak; (2) içinden
+    çıkılamaz zor bir duruma düşmek.
+  - *gönlü kalmak*: (1) isteyip de edinemediği bir şeyi istemekten vazgeçmemek; (2) gücenmek.
+  - *saçını süpürge etmek*: kadının özveriyle çalışıp hizmet etmesi; öznesi sözlükte kadındır.
+  - insanca'nın derlemesi ilk ikisini tek anlamla veriyor; burada sözlüğe göre düzeltildi.
 - **Sicil ve çağrışım:** argo kökenli deyim (*kafayı yemek*) kurumsal metinde sırıtır; deyimi gerçek
   anlamının da geçerli olduğu bağlamda kullanma (mutfak yazısında *tencere yuvarlandı kapağını buldu*).
   Emin değilsen sozluk.gov.tr'de doğrula ya da kullanma. Kaynak: Ömer Asım Aksoy, *Atasözleri ve
-  Deyimler*, insanca'nın `deyimler.md` derlemesi üzerinden.
+  Deyimler*, insanca'nın deyim derlemesi üzerinden (github.com/tahiryildiz/insanca).
 
 ---
 
