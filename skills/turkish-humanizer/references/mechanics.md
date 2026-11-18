@@ -60,6 +60,11 @@ yucezerey/turkish-anti-ai-skill, MIT). Şüphede güncel TDK Yazım Kılavuzu es
 
 ### Virgül — where English adds one and Turkish doesn't
 - **No Oxford comma before ve/veya/yahut:** ✓ *elmalar, armutlar ve muzlar* ✗ *…armutlar, ve muzlar.*
+  It is the quietest leak in bilingual writing (114 cases in one carefully written bilingual book: 82
+  prose, 32 UI strings). **Do not delete it blindly:** the comma often marks a pause the author wanted,
+  and removing it can turn the sentence into a three-item list (✗ *bir sayaç, bir biriktirici, ve makine
+  saydı* → without the comma *makine* becomes a list item). Fix in this order: `X ve Y` · `X. Ve Y` ·
+  `X; Y`. (This nuance lived in the v2 body and was lost in v3.)
 - **No comma before "ve" joining two clauses:** ✓ *Toplantı bitti ve herkes ayrıldı.*
 - **No comma after a fronted subordinate/adverbial clause** (unlike English "Because X, Y"):
   ✓ *Hava soğuk olduğu için dışarı çıkmadık.* ✗ *…olduğu için, dışarı çıkmadık.*
